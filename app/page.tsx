@@ -16,10 +16,10 @@ export default function HomePage() {
       {/* <ScrollZoomLayout /> */}
       {/* <HeroSection /> */}
       <MeetTheFounder />
-      <MassagePromo />
+      {/*<MassagePromo />*/}
       <LuxuryEventsGallery />
       <ServicesSection />
-      <MeetTheFounder />
+      {/*<MeetTheFounder />*/}
       {/*<FeaturedCampaigns /> */}
       <LocationsShowcase />
       <MissionStatement />
