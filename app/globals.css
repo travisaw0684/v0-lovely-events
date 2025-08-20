@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+
+  /* Updated design tokens for luxury events services section */
+  --background: #ffffff;
+  --foreground: #475569;
+  --card: #ecfeff;
+  --card-foreground: #475569;
+  --popover: #ffffff;
+  --popover-foreground: #475569;
+  --primary: #164e63;
+  --primary-foreground: #ffffff;
+  --secondary: #f59e0b;
+  --secondary-foreground: #ffffff;
+  --muted: #fdf2f8;
+  --muted-foreground: #475569;
+  --accent: #f59e0b;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #e2e8f0;
+  --input: #ffffff;
+  --ring: rgba(22, 78, 99, 0.5);
+  --chart-1: #164e63;
+  --chart-2: #f59e0b;
+  --chart-3: #dc2626;
+  --chart-4: #ecfeff;
+  --chart-5: #fdf2f8;
+  --radius: 0.5rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #475569;
+  --sidebar-primary: #164e63;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f59e0b;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: rgba(22, 78, 99, 0.5);
+
+  /* Updated design tokens for Meet the Founder section with warm, approachable colors */
+  --founder-background: #ffffff;
+  --founder-foreground: #374151;
+  --founder-card: #fefce8;
+  --founder-card-foreground: #374151;
+  --founder-popover: #fef08a;
+  --founder-popover-foreground: #374151;
+  --founder-primary: #d97706;
+  --founder-primary-foreground: #ffffff;
+  --founder-secondary: #fefce8;
+  --founder-secondary-foreground: #374151;
+  --founder-muted: #f0f4f8;
+  --founder-muted-foreground: #374151;
+  --founder-accent: #fef08a;
+  --founder-accent-foreground: #374151;
+  --founder-destructive: #be123c;
+  --founder-destructive-foreground: #ffffff;
+  --founder-border: #e2e8f0;
+  --founder-input: #ffffff;
+  --founder-ring: #d97706;
+  --founder-chart-1: #fef08a;
+  --founder-chart-2: #d97706;
+  --founder-chart-3: #fefce8;
+  --founder-chart-4: #ecfeff;
+  --founder-chart-5: #fdf2f8;
+  --founder-radius: 0.5rem;
+  --founder-sidebar: #fefce8;
+  --founder-sidebar-foreground: #374151;
+  --founder-sidebar-primary: #d97706;
+  --founder-sidebar-primary-foreground: #ffffff;
+  --founder-sidebar-accent: #fef08a;
+  --founder-sidebar-accent-foreground: #374151;
+  --founder-sidebar-border: #e2e8f0;
+  --founder-sidebar-ring: #d97706;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+/* Added luxury gallery animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes luxuryZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 1s ease-out 0.3s both;
+}
+
+.animate-luxury-zoom {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-luxury-zoom:hover {
+  transform: scale(1.05);
+}
+
+/* Added founder section animations */
+@keyframes founderPhotoFade {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes founderTextSlide {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-founder-photo {
+  animation: founderPhotoFade 1s ease-out;
+}
+
+.animate-founder-text {
+  animation: founderTextSlide 1s ease-out 0.3s both;
+}
+
+/* Swiper pagination styles */
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5) !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: white !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
