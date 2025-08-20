@@ -12,13 +12,28 @@ const slides = [
   },
   {
     id: 2,
-    video: "https://videos.pexels.com/video-files/855677/855677-hd_1920_1080_30fps.mp4",
+    video: "https://videos.pexels.com/video-files/8776110/8776110-uhd_2560_1440_25fps.mp4",
     alt: "Las Vegas cityscape with casino lights",
   },
   {
     id: 3,
     video: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5396971-hd_1920_1080_30fps-b4nrnBthWWabKzc5aHPINogTZnqbVz.mp4",
     alt: "Las Vegas boulevard traffic and billboards",
+  },
+  { 
+    id: 4,
+    video: "https://videos.pexels.com/video-files/7509495/7509495-hd_1920_1080_25fps.mp4",
+    alt: "Las Vegas cityscape with casino lights",
+  },
+  { 
+    id: 5,
+    video: "https://videos.pexels.com/video-files/855677/855677-hd_1920_1080_30fps.mp4",
+    alt: "Las Vegas cityscape with casino lights",
+  },
+  {
+    id: 6,
+    video: "https://videos.pexels.com/video-files/6396120/6396120-hd_1080_1920_25fps.mp4",
+    alt: "test",
   },
 ]
 

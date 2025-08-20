@@ -19,7 +19,7 @@ export default function HomePage() {
       {/*<MassagePromo />*/}
       <LuxuryEventsGallery />
       <ServicesSection />
-      {/*<MeetTheFounder />*/}
+      {/*<MeetTheFounder /> */}
       {/*<FeaturedCampaigns /> */}
       <LocationsShowcase />
       <MissionStatement />
