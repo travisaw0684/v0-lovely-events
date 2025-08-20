@@ -40,7 +40,7 @@ export default function MeetTheFounder() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl transform rotate-3"></div>
               <img
-                src="/placeholder.svg?height=500&width=500"
+                src="https://static.mywebsites360.com/d3536c889e90455b8c18f12a5d7c8646/i/db962ffdb46c4063a7ae826d597429e5/1/4SoifmQp45JMgBnHjfgmz/wedding-chamber-headshots-2137.jpg?dpr=2"
                 alt="Shawanda Holsey - Founder & Creative Director"
                 className="relative w-full max-w-md mx-auto aspect-square object-cover rounded-2xl shadow-2xl"
               />

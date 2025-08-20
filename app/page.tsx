@@ -15,6 +15,7 @@ export default function HomePage() {
       <HeroCarousel />
       {/* <ScrollZoomLayout /> */}
       {/* <HeroSection /> */}
+      <MeetTheFounder />
       <MassagePromo />
       <LuxuryEventsGallery />
       <ServicesSection />
