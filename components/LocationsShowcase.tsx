@@ -6,27 +6,27 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation"
 const locations = [
   {
     id: 1,
-    city: "London",
+    city: "Event Planning",
     image:
-      "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    quote: "The heart of UK advertising, where creativity meets opportunity.",
-    stats: "500+ premium locations",
+      "https://images.pexels.com/photos/733852/pexels-photo-733852.jpeg",
+    quote: "Turning Your Vision Into Lasting Impressions.",
+    stats: "????????????",
   },
   {
     id: 2,
-    city: "Birmingham",
+    city: "Sporting Event Planning",
     image:
-      "https://images.unsplash.com/photo-1605902711834-8b11c3e3ef2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    quote: "Dynamic urban landscape with unmatched audience engagement.",
-    stats: "200+ strategic sites",
+      "https://static.mywebsites360.com/d3536c889e90455b8c18f12a5d7c8646/i/c30f5c7422ad4373901fb774b5b3dc30/1/2GTQbgiNxerRr5gcT6hkjr8dsnb6NBTxXMi2obS/N40A3568.jpg",
+    quote: "From Kickoff to Celebration — We’ve Got You Covered.",
+    stats: "????????????",
   },
   {
     id: 3,
-    city: "Manchester",
+    city: "Balloon Decor",
     image:
-      "https://images.unsplash.com/photo-1583422409516-2895a77efded?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    quote: "Where innovation thrives and brands make lasting impressions.",
-    stats: "150+ high-impact locations",
+      "https://static.mywebsites360.com/d3536c889e90455b8c18f12a5d7c8646/i/ec404a18b107437fb80c21664fd712a6/1/4SoifmQp45JMgBnHiDiv8/20230509_143624.jpg",
+    quote: "Adding Color, Style, and Fun to Every Celebration.",
+    stats: "????????????",
   },
   {
     id: 4,
@@ -98,9 +98,15 @@ export default function LocationsShowcase() {
             titleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Locations</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Premium outdoor advertising opportunities across the UK's most vibrant cities
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Versatile Service</h2>
+          <h4 className="text-xl text-gray-600 max-w-3xl mx-auto">
+            We design events that reflect your vision—seamlessly and beautifully.
+          </h4>
+          <p>
+            From corporate functions and sporting events to weddings, anniversary parties, and milestone celebrations, Lovely Events Group offers full-service planning with flexibility and endless customization. Our team handles every detail, from concept to execution, so you and your guests can simply show up and enjoy.
+          </p>
+          <p>
+            Let us take the stress out of planning. Connect with us today to explore how we can bring your next event to life.
           </p>
         </div>
 

@@ -24,12 +24,13 @@ export default function MeetTheFounder() {
     return () => observer.disconnect()
   }, [])
 
+
   return (
     <section ref={sectionRef} className="py-20 px-4 bg-gradient-to-br from-background to-secondary/20">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Meet the Founder</h2>
+          <h2 className="text-3xl md:text-5xl lg:text-7xl font-extralight mb-6 leading-tight tracking-tight">We Bring Sophisticated Fun To Your Event</h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
         </div>
 

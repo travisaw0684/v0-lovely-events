@@ -17,8 +17,8 @@ export default function HomePage() {
       {/* <HeroSection /> */}
       <MeetTheFounder />
       {/*<MassagePromo />*/}
-      <LuxuryEventsGallery />
-      <ServicesSection />
+      {/*<LuxuryEventsGallery />*/}
+      {/*<ServicesSection />*/}
       {/*<MeetTheFounder /> */}
       {/*<FeaturedCampaigns /> */}
       <LocationsShowcase />
