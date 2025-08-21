@@ -20,19 +20,22 @@ export default function Header() {
               Home
             </Link>
             <Link href="#locations" className="text-white hover:text-gray-300 transition-colors duration-300">
-              Locations
+              Current Promotions
             </Link>
             <Link href="#" className="text-white hover:text-gray-300 transition-colors duration-300">
-              Landlords
+              Services
             </Link>
             <Link href="#campaigns" className="text-white hover:text-gray-300 transition-colors duration-300">
-              Campaigns
+              Our Story
             </Link>
             <Link href="#" className="text-white hover:text-gray-300 transition-colors duration-300">
-              About Us
+              Shop
             </Link>
             <Link href="#contact" className="text-white hover:text-gray-300 transition-colors duration-300">
-              Contact Us
+              More
+            </Link>
+            <Link href="#contact" className="text-white hover:text-gray-300 transition-colors duration-300">
+              Let's Get Started!
             </Link>
           </nav>
 

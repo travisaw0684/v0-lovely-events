@@ -30,7 +30,7 @@ export default function MeetTheFounder() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl lg:text-7xl font-extralight mb-6 leading-tight tracking-tight">We Bring Sophisticated Fun To Your Event</h2>
+          <h2 className="text-3xl md:text-5xl lg:text-5xl font-extralight mb-6 leading-tight tracking-tight">We Bring Sophisticated Fun To Your Event</h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
         </div>
 

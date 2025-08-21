@@ -30,24 +30,24 @@ const locations = [
   },
   {
     id: 4,
-    city: "Glasgow",
-    image: "https://images.unsplash.com/photo-1549918864-48ac978761a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    quote: "Scotland's creative hub with exceptional brand visibility.",
-    stats: "120+ premium positions",
+    city: "Business Event Planning",
+    image: "https://images.pexels.com/photos/7648472/pexels-photo-7648472.jpeg",
+    quote: "Your Vision. Our Expertise. One Unforgettable Event.",
+    stats: "????????????",
   },
   {
     id: 5,
-    city: "Leeds",
+    city: "Wedding Events",
     image:
-      "https://images.unsplash.com/photo-1590736969955-71cc94901144?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    quote: "Northern powerhouse delivering outstanding campaign results.",
+      "https://images.pexels.com/photos/6405800/pexels-photo-6405800.jpeg",
+    quote: "Turning ‘I Do’ Into a Dream Come True.",
     stats: "100+ strategic locations",
   },
   {
     id: 6,
-    city: "Liverpool",
+    city: "Employee Recognition Dinners",
     image:
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      "https://images.pexels.com/photos/6405800/pexels-photo-6405800.jpeg",
     quote: "Historic charm meets modern advertising excellence.",
     stats: "80+ key positions",
   },
@@ -90,7 +90,7 @@ export default function LocationsShowcase() {
   const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation()
 
   return (
-    <section id="locations" className="py-20 bg-white">
+    <section id="locations" className="py-20 bg-gradient-to-r from-[#ba3364] to-[#732b6f]">
       <div className="container mx-auto px-6">
         <div
           ref={titleRef}
@@ -98,14 +98,14 @@ export default function LocationsShowcase() {
             titleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Versatile Service</h2>
-          <h4 className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-200 mb-4">Versatile Service</h2>
+          <h4 className="text-2xl text-gray-200 max-w-3xl mx-auto">
             We design events that reflect your vision—seamlessly and beautifully.
           </h4>
-          <p>
+          <p className="text-sm text-gray-200">
             From corporate functions and sporting events to weddings, anniversary parties, and milestone celebrations, Lovely Events Group offers full-service planning with flexibility and endless customization. Our team handles every detail, from concept to execution, so you and your guests can simply show up and enjoy.
           </p>
-          <p>
+          <p className="text-sm text-gray-200">
             Let us take the stress out of planning. Connect with us today to explore how we can bring your next event to life.
           </p>
         </div>
