@@ -52,10 +52,10 @@ export default function MeetTheFounder() {
           <div className={`space-y-8 ${isVisible ? "animate-founder-text" : "opacity-0"}`}>
             <div>
               <p className="text-xl text-center text-primary font-semibold">We Bring Sophisticated Fun To Your Event</p>
-              <hr className="w-12 h-3 m-auto rounded-sm md:my-12 bg-gray-800 border-0 dark:bg-gray-700"/>
+              <hr className="w-15 h-2 m-auto rounded-sm md:my-12 bg-gray-800 border-0 dark:bg-gray-700"/>
             </div>
             <div>
-              <h3 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-4">Shawanda Holsey</h3>
+              <h3 className="ext-3xl md:text-2xl lg:text-5xl font-extralight mb-6 leading-tight tracking-tight text-center">Shawanda Holsey</h3>
               <p className="text-xl text-primary font-semibold mb-6 text-center">Founder & Creative Director</p>
             </div>
 
