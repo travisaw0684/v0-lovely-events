@@ -30,7 +30,7 @@ export default function MeetTheFounder() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl lg:text-5xl font-extralight mb-6 leading-tight tracking-tight">We Bring Sophisticated Fun To Your Event</h2>
+          {/*<h2 className="text-3xl md:text-5xl lg:text-5xl font-extralight mb-6 leading-tight tracking-tight">We Bring Sophisticated Fun To Your Event</h2>*/}
           <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
         </div>
 
@@ -43,7 +43,7 @@ export default function MeetTheFounder() {
               <img
                 src="https://static.mywebsites360.com/d3536c889e90455b8c18f12a5d7c8646/i/db962ffdb46c4063a7ae826d597429e5/1/4SoifmQp45JMgBnHjfgmz/wedding-chamber-headshots-2137.jpg?dpr=2"
                 alt="Shawanda Holsey - Founder & Creative Director"
-                className="relative w-full max-w-md mx-auto aspect-square object-cover rounded-2xl shadow-2xl"
+                className="relative h-23 w-full max-w-md mx-auto aspect-square object-cover rounded-2xl shadow-2xl"
               />
             </div>
           </div>
@@ -51,8 +51,12 @@ export default function MeetTheFounder() {
           {/* Text Content */}
           <div className={`space-y-8 ${isVisible ? "animate-founder-text" : "opacity-0"}`}>
             <div>
-              <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Shawanda Holsey</h3>
-              <p className="text-xl text-primary font-semibold mb-6">Founder & Creative Director</p>
+              <p className="text-xl text-center text-primary font-semibold">We Bring Sophisticated Fun To Your Event</p>
+              <hr className="w-12 h-3 m-auto rounded-sm md:my-12 bg-gray-800 border-0 dark:bg-gray-700"/>
+            </div>
+            <div>
+              <h3 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-4">Shawanda Holsey</h3>
+              <p className="text-xl text-primary font-semibold mb-6 text-center">Founder & Creative Director</p>
             </div>
 
             <div className="prose prose-lg max-w-none">
