@@ -79,7 +79,7 @@ export default function CallToAction() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className={`text-center lg:text-left ${isVisible ? "animate-cta-fade-in" : "opacity-0"}`}>
             <div className="mb-8">
-              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-2">Lovely Events</h1>
+              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-2">Lovely Events Rentals</h1>
               <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-indigo-500 mx-auto lg:mx-0"></div>
             </div>
           </div>
@@ -103,7 +103,7 @@ export default function CallToAction() {
               Explore Rentals
             </Button>
 
-            <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-xl">
+            { /*<Card className="bg-white/90 backdrop-blur-sm border-0 shadow-xl">
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   <Quote className="w-8 h-8 text-indigo-500 mr-3" />
@@ -123,7 +123,7 @@ export default function CallToAction() {
                   <p className="text-gray-600 text-sm">{testimonial.event}</p>
                 </div>
               </CardContent>
-            </Card>
+            </Card> 
 
             <div className="flex justify-center mt-4 space-x-2">
               {testimonials.map((_, index) => (
@@ -135,7 +135,7 @@ export default function CallToAction() {
                   }`}
                 />
               ))}
-            </div>
+            </div>*/}
           </div>
         </div>
       </div>
