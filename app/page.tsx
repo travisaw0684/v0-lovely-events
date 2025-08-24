@@ -5,6 +5,7 @@ import TrustedBrands from "@/components/TrustedBrands"
 import CallToAction from "@/components/CallToAction"
 import LocationsShowcase from "@/components/LocationsShowcase"
 import MissionStatement from "@/components/MissionStatement"
+import FeaturedCampaigns from "@/components/FeaturedCampaigns"
 import Footer from "@/components/Footer"
 
 export default function HomePage() {
@@ -24,6 +25,7 @@ export default function HomePage() {
       {/*<FeaturedCampaigns /> */}
       <LocationsShowcase />
       <MissionStatement />
+      <FeaturedCampaigns />
       <Footer />
       {/* <CookieNotice /> */}
     </div>

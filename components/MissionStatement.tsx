@@ -15,12 +15,16 @@ export default function MissionStatement() {
           }`}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-            We are passionate about creating positive change in communities and the planet
+            A History of Satisfaction
           </h2>
           <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-            Through innovative outdoor advertising solutions, we connect brands with audiences while contributing to
-            sustainable urban development and community growth. Our commitment extends beyond advertising to making a
-            meaningful impact on the world around us.
+            Our clients choose us for a reason—because we deliver.
+          </p>
+          <p className="text-xl text-gray-300 mb-12 leading-relaxed">
+            At Lovely Events Group, we’re committed to making your planning experience smooth, stress-free, and unforgettable. From the initial consultation to the final send-off, we guide you through every detail with clarity, care, and professionalism. Whether it’s managing logistics or coordinating day-of execution, we ensure your event flows seamlessly, so you can enjoy every moment.
+          </p>
+          <p className="text-xl text-gray-300 mb-12 leading-relaxed">
+            If you’re looking for a trusted event planner in Las Vegas, you’re in the right place.
           </p>
           <button className="bg-white text-black hover:bg-gray-100 transition-all duration-300 px-8 py-4 text-lg font-semibold rounded-lg">
             Contact Us
