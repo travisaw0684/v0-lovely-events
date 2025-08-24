@@ -18,11 +18,11 @@ export default function HomePage() {
       <MeetTheFounder />
       <TrustedBrands />
       <CallToAction />
-      {/*<MassagePromo />*/}
-      {/*<LuxuryEventsGallery />*/}
-      {/*<ServicesSection />*/}
-      {/*<MeetTheFounder /> */}
-      {/*<FeaturedCampaigns /> */}
+      {/* <MassagePromo /> */}
+      {/* <LuxuryEventsGallery /> */}
+      {/* <ServicesSection /> */}
+      {/* <MeetTheFounder /> */}
+      {/* <FeaturedCampaigns /> */}
       <LocationsShowcase />
       <MissionStatement />
       <FeaturedCampaigns />
