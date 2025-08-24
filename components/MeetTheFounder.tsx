@@ -43,7 +43,7 @@ export default function MeetTheFounder() {
               <img
                 src="https://static.mywebsites360.com/d3536c889e90455b8c18f12a5d7c8646/i/db962ffdb46c4063a7ae826d597429e5/1/4SoifmQp45JMgBnHjfgmz/wedding-chamber-headshots-2137.jpg?dpr=2"
                 alt="Shawanda Holsey - Founder & Creative Director"
-                className="relative h-23 w-full max-w-md mx-auto aspect-square object-cover rounded-2xl shadow-2xl"
+                className="relative h-[46rem] w-full max-w-md mx-auto aspect-square object-cover rounded-2xl shadow-2xl"
               />
             </div>
           </div>
@@ -51,10 +51,10 @@ export default function MeetTheFounder() {
           {/* Text Content */}
           <div className={`space-y-8 ${isVisible ? "animate-founder-text" : "opacity-0"}`}>
             <div>
-              <p className="text-xl text-center text-primary font-semibold">We Bring Sophisticated Fun To Your Event</p>
-              <hr className="w-15 h-2 m-auto rounded-sm md:my-12 bg-gray-800 border-0 dark:bg-gray-700"/>
+              <p className="text-[1rem] text-center text-primary font-semibold">We Bring Sophisticated Fun To Your Event</p>
+              <hr className="w-[4rem] h-[.2rem] m-auto rounded-sm md:my-[2rem] bg-gray-800 border-0 dark:bg-gray-700"/>
             </div>
-            <div>
+            <div className="!m-[0rem]">
               <h3 className="ext-3xl md:text-2xl lg:text-5xl font-extralight mb-6 leading-tight tracking-tight text-center">Shawanda Holsey</h3>
               <p className="text-xl text-primary font-semibold mb-6 text-center">Founder & Creative Director</p>
             </div>
