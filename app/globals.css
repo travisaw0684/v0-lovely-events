@@ -263,8 +263,25 @@ body {
   }
 }
 
+@keyframes brandsCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 .animate-brands-fade-in {
   animation: brandsFadeIn 0.8s ease-out;
+}
+
+.animate-brands-carousel {
+  animation: brandsCarousel 30s linear infinite;
+}
+
+.animate-brands-carousel:hover {
+  animation-play-state: paused;
 }
 
 .brands-logo {

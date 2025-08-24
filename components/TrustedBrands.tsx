@@ -58,6 +58,8 @@ const TrustedBrands = () => {
     },
   ]
 
+  const duplicatedBrands = [...brands, ...brands]
+
   return (
     <section
       ref={sectionRef}
@@ -78,27 +80,30 @@ const TrustedBrands = () => {
           </p>
         </div>
 
-        {/* Logo Grid */}
-        <div
-          className={`grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center ${isVisible ? "animate-brands-fade-in" : "opacity-0"}`}
-        >
-          {brands.map((brand, index) => (
-            <div
-              key={brand.name}
-              className="group p-6 rounded-lg transition-all duration-300 hover:shadow-lg"
-              style={{
-                backgroundColor: "var(--brands-card)",
-                animationDelay: `${index * 0.1}s`,
-              }}
-            >
-              <img
-                src={brand.logo || "/placeholder.svg"}
-                alt={`${brand.name} logo`}
-                className="brands-logo w-full h-16 object-contain mx-auto"
-                loading="lazy"
-              />
-            </div>
-          ))}
+        <div className="overflow-hidden">
+          <div
+            className={`flex animate-brands-carousel ${isVisible ? "animate-brands-fade-in" : "opacity-0"}`}
+            style={{ width: `${duplicatedBrands.length * 200}px` }}
+          >
+            {duplicatedBrands.map((brand, index) => (
+              <div
+                key={`${brand.name}-${index}`}
+                className="group p-6 rounded-lg transition-all duration-300 hover:shadow-lg flex-shrink-0"
+                style={{
+                  backgroundColor: "var(--brands-card)",
+                  width: "200px",
+                  marginRight: "2rem",
+                }}
+              >
+                <img
+                  src={brand.logo || "/placeholder.svg"}
+                  alt={`${brand.name} logo`}
+                  className="brands-logo w-full h-16 object-contain mx-auto"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Bottom Text */}
