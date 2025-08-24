@@ -146,6 +146,41 @@
   --cta-sidebar-accent-foreground: #ffffff;
   --cta-sidebar-border: #e5e7eb;
   --cta-sidebar-ring: rgba(0, 0, 0, 0.1);
+
+  /* Added design tokens for newsletter subscription CTA section */
+  --newsletter-background: #ffffff;
+  --newsletter-foreground: #374151;
+  --newsletter-card: #f8fafc;
+  --newsletter-card-foreground: #1f2937;
+  --newsletter-popover: #ffffff;
+  --newsletter-popover-foreground: #374151;
+  --newsletter-primary: #6366f1;
+  --newsletter-primary-foreground: #ffffff;
+  --newsletter-secondary: #1f2937;
+  --newsletter-secondary-foreground: #ffffff;
+  --newsletter-muted: #f8fafc;
+  --newsletter-muted-foreground: #6b7280;
+  --newsletter-accent: #6366f1;
+  --newsletter-accent-foreground: #ffffff;
+  --newsletter-destructive: #ea580c;
+  --newsletter-destructive-foreground: #ffffff;
+  --newsletter-border: #e5e7eb;
+  --newsletter-input: #ffffff;
+  --newsletter-ring: #6366f1;
+  --newsletter-chart-1: #8b5cf6;
+  --newsletter-chart-2: #4b5563;
+  --newsletter-chart-3: #374151;
+  --newsletter-chart-4: #f97316;
+  --newsletter-chart-5: #ea580c;
+  --newsletter-radius: 0.5rem;
+  --newsletter-sidebar: #ffffff;
+  --newsletter-sidebar-foreground: #374151;
+  --newsletter-sidebar-primary: #6366f1;
+  --newsletter-sidebar-primary-foreground: #ffffff;
+  --newsletter-sidebar-accent: #8b5cf6;
+  --newsletter-sidebar-accent-foreground: #ffffff;
+  --newsletter-sidebar-border: #e5e7eb;
+  --newsletter-sidebar-ring: #6366f1;
 }
 
 * {
@@ -322,6 +357,42 @@ body {
 
 .animate-cta-button-pulse:hover {
   animation: ctaButtonPulse 0.6s ease-in-out;
+}
+
+/* Added newsletter section animations */
+@keyframes newsletterFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes newsletterButtonHover {
+  from {
+    transform: scale(1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  to {
+    transform: scale(1.02);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.animate-newsletter-fade-in {
+  animation: newsletterFadeIn 1s ease-out;
+}
+
+.animate-newsletter-button-hover {
+  transition: all 0.3s ease-in-out;
+}
+
+.animate-newsletter-button-hover:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 /* Swiper pagination styles */

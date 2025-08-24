@@ -7,6 +7,7 @@ import LocationsShowcase from "@/components/LocationsShowcase"
 import MissionStatement from "@/components/MissionStatement"
 import FeaturedCampaigns from "@/components/FeaturedCampaigns"
 import Footer from "@/components/Footer"
+import NewsletterSubscription from "@/components/NewsletterSubscription"
 
 export default function HomePage() {
   return (
@@ -18,11 +19,7 @@ export default function HomePage() {
       <MeetTheFounder />
       <TrustedBrands />
       <CallToAction />
-      {/* <MassagePromo /> */}
-      {/* <LuxuryEventsGallery /> */}
-      {/* <ServicesSection /> */}
-      {/* <MeetTheFounder /> */}
-      {/* <FeaturedCampaigns /> */}
+      <NewsletterSubscription />
       <LocationsShowcase />
       <MissionStatement />
       <FeaturedCampaigns />
