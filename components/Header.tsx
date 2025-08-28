@@ -19,16 +19,16 @@ export default function Header() {
             <Link href="/" className="text-white hover:text-gray-300 transition-colors duration-300">
               Home
             </Link>
-            <Link href="#locations" className="text-white hover:text-gray-300 transition-colors duration-300">
+            <Link href="/promotions" className="text-white hover:text-gray-300 transition-colors duration-300">
               Current Promotions
             </Link>
-            <Link href="#" className="text-white hover:text-gray-300 transition-colors duration-300">
+            <Link href="/services" className="text-white hover:text-gray-300 transition-colors duration-300">
               Services
             </Link>
-            <Link href="#campaigns" className="text-white hover:text-gray-300 transition-colors duration-300">
+            <Link href="/our-story" className="text-white hover:text-gray-300 transition-colors duration-300">
               Our Story
             </Link>
-            <Link href="#" className="text-white hover:text-gray-300 transition-colors duration-300">
+            <Link href="/shop" className="text-white hover:text-gray-300 transition-colors duration-300">
               Shop
             </Link>
             <Link href="#contact" className="text-white hover:text-gray-300 transition-colors duration-300">
@@ -52,17 +52,17 @@ export default function Header() {
               <Link href="/" className="text-white hover:text-gray-300 transition-colors duration-300">
                 Home
               </Link>
-              <Link href="#locations" className="text-white hover:text-gray-300 transition-colors duration-300">
-                Locations
+              <Link href="/promotions" className="text-white hover:text-gray-300 transition-colors duration-300">
+                Current Promotions
               </Link>
-              <Link href="#" className="text-white hover:text-gray-300 transition-colors duration-300">
-                Landlords
+              <Link href="/services" className="text-white hover:text-gray-300 transition-colors duration-300">
+                Services
               </Link>
-              <Link href="#campaigns" className="text-white hover:text-gray-300 transition-colors duration-300">
-                Campaigns
+              <Link href="/our-story" className="text-white hover:text-gray-300 transition-colors duration-300">
+                Our Story
               </Link>
-              <Link href="#" className="text-white hover:text-gray-300 transition-colors duration-300">
-                About Us
+              <Link href="/shop" className="text-white hover:text-gray-300 transition-colors duration-300">
+                Shop
               </Link>
               <Link href="#contact" className="text-white hover:text-gray-300 transition-colors duration-300">
                 Contact Us
@@ -74,3 +74,5 @@ export default function Header() {
     </header>
   )
 }
+
+export { Header }

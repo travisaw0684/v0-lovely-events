@@ -3,6 +3,7 @@ import HeroCarousel from "@/components/HeroCarousel"
 import MeetTheFounder from "@/components/MeetTheFounder"
 import TrustedBrands from "@/components/TrustedBrands"
 import CallToAction from "@/components/CallToAction"
+import TestimonialsSection from "@/components/TestimonialsSection"
 import LocationsShowcase from "@/components/LocationsShowcase"
 import MissionStatement from "@/components/MissionStatement"
 import FeaturedCampaigns from "@/components/FeaturedCampaigns"
@@ -19,6 +20,7 @@ export default function HomePage() {
       <MeetTheFounder />
       <TrustedBrands />
       <CallToAction />
+      <TestimonialsSection />
       <NewsletterSubscription />
       <LocationsShowcase />
       <MissionStatement />

@@ -7,40 +7,75 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
+  /* Updated to luxury event planning design tokens with blush pink, champagne gold, ivory, and light gray */
+  --background: #ffffff; /* Pure white */
+  --foreground: #374151; /* Dark gray for text */
+  --card: #f8f4f1; /* Champagne ivory */
+  --card-foreground: #374151; /* Dark gray for card text */
+  --popover: #f8f4f1; /* Champagne ivory for popovers */
+  --popover-foreground: #374151; /* Dark gray for popover text */
+  --primary: #f5e3d7; /* Light blush pink for key elements */
+  --primary-foreground: #374151; /* Dark gray for primary text */
+  --secondary: #d4af7f; /* Champagne gold for accents */
+  --secondary-foreground: #ffffff; /* White for contrasting text */
+  --muted: #d1d5db; /* Light gray for muted text */
+  --muted-foreground: #374151; /* Dark gray for muted text */
+  --accent: #d4af7f; /* Champagne gold for buttons and highlights */
+  --accent-foreground: #ffffff; /* White for accent button text */
+  --destructive: #dc2626; /* Red for error messages */
+  --destructive-foreground: #ffffff; /* White for error message text */
+  --border: #d1d5db; /* Light gray for borders */
+  --input: #ffffff; /* White for input fields */
+  --ring: #d4af7f; /* Champagne gold for focus rings */
+  --chart-1: #f5e3d7; /* Light blush pink */
+  --chart-2: #d4af7f; /* Champagne gold */
+  --chart-3: #f8f4f1; /* Champagne ivory */
+  --chart-4: #d1d5db; /* Light gray */
+  --chart-5: #ffffff; /* Pure white */
+  --radius: 0.5rem; /* Rounded corners */
+  --sidebar: #f8f4f1; /* Sidebar background */
+  --sidebar-foreground: #374151; /* Dark gray for sidebar text */
+  --sidebar-primary: #f5e3d7; /* Light blush pink for sidebar highlights */
+  --sidebar-primary-foreground: #374151; /* Dark gray for sidebar primary text */
+  --sidebar-accent: #d4af7f; /* Champagne gold for sidebar accents */
+  --sidebar-accent-foreground: #ffffff; /* White for sidebar accent text */
+  --sidebar-border: #d1d5db; /* Light gray for sidebar borders */
+  --sidebar-ring: #d4af7f; /* Champagne gold for sidebar focus rings */
+
   /* Updated design tokens for luxury events services section */
-  --background: #ffffff;
-  --foreground: #475569;
-  --card: #ecfeff;
-  --card-foreground: #475569;
-  --popover: #ffffff;
-  --popover-foreground: #475569;
-  --primary: #164e63;
-  --primary-foreground: #ffffff;
-  --secondary: #f59e0b;
-  --secondary-foreground: #ffffff;
-  --muted: #fdf2f8;
-  --muted-foreground: #475569;
-  --accent: #f59e0b;
-  --accent-foreground: #ffffff;
-  --destructive: #dc2626;
-  --destructive-foreground: #ffffff;
-  --border: #e2e8f0;
-  --input: #ffffff;
-  --ring: rgba(22, 78, 99, 0.5);
-  --chart-1: #164e63;
-  --chart-2: #f59e0b;
-  --chart-3: #dc2626;
-  --chart-4: #ecfeff;
-  --chart-5: #fdf2f8;
-  --radius: 0.5rem;
-  --sidebar: #ffffff;
-  --sidebar-foreground: #475569;
-  --sidebar-primary: #164e63;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #f59e0b;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #e2e8f0;
-  --sidebar-ring: rgba(22, 78, 99, 0.5);
+  --services-background: #ffffff;
+  --services-foreground: #475569;
+  --services-card: #ecfeff;
+  --services-card-foreground: #475569;
+  --services-popover: #ffffff;
+  --services-popover-foreground: #475569;
+  --services-primary: #164e63;
+  --services-primary-foreground: #ffffff;
+  --services-secondary: #f59e0b;
+  --services-secondary-foreground: #ffffff;
+  --services-muted: #fdf2f8;
+  --services-muted-foreground: #475569;
+  --services-accent: #f59e0b;
+  --services-accent-foreground: #ffffff;
+  --services-destructive: #dc2626;
+  --services-destructive-foreground: #ffffff;
+  --services-border: #e2e8f0;
+  --services-input: #ffffff;
+  --services-ring: rgba(22, 78, 99, 0.5);
+  --services-chart-1: #164e63;
+  --services-chart-2: #f59e0b;
+  --services-chart-3: #dc2626;
+  --services-chart-4: #ecfeff;
+  --services-chart-5: #fdf2f8;
+  --services-radius: 0.5rem;
+  --services-sidebar: #ffffff;
+  --services-sidebar-foreground: #475569;
+  --services-sidebar-primary: #164e63;
+  --services-sidebar-primary-foreground: #ffffff;
+  --services-sidebar-accent: #f59e0b;
+  --services-sidebar-accent-foreground: #ffffff;
+  --services-sidebar-border: #e2e8f0;
+  --services-sidebar-ring: rgba(22, 78, 99, 0.5);
 
   /* Updated design tokens for Meet the Founder section with warm, approachable colors */
   --founder-background: #ffffff;
@@ -181,6 +216,80 @@
   --newsletter-sidebar-accent-foreground: #ffffff;
   --newsletter-sidebar-border: #e5e7eb;
   --newsletter-sidebar-ring: #6366f1;
+
+  /* Added design tokens for promotions page with luxury event planning aesthetic */
+  --promotions-background: #ffffff; /* Page background */
+  --promotions-foreground: #374151; /* Main text color */
+  --promotions-card: #f8e5d7; /* Card background for offers - champagne gold */
+  --promotions-card-foreground: #374151; /* Text color within cards */
+  --promotions-popover: #f6d3c0; /* Popover background - blush pink */
+  --promotions-popover-foreground: #374151; /* Text color in popovers */
+  --promotions-primary: #f6d3c0; /* For call-to-action buttons - blush pink */
+  --promotions-primary-foreground: #374151; /* Text color on buttons */
+  --promotions-secondary: #e9b8a1; /* For secondary buttons - soft coral */
+  --promotions-secondary-foreground: #ffffff; /* Text color on secondary buttons */
+  --promotions-muted: #f2f2f2; /* For muted text or backgrounds - ivory */
+  --promotions-muted-foreground: #b2b2b2; /* Muted text color */
+  --promotions-accent: #e9b8a1; /* Accent elements like borders or highlights - soft coral */
+  --promotions-accent-foreground: #ffffff; /* Text color on accent backgrounds */
+  --promotions-destructive: #dc2626; /* For any error messages */
+  --promotions-destructive-foreground: #ffffff; /* Text color for error messages */
+  --promotions-border: #e9b8a1; /* Card borders - soft coral */
+  --promotions-input: #ffffff; /* Input fields background */
+  --promotions-ring: #f6d3c0; /* Focus ring color - blush pink */
+  --promotions-radius: 0.5rem; /* Rounded corners for buttons and cards */
+  --promotions-sidebar: #f8e5d7; /* Sidebar background - champagne gold */
+  --promotions-sidebar-foreground: #374151; /* Text color in sidebar */
+  --promotions-sidebar-primary: #f6d3c0; /* Primary sidebar elements - blush pink */
+  --promotions-sidebar-primary-foreground: #374151; /* Text color for sidebar primary */
+  --promotions-sidebar-accent: #e9b8a1; /* Sidebar accent elements - soft coral */
+  --promotions-sidebar-accent-foreground: #ffffff; /* Text color for sidebar accents */
+  --promotions-sidebar-border: #e9b8a1; /* Sidebar border color - soft coral */
+  --promotions-sidebar-ring: #f6d3c0; /* Sidebar focus ring color - blush pink */
+
+  /* Added design tokens for services page with luxury event planning aesthetic */
+  --services-page-background: #ffffff; /* Main background color */
+  --services-page-foreground: #374151; /* Text color */
+  --services-page-card: #f5f0e1; /* Card background */
+  --services-page-card-foreground: #374151; /* Card text color */
+  --services-page-popover: #f7e8e2; /* Popover background */
+  --services-page-popover-foreground: #374151; /* Popover text color */
+  --services-page-primary: #f7e8e2; /* Primary color for accents and backgrounds */
+  --services-page-primary-foreground: #374151; /* Primary text color */
+  --services-page-secondary: #d4c8b2; /* Secondary accent color */
+  --services-page-secondary-foreground: #374151; /* Secondary text color */
+  --services-page-muted: #e2d8d0; /* Muted background for sections */
+  --services-page-muted-foreground: #374151; /* Muted text color */
+  --services-page-accent: #d4c8b2; /* Accent color for buttons and highlights */
+  --services-page-accent-foreground: #ffffff; /* Text color for accents */
+  --services-page-destructive: #be123c; /* Color for alerts or errors */
+  --services-page-destructive-foreground: #ffffff; /* Text color for alerts */
+  --services-page-border: #e2d8d0; /* Border color for cards and sections */
+  --services-page-input: #ffffff; /* Input field background */
+  --services-page-ring: #d4c8b2; /* Ring color for focused elements */
+  --services-page-radius: 0.5rem; /* Corner rounding for cards and buttons */
+
+  /* Added design tokens for Our Story page with luxury event planning aesthetic */
+  --story-background: #ffffff; /* White for a clean, elegant backdrop */
+  --story-foreground: #4b5563; /* Dark gray for text, ensuring readability */
+  --story-card: #f5f0e1; /* Champagne Gold for card backgrounds */
+  --story-card-foreground: #4b5563; /* Dark gray for card text */
+  --story-popover: #f8e1d4; /* Blush Pink for popovers */
+  --story-popover-foreground: #4b5563; /* Dark gray for popover text */
+  --story-primary: #f8e1d4; /* Blush Pink for primary accents and buttons */
+  --story-primary-foreground: #4b5563; /* Dark gray for text on primary buttons */
+  --story-secondary: #d6bdaf; /* Soft Beige for secondary elements */
+  --story-secondary-foreground: #4b5563; /* Dark gray for text on secondary elements */
+  --story-muted: #eae8e2; /* Ivory for muted backgrounds */
+  --story-muted-foreground: #4b5563; /* Dark gray for muted text */
+  --story-accent: #f5f0e1; /* Champagne Gold for highlights */
+  --story-accent-foreground: #4b5563; /* Dark gray for text on accent elements */
+  --story-destructive: #ea580c; /* Standard red for any error messages */
+  --story-destructive-foreground: #ffffff; /* White text on destructive elements */
+  --story-border: #d6bdaf; /* Soft Beige for card and section borders */
+  --story-input: #ffffff; /* White for input fields */
+  --story-ring: #f8e1d4; /* Blush Pink for focus rings */
+  --story-radius: 0.5rem; /* Rounded corners for buttons and cards */
 }
 
 * {
@@ -393,6 +502,143 @@ body {
 .animate-newsletter-button-hover:hover {
   transform: scale(1.02);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Added promotions page animations */
+@keyframes promotionsFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes promotionsCardHover {
+  from {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  to {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@keyframes promotionsBannerPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.animate-promotions-fade-in {
+  animation: promotionsFadeIn 1s ease-out;
+}
+
+.animate-promotions-card-hover {
+  transition: all 0.3s ease-in-out;
+}
+
+.animate-promotions-card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.animate-promotions-banner-pulse {
+  animation: promotionsBannerPulse 2s ease-in-out infinite;
+}
+
+/* Added services page animations */
+@keyframes servicesPageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes servicesPageCardHover {
+  from {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  to {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.animate-services-page-fade-in {
+  animation: servicesPageFadeIn 1s ease-out;
+}
+
+.animate-services-page-card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-services-page-card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Added Our Story page animations */
+@keyframes storyFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes storySlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes storyCardHover {
+  from {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  to {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.animate-story-fade-in {
+  animation: storyFadeIn 1s ease-out;
+}
+
+.animate-story-slide-in {
+  animation: storySlideIn 1s ease-out;
+}
+
+.animate-story-card-hover {
+  transition: all 0.3s ease-in-out;
+}
+
+.animate-story-card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 /* Swiper pagination styles */

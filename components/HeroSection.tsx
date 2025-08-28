@@ -7,11 +7,7 @@ import "swiper/css"
 import "swiper/css/effect-fade"
 import "swiper/css/pagination"
 
-const heroImages = [
-  "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
-  "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
-  "https://images.unsplash.com/photo-1514565131-fce0801e5785?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
-]
+const heroImages = ["/elegant-wedding-reception-with-beautiful-table-set.png", "/sophisticated-corporate-event-with-modern-decor--a.png", "/luxurious-social-gathering-with-champagne--elegant.png"]
 
 export default function HeroSection() {
   return (
@@ -35,28 +31,28 @@ export default function HeroSection() {
         {heroImages.map((image, index) => (
           <SwiperSlide key={index}>
             <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${image})` }} />
-            <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/40 to-black/60" />
+            <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-black/40" />
           </SwiperSlide>
         ))}
       </Swiper>
 
       {/* Hero Content */}
       <div className="absolute inset-0 flex items-center justify-center z-10">
-        <div className="text-center text-white max-w-6xl px-6 pl-12 md:pl-16 lg:pl-20 animate-fade-in">
-          <h1 className="text-4xl md:text-6xl lg:text-8xl font-black mb-6 leading-tight tracking-tight">
-            MAX
-            <br />
-            PLAN
+        <div className="text-center text-white max-w-4xl px-6 animate-fade-in">
+          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight tracking-wide text-balance">
+            Making Your Events
+            <span className="block text-secondary"> Unforgettable</span>
           </h1>
-          <p className="text-xl md:text-2xl lg:text-3xl mb-8 font-light max-w-4xl">
-            We create positive change in communities and the planet.
+          <p className="font-sans text-lg md:text-xl lg:text-2xl mb-8 font-light max-w-3xl mx-auto leading-relaxed text-pretty">
+            Sophisticated event planning services specializing in weddings, corporate events, and social gatherings that
+            reflect your unique style and story.
           </p>
-          <div className="justify-center flex flex-col sm:flex-row gap-4 animate-slide-up">
-            <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300 px-8 py-4 text-lg font-semibold tracking-wide">
-              LOCATIONS <i className="fas fa-arrow-right ml-2"></i>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
+            <button className="bg-secondary hover:bg-secondary/90 text-white px-8 py-4 text-lg font-medium tracking-wide transition-all duration-300 rounded-md shadow-lg hover:shadow-xl transform hover:scale-105">
+              View Our Services
             </button>
-            <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300 px-8 py-4 text-lg font-semibold tracking-wide">
-              LANDLORDS <i className="fas fa-arrow-right ml-2"></i>
+            <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-foreground transition-all duration-300 px-8 py-4 text-lg font-medium tracking-wide rounded-md">
+              Book Consultation
             </button>
           </div>
         </div>

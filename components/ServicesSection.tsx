@@ -57,29 +57,29 @@ export default function ServicesSection() {
     const IconComponent = service.icon
 
     return (
-      <section className="py-20 px-4" style={{ backgroundColor: "#ba3364" }}>
+      <section className="py-20 px-4 bg-card">
         <div className="max-w-4xl mx-auto">
           {/* Back Button */}
           <button
             onClick={handleBackToCards}
-            className="flex items-center gap-2 text-primary hover:text-accent transition-colors duration-300 mb-8 group"
+            className="flex items-center gap-2 text-secondary hover:text-accent transition-colors duration-300 mb-8 group"
           >
             <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-300" />
-            <span className="font-medium">Back to Services</span>
+            <span className="font-medium font-sans">Back to Services</span>
           </button>
 
           {/* Service Detail */}
-          <div className="bg-card rounded-3xl p-12 border border-border">
+          <div className="bg-background rounded-3xl p-12 border border-border shadow-lg">
             <div className="text-center mb-8">
-              <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                <IconComponent className="w-10 h-10 text-primary-foreground" />
+              <div className="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                <IconComponent className="w-10 h-10 text-secondary-foreground" />
               </div>
-              <h2 className="text-4xl font-bold text-card-foreground mb-4">{service.title}</h2>
-              <p className="text-xl text-muted-foreground mb-8">{service.description}</p>
+              <h2 className="font-serif text-4xl font-bold text-foreground mb-4">{service.title}</h2>
+              <p className="font-sans text-xl text-muted-foreground mb-8">{service.description}</p>
             </div>
 
             <div className="prose prose-lg max-w-none text-center">
-              <p className="text-muted-foreground leading-relaxed text-lg">{service.details}</p>
+              <p className="font-sans text-muted-foreground leading-relaxed text-lg">{service.details}</p>
             </div>
           </div>
         </div>
@@ -88,25 +88,25 @@ export default function ServicesSection() {
   }
 
   return (
-    <section className="py-20 px-4" style={{ backgroundColor: "#ba3364" }}>
+    <section className="py-20 px-4 bg-card">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Our Expertise</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Our Expertise</h2>
+          <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             We specialize in creating extraordinary events that reflect your style and story.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.slice(0, 3).map((service, index) => {
             const IconComponent = service.icon
             return (
               <div
                 key={index}
                 onClick={() => handleServiceClick(index)}
-                className="group bg-card rounded-2xl overflow-hidden text-center transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer relative"
+                className="group bg-background rounded-2xl overflow-hidden text-center transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer relative min-h-[300px]"
                 style={{
                   backgroundImage: `url(${service.backgroundImage})`,
                   backgroundSize: "cover",
@@ -114,20 +114,20 @@ export default function ServicesSection() {
                 }}
               >
                 {/* Overlay for better text readability */}
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300 rounded-2xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20 group-hover:from-black/60 group-hover:via-black/30 group-hover:to-black/10 transition-all duration-300 rounded-2xl"></div>
 
                 {/* Content over background */}
-                <div className="relative z-10 p-8">
+                <div className="relative z-10 p-8 h-full flex flex-col justify-end">
                   {/* Icon */}
                   <div className="mb-6 flex justify-center">
-                                      <div className="w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white transition-colors duration-300">
-                      <IconComponent className="w-8 h-8 text-primary" />
+                    <div className="w-16 h-16 bg-secondary/90 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-secondary transition-colors duration-300">
+                      <IconComponent className="w-8 h-8 text-secondary-foreground" />
                     </div>
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                  <p className="text-white/90 leading-relaxed">{service.description}</p>
+                  <h3 className="font-serif text-2xl font-bold text-white mb-3">{service.title}</h3>
+                  <p className="font-sans text-white/90 leading-relaxed">{service.description}</p>
                 </div>
               </div>
             )
