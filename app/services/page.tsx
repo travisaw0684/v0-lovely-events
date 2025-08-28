@@ -148,10 +148,7 @@ const testimonials = [
 
 export default function ServicesPage() {
   return (
-    <div
-      className="min-h-screen"
-      style={{ backgroundColor: "var(--services-page-background)", color: "var(--services-page-foreground)" }}
-    >
+    <div className="min-h-screen bg-gray-50 text-gray-900">
       <Header />
 
       {/* Hero Section */}
@@ -160,19 +157,13 @@ export default function ServicesPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url(/luxurious-event-venue-with-elegant-table-settings.png)" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#ba3364]/80 via-[#732b6f]/60 to-[#ba3364]/80" />
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 animate-services-page-fade-in">
           <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">Crafting Unforgettable Experiences</h1>
           <p className="font-sans text-xl md:text-2xl mb-8 leading-relaxed">
             From intimate celebrations to grand affairs, we bring your vision to life with elegance and precision.
           </p>
-          <button
-            className="px-8 py-4 rounded-full font-sans font-semibold text-lg transition-all duration-300 animate-services-page-card-hover"
-            style={{
-              backgroundColor: "var(--services-page-accent)",
-              color: "var(--services-page-accent-foreground)",
-            }}
-          >
+          <button className="bg-[#ba3364] hover:bg-[#732b6f] text-white px-8 py-4 rounded-full font-sans font-semibold text-lg transition-all duration-300 animate-services-page-card-hover">
             Start Planning Your Event
             <ArrowRight className="inline-block ml-2 w-5 h-5" />
           </button>
@@ -184,10 +175,7 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-services-page-fade-in">
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">Our Services</h2>
-            <p
-              className="font-sans text-xl max-w-3xl mx-auto leading-relaxed"
-              style={{ color: "var(--services-page-muted-foreground)" }}
-            >
+            <p className="font-sans text-xl max-w-3xl mx-auto leading-relaxed text-gray-600">
               We specialize in creating extraordinary events that reflect your style and story, with comprehensive
               planning services tailored to your needs.
             </p>
@@ -198,28 +186,17 @@ export default function ServicesPage() {
               const IconComponent = service.icon
               return (
                 <div key={index} className="animate-services-page-fade-in">
-                  <div
-                    className="rounded-3xl p-12 animate-services-page-card-hover"
-                    style={{ backgroundColor: "var(--services-page-card)" }}
-                  >
+                  <div className="bg-white rounded-3xl p-12 shadow-lg hover:shadow-xl transition-all duration-300 animate-services-page-card-hover">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                       {/* Content */}
                       <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                         <div className="flex items-center mb-6">
-                          <div
-                            className="w-16 h-16 rounded-full flex items-center justify-center mr-4"
-                            style={{ backgroundColor: "var(--services-page-primary)" }}
-                          >
-                            <IconComponent
-                              className="w-8 h-8"
-                              style={{ color: "var(--services-page-primary-foreground)" }}
-                            />
+                          <div className="w-16 h-16 rounded-full bg-[#ba3364] flex items-center justify-center mr-4">
+                            <IconComponent className="w-8 h-8 text-white" />
                           </div>
                           <div>
                             <h3 className="font-serif text-3xl font-bold">{service.title}</h3>
-                            <p className="font-sans text-lg" style={{ color: "var(--services-page-muted-foreground)" }}>
-                              {service.subtitle}
-                            </p>
+                            <p className="font-sans text-lg text-gray-600">{service.subtitle}</p>
                           </div>
                         </div>
 
@@ -230,10 +207,7 @@ export default function ServicesPage() {
                           <ul className="space-y-2">
                             {service.features.map((feature, featureIndex) => (
                               <li key={featureIndex} className="flex items-center font-sans">
-                                <CheckCircle
-                                  className="w-5 h-5 mr-3 flex-shrink-0"
-                                  style={{ color: "var(--services-page-accent)" }}
-                                />
+                                <CheckCircle className="w-5 h-5 mr-3 flex-shrink-0 text-[#ba3364]" />
                                 {feature}
                               </li>
                             ))}
@@ -244,16 +218,10 @@ export default function ServicesPage() {
                           {service.packages.map((pkg, pkgIndex) => (
                             <div
                               key={pkgIndex}
-                              className="p-4 rounded-2xl border-2 text-center"
-                              style={{
-                                borderColor: "var(--services-page-border)",
-                                backgroundColor: "var(--services-page-background)",
-                              }}
+                              className="p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 text-center hover:border-[#ba3364] transition-colors duration-300"
                             >
                               <h5 className="font-serif text-lg font-semibold mb-2">{pkg.name}</h5>
-                              <p className="font-sans font-bold mb-3" style={{ color: "var(--services-page-accent)" }}>
-                                {pkg.price}
-                              </p>
+                              <p className="font-sans font-bold mb-3 text-[#ba3364]">{pkg.price}</p>
                               <ul className="text-sm space-y-1">
                                 {pkg.features.map((feature, fIndex) => (
                                   <li key={fIndex} className="font-sans">
@@ -283,7 +251,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 px-4" style={{ backgroundColor: "var(--services-page-muted)" }}>
+      <section className="py-20 px-4 bg-gray-100">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-services-page-fade-in">
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">Our Process</h2>
@@ -297,11 +265,8 @@ export default function ServicesPage() {
               const IconComponent = step.icon
               return (
                 <div key={index} className="text-center animate-services-page-fade-in">
-                  <div
-                    className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
-                    style={{ backgroundColor: "var(--services-page-primary)" }}
-                  >
-                    <IconComponent className="w-10 h-10" style={{ color: "var(--services-page-primary-foreground)" }} />
+                  <div className="w-20 h-20 rounded-full bg-[#ba3364] flex items-center justify-center mx-auto mb-6">
+                    <IconComponent className="w-10 h-10 text-white" />
                   </div>
                   <h3 className="font-serif text-2xl font-bold mb-4">{step.title}</h3>
                   <p className="font-sans text-lg leading-relaxed">{step.description}</p>
@@ -317,10 +282,7 @@ export default function ServicesPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-services-page-fade-in">
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">Client Testimonials</h2>
-            <p
-              className="font-sans text-xl max-w-3xl mx-auto leading-relaxed"
-              style={{ color: "var(--services-page-muted-foreground)" }}
-            >
+            <p className="font-sans text-xl max-w-3xl mx-auto leading-relaxed text-gray-600">
               Hear from our satisfied clients about their unforgettable experiences.
             </p>
           </div>
@@ -329,8 +291,7 @@ export default function ServicesPage() {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="p-8 rounded-2xl text-center animate-services-page-card-hover"
-                style={{ backgroundColor: "var(--services-page-card)" }}
+                className="p-8 rounded-2xl bg-white shadow-lg text-center hover:shadow-xl transition-all duration-300 animate-services-page-card-hover"
               >
                 <div
                   className="w-20 h-20 rounded-full bg-cover bg-center mx-auto mb-6"
@@ -338,14 +299,12 @@ export default function ServicesPage() {
                 />
                 <div className="flex justify-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current" style={{ color: "var(--services-page-accent)" }} />
+                    <Star key={i} className="w-5 h-5 fill-current text-[#ba3364]" />
                   ))}
                 </div>
                 <p className="font-sans text-lg mb-4 italic">"{testimonial.text}"</p>
                 <h4 className="font-serif text-xl font-semibold">{testimonial.name}</h4>
-                <p className="font-sans" style={{ color: "var(--services-page-muted-foreground)" }}>
-                  {testimonial.event}
-                </p>
+                <p className="font-sans text-gray-600">{testimonial.event}</p>
               </div>
             ))}
           </div>
@@ -353,19 +312,13 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4" style={{ backgroundColor: "var(--services-page-primary)" }}>
+      <section className="py-20 px-4 bg-[#ba3364] text-white">
         <div className="max-w-4xl mx-auto text-center animate-services-page-fade-in">
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">Ready to Start Planning?</h2>
           <p className="font-sans text-xl mb-8 leading-relaxed">
             Let's create an unforgettable experience together. Contact us today for a consultation.
           </p>
-          <button
-            className="px-8 py-4 rounded-full font-sans font-semibold text-lg transition-all duration-300 animate-services-page-card-hover"
-            style={{
-              backgroundColor: "var(--services-page-accent)",
-              color: "var(--services-page-accent-foreground)",
-            }}
-          >
+          <button className="bg-[#732b6f] hover:bg-white hover:text-[#ba3364] px-8 py-4 rounded-full font-sans font-semibold text-lg transition-all duration-300 animate-services-page-card-hover">
             Book Your Consultation
             <ArrowRight className="inline-block ml-2 w-5 h-5" />
           </button>

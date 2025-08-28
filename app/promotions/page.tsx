@@ -102,7 +102,7 @@ export default function PromotionsPage() {
       <Header />
 
       {/* Limited Time Banner */}
-      <div className="bg-gradient-to-r from-[#e9b8a1] to-[#f6d3c0] text-white py-3 px-4 mt-[3.9rem] text-center animate-promotions-banner-pulse">
+      <div className="bg-gradient-to-r from-[#ba3364] to-[#732b6f] text-white py-3 px-4 mt-[3.9rem] text-center animate-promotions-banner-pulse">
         <div className="flex items-center justify-center gap-2">
           <Clock className="h-4 w-4" />
           <span className="font-medium">Limited Time Only! Spring Promotion - Save 20% on All Packages</span>
@@ -120,18 +120,18 @@ export default function PromotionsPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#f6d3c0]/80 to-[#e9b8a1]/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#ba3364]/70 to-[#732b6f]/50"></div>
         </div>
         <div
           className={`relative z-10 text-center max-w-4xl mx-auto px-6 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          <h1 className="font-serif text-5xl md:text-6xl font-bold text-gray-800 mb-6">Exclusive Event Packages</h1>
-          <p className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
+          <h1 className="font-serif text-5xl md:text-6xl font-bold text-white mb-6">Exclusive Event Packages</h1>
+          <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
             Discover our limited-time offers and seasonal packages designed to make your special moments extraordinary
           </p>
           <Button
             size="lg"
-            className="bg-[#f6d3c0] hover:bg-[#e9b8a1] text-gray-800 font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105"
+            className="bg-[#ba3364] hover:bg-[#732b6f] text-white font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105"
           >
             <Gift className="mr-2 h-5 w-5" />
             Explore Our Offers
@@ -156,14 +156,14 @@ export default function PromotionsPage() {
             {promotions.map((promo, index) => (
               <Card
                 key={promo.id}
-                className={`overflow-hidden border-[#e9b8a1] bg-[#f8e5d7] animate-promotions-card-hover transition-all duration-700 delay-${(index + 1) * 200} ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                className={`overflow-hidden border-[#ba3364] bg-gradient-to-br from-white to-[#ba3364]/5 animate-promotions-card-hover transition-all duration-700 delay-${(index + 1) * 200} ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               >
                 <div className="relative h-64">
                   <Image src={promo.image || "/placeholder.svg"} alt={promo.title} fill className="object-cover" />
                   <div className="absolute top-4 left-4">
-                    <Badge className="bg-[#e9b8a1] text-white font-semibold">{promo.discount}</Badge>
+                    <Badge className="bg-[#ba3364] text-white font-semibold">{promo.discount}</Badge>
                     {promo.isLimited && (
-                      <Badge className="bg-red-500 text-white font-semibold ml-2">Limited Time</Badge>
+                      <Badge className="bg-[#732b6f] text-white font-semibold ml-2">Limited Time</Badge>
                     )}
                   </div>
                 </div>
@@ -177,14 +177,14 @@ export default function PromotionsPage() {
 
                 <CardContent className="space-y-4">
                   <div className="flex items-center gap-4">
-                    <span className="text-2xl font-bold text-[#e9b8a1]">{promo.salePrice}</span>
+                    <span className="text-2xl font-bold text-[#ba3364]">{promo.salePrice}</span>
                     <span className="text-lg text-gray-500 line-through">{promo.originalPrice}</span>
                   </div>
 
                   <ul className="space-y-2">
                     {promo.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-gray-700">
-                        <Heart className="h-4 w-4 text-[#f6d3c0]" />
+                        <Heart className="h-4 w-4 text-[#732b6f]" />
                         {feature}
                       </li>
                     ))}
@@ -197,7 +197,7 @@ export default function PromotionsPage() {
                 </CardContent>
 
                 <CardFooter>
-                  <Button className="w-full bg-[#f6d3c0] hover:bg-[#e9b8a1] text-gray-800 font-semibold transition-all duration-300 hover:scale-105">
+                  <Button className="w-full bg-[#ba3364] hover:bg-[#732b6f] text-white font-semibold transition-all duration-300 hover:scale-105">
                     Learn More
                   </Button>
                 </CardFooter>
@@ -223,7 +223,7 @@ export default function PromotionsPage() {
             {testimonials.map((testimonial, index) => (
               <Card
                 key={index}
-                className={`bg-white border-[#e9b8a1] transition-all duration-700 delay-${(index + 6) * 100} ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                className={`bg-white border-[#ba3364] transition-all duration-700 delay-${(index + 6) * 100} ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               >
                 <CardContent className="p-6 text-center">
                   <div className="relative w-20 h-20 mx-auto mb-4">
@@ -237,7 +237,7 @@ export default function PromotionsPage() {
 
                   <div className="flex justify-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-[#f6d3c0] fill-current" />
+                      <Star key={i} className="h-5 w-5 text-[#ba3364] fill-current" />
                     ))}
                   </div>
 
@@ -255,25 +255,25 @@ export default function PromotionsPage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-[#f6d3c0] to-[#e9b8a1]">
+      <section className="py-20 px-6 bg-gradient-to-r from-[#ba3364] to-[#732b6f]">
         <div
           className={`max-w-4xl mx-auto text-center transition-all duration-1000 delay-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-gray-800 mb-6">Ready to Create Magic?</h2>
-          <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Ready to Create Magic?</h2>
+          <p className="text-xl text-white/90 mb-8 leading-relaxed">
             Don't miss out on these exclusive offers. Contact us today to start planning your unforgettable event.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-white hover:bg-gray-100 text-gray-800 font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105"
+              className="bg-white hover:bg-gray-100 text-[#ba3364] font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105"
             >
               Book Consultation
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-gray-800 hover:bg-white hover:text-gray-800 font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 bg-transparent"
+              className="border-white text-white hover:bg-white hover:text-[#ba3364] font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 bg-transparent"
             >
               View Portfolio
             </Button>

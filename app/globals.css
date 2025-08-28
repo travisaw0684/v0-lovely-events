@@ -290,6 +290,36 @@
   --story-input: #ffffff; /* White for input fields */
   --story-ring: #f8e1d4; /* Blush Pink for focus rings */
   --story-radius: 0.5rem; /* Rounded corners for buttons and cards */
+
+  /* Added design tokens for shop page with luxury event rental aesthetic */
+  --shop-background: #ffffff; /* Ivory background */
+  --shop-foreground: #374151; /* Dark Gray for text */
+  --shop-card: #f8e4d2; /* Champagne Gold for product cards */
+  --shop-card-foreground: #1f2937; /* Dark Gray for card text */
+  --shop-popover: #ffffff; /* Ivory for popover */
+  --shop-popover-foreground: #374151; /* Dark Gray for popover text */
+  --shop-primary: #f2d5d0; /* Blush Pink for primary elements */
+  --shop-primary-foreground: #1f2937; /* Dark Gray for primary text */
+  --shop-secondary: #d6bfa1; /* Warm Beige for secondary elements */
+  --shop-secondary-foreground: #1f2937; /* Dark Gray for secondary text */
+  --shop-muted: #c4b6a6; /* Soft Taupe for muted elements */
+  --shop-muted-foreground: #1f2937; /* Dark Gray for muted text */
+  --shop-accent: #d6bfa1; /* Warm Beige for accents */
+  --shop-accent-foreground: #1f2937; /* Dark Gray for accent text */
+  --shop-destructive: #e63946; /* Red for destructive actions */
+  --shop-destructive-foreground: #ffffff; /* White for destructive text */
+  --shop-border: #e5e7eb; /* Light Gray for borders */
+  --shop-input: #f8e4d2; /* Champagne Gold for input backgrounds */
+  --shop-ring: #f2d5d0; /* Blush Pink for focus rings */
+  --shop-radius: 0.5rem; /* Soft rounding for elements */
+  --shop-sidebar: #f8e4d2; /* Champagne Gold for sidebar */
+  --shop-sidebar-foreground: #1f2937; /* Dark Gray for sidebar text */
+  --shop-sidebar-primary: #f2d5d0; /* Blush Pink for primary sidebar elements */
+  --shop-sidebar-primary-foreground: #1f2937; /* Dark Gray for sidebar primary text */
+  --shop-sidebar-accent: #d6bfa1; /* Warm Beige for sidebar accents */
+  --shop-sidebar-accent-foreground: #1f2937; /* Dark Gray for sidebar accent text */
+  --shop-sidebar-border: #e5e7eb; /* Light Gray for sidebar borders */
+  --shop-sidebar-ring: #f2d5d0; /* Blush Pink for sidebar focus rings */
 }
 
 * {
@@ -639,6 +669,57 @@ body {
 .animate-story-card-hover:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Added shop page animations */
+@keyframes shopFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shopCardHover {
+  from {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  to {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@keyframes shopFilterSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-shop-fade-in {
+  animation: shopFadeIn 1s ease-out;
+}
+
+.animate-shop-card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-shop-card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.animate-shop-filter-slide {
+  animation: shopFilterSlide 0.8s ease-out;
 }
 
 /* Swiper pagination styles */
