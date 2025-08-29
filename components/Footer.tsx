@@ -8,6 +8,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div>
+            <div className="mb-4">
+              <img
+                src="https://static.mywebsites360.com/d3536c889e90455b8c18f12a5d7c8646/i/a5f603b1a2214b0f8afdaccd0790e40b/1/5feFb8zhrk/fulllogo_transparent_nobuffer.png?dpr=2"
+                alt="Lovely Events Logo"
+                className="w-24 h-24 object-contain"
+              />
+            </div>
             <h3 className="font-serif text-3xl font-bold mb-6 text-white">LOVELY EVENTS</h3>
             <p className="text-white/80 mb-6 leading-relaxed">
               Creating unforgettable moments through sophisticated event planning and elegant design.

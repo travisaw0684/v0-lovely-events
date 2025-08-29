@@ -12,7 +12,11 @@ export default function Header() {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="text-white text-2xl font-bold tracking-wider">
-            LOVELY EVENTS
+            <img
+                src="https://static.mywebsites360.com/d3536c889e90455b8c18f12a5d7c8646/i/a5f603b1a2214b0f8afdaccd0790e40b/1/5feFb8zhrk/fulllogo_transparent_nobuffer.png?dpr=2"
+                alt="Lovely Events Logo"
+                className="w-[8rem] h-[8rem]"
+              />
           </Link>
 
           {/* Desktop Navigation */}
