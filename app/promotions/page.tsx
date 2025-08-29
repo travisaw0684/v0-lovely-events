@@ -101,15 +101,6 @@ export default function PromotionsPage() {
       {/* Header component for site navigation */}
       <Header />
 
-      {/* Limited Time Banner */}
-      <div className="bg-gradient-to-r from-[#ba3364] to-[#732b6f] text-white py-3 px-4 mt-[3.9rem] text-center animate-promotions-banner-pulse">
-        <div className="flex items-center justify-center gap-2">
-          <Clock className="h-4 w-4" />
-          <span className="font-medium">Limited Time Only! Spring Promotion - Save 20% on All Packages</span>
-          <Sparkles className="h-4 w-4" />
-        </div>
-      </div>
-
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
@@ -138,6 +129,15 @@ export default function PromotionsPage() {
           </Button>
         </div>
       </section>
+
+      {/* Limited Time Banner */}
+      <div className="bg-gradient-to-r from-[#ba3364] to-[#732b6f] text-white py-3 px-4 text-center animate-promotions-banner-pulse">
+        <div className="flex items-center justify-center gap-2">
+          <Clock className="h-4 w-4" />
+          <span className="font-medium">Limited Time Only! Spring Promotion - Save 20% on All Packages</span>
+          <Sparkles className="h-4 w-4" />
+        </div>
+      </div>
 
       {/* Promotional Cards Section */}
       <section className="py-20 px-6">

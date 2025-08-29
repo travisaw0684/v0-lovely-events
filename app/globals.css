@@ -61,7 +61,7 @@
   --services-destructive-foreground: #ffffff;
   --services-border: #e2e8f0;
   --services-input: #ffffff;
-  --services-ring: rgba(22, 78, 99, 0.5);
+  --services-ring: #d4af7f;
   --services-chart-1: #164e63;
   --services-chart-2: #f59e0b;
   --services-chart-3: #dc2626;
@@ -75,7 +75,7 @@
   --services-sidebar-accent: #f59e0b;
   --services-sidebar-accent-foreground: #ffffff;
   --services-sidebar-border: #e2e8f0;
-  --services-sidebar-ring: rgba(22, 78, 99, 0.5);
+  --services-sidebar-ring: #d4af7f;
 
   /* Updated design tokens for Meet the Founder section with warm, approachable colors */
   --founder-background: #ffffff;
@@ -320,6 +320,146 @@
   --shop-sidebar-accent-foreground: #1f2937; /* Dark Gray for sidebar accent text */
   --shop-sidebar-border: #e5e7eb; /* Light Gray for sidebar borders */
   --shop-sidebar-ring: #f2d5d0; /* Blush Pink for sidebar focus rings */
+
+  /* Added design tokens for sporting events page with luxury sports aesthetic */
+  --sporting-background: #ffffff; /* Page background */
+  --sporting-foreground: #4b5563; /* Main text color */
+  --sporting-card: #f4f4f4; /* Card backgrounds */
+  --sporting-card-foreground: #4b5563; /* Text on cards */
+  --sporting-popover: #ffffff; /* Popover background */
+  --sporting-popover-foreground: #4b5563; /* Text in popovers */
+  --sporting-primary: #ba3364; /* Call-to-action buttons - using user's burgundy */
+  --sporting-primary-foreground: #ffffff; /* Text on primary buttons */
+  --sporting-secondary: #732b6f; /* Secondary buttons - using user's purple */
+  --sporting-secondary-foreground: #ffffff; /* Text on secondary buttons */
+  --sporting-muted: #f4f4f4; /* Muted backgrounds */
+  --sporting-muted-foreground: #4b5563; /* Text on muted backgrounds */
+  --sporting-accent: #732b6f; /* Decorative accents - using user's purple */
+  --sporting-accent-foreground: #ffffff; /* Text color for accent elements */
+  --sporting-destructive: #ff0000; /* Error messages */
+  --sporting-destructive-foreground: #ffffff; /* Text on error messages */
+  --sporting-border: #e0e0e0; /* Borders for sections */
+  --sporting-input: #ffffff; /* Input field background */
+  --sporting-ring: rgba(186, 51, 100, 0.5); /* Focus ring for inputs */
+  --sporting-chart-1: #ba3364; /* Chart color 1 */
+  --sporting-chart-2: #732b6f; /* Chart color 2 */
+  --sporting-chart-3: #4b5563; /* Chart color 3 */
+  --sporting-chart-4: #e0e0e0; /* Chart color 4 */
+  --sporting-chart-5: #f4f4f4; /* Chart color 5 */
+  --sporting-radius: 0.5rem; /* Corner rounding */
+  --sporting-sidebar: #ffffff; /* Sidebar background */
+  --sporting-sidebar-foreground: #4b5563; /* Sidebar text */
+  --sporting-sidebar-primary: #ba3364; /* Sidebar primary color */
+  --sporting-sidebar-primary-foreground: #ffffff; /* Sidebar primary text */
+  --sporting-sidebar-accent: #732b6f; /* Sidebar accent */
+  --sporting-sidebar-accent-foreground: #ffffff; /* Sidebar accent text */
+  --sporting-sidebar-border: #e0e0e0; /* Sidebar border */
+  --sporting-sidebar-ring: rgba(186, 51, 100, 0.5); /* Sidebar focus ring */
+
+  /* Added design tokens for balloon decor page with luxury balloon artistry aesthetic */
+  --balloon-background: #ffffff; /* Page background */
+  --balloon-foreground: #4b3c5a; /* Primary text color */
+  --balloon-card: #f4e1f0; /* Background color for cards */
+  --balloon-card-foreground: #4b3c5a; /* Text color for cards */
+  --balloon-popover: #ffffff; /* Background for popovers */
+  --balloon-popover-foreground: #4b3c5a; /* Text color for popovers */
+  --balloon-primary: #ba3364; /* Primary buttons and highlights - using user's burgundy */
+  --balloon-primary-foreground: #ffffff; /* Text color for primary buttons */
+  --balloon-secondary: #732b6f; /* Secondary buttons and highlights - using user's purple */
+  --balloon-secondary-foreground: #ffffff; /* Text color for secondary buttons */
+  --balloon-muted: #f4e1f0; /* Muted backgrounds */
+  --balloon-muted-foreground: #4b3c5a; /* Muted text color */
+  --balloon-accent: #732b6f; /* Accent elements - using user's purple */
+  --balloon-accent-foreground: #ffffff; /* Text color for accent elements */
+  --balloon-destructive: #dc2626; /* Color for destructive actions */
+  --balloon-destructive-foreground: #ffffff; /* Text color for destructive actions */
+  --balloon-border: #4b3c5a; /* Border color for cards and sections */
+  --balloon-input: #ffffff; /* Input fields background */
+  --balloon-ring: rgba(186, 51, 100, 0.5); /* Focus ring color */
+  --balloon-chart-1: #ba3364; /* Chart color 1 */
+  --balloon-chart-2: #732b6f; /* Chart color 2 */
+  --balloon-chart-3: #f4e1f0; /* Chart color 3 */
+  --balloon-chart-4: #ffffff; /* Chart color 4 */
+  --balloon-chart-5: #4b3c5a; /* Chart color 5 */
+  --balloon-radius: 0.5rem; /* Corner rounding for buttons and cards */
+  --balloon-sidebar: #f4e1f0; /* Sidebar background */
+  --balloon-sidebar-foreground: #4b3c5a; /* Sidebar text color */
+  --balloon-sidebar-primary: #ba3364; /* Sidebar primary color */
+  --balloon-sidebar-primary-foreground: #ffffff; /* Sidebar primary text color */
+  --balloon-sidebar-accent: #732b6f; /* Sidebar accent color */
+  --balloon-sidebar-accent-foreground: #ffffff; /* Sidebar accent text color */
+  --balloon-sidebar-border: #4b3c5a; /* Sidebar border color */
+  --balloon-sidebar-ring: rgba(186, 51, 100, 0.5); /* Sidebar focus ring */
+
+  /* Added design tokens for corporate services pages with professional luxury aesthetic */
+  --corporate-background: #ffffff; /* Main background */
+  --corporate-foreground: #424242; /* Main text color */
+  --corporate-card: #ffffff; /* Card background */
+  --corporate-card-foreground: #424242; /* Card text color */
+  --corporate-popover: #f3e5f5; /* Popover background */
+  --corporate-popover-foreground: #424242; /* Popover text color */
+  --corporate-primary: #ba3364; /* Primary color for CTAs - using user's burgundy */
+  --corporate-primary-foreground: #ffffff; /* Text color on primary background */
+  --corporate-secondary: #732b6f; /* Accent color - using user's purple */
+  --corporate-secondary-foreground: #ffffff; /* Text color on secondary background */
+  --corporate-muted: #f3e5f5; /* Muted background */
+  --corporate-muted-foreground: #424242; /* Muted text color */
+  --corporate-accent: #732b6f; /* Accent color - using user's purple */
+  --corporate-accent-foreground: #ffffff; /* Text color on accent background */
+  --corporate-destructive: #dc2626; /* Destructive actions */
+  --corporate-destructive-foreground: #ffffff; /* Text color on destructive actions */
+  --corporate-border: #424242; /* General border color */
+  --corporate-input: #ffffff; /* Input background */
+  --corporate-ring: rgba(186, 51, 100, 0.5); /* Focus ring color */
+  --corporate-chart-1: #ba3364; /* Chart color 1 */
+  --corporate-chart-2: #732b6f; /* Chart color 2 */
+  --corporate-chart-3: #f3e5f5; /* Chart color 3 */
+  --corporate-chart-4: #ffffff; /* Chart color 4 */
+  --corporate-chart-5: #424242; /* Chart color 5 */
+  --corporate-radius: 0.5rem; /* Border radius for components */
+  --corporate-sidebar: #f3e5f5; /* Sidebar background */
+  --corporate-sidebar-foreground: #424242; /* Sidebar text color */
+  --corporate-sidebar-primary: #ba3364; /* Sidebar primary color */
+  --corporate-sidebar-primary-foreground: #ffffff; /* Sidebar primary text color */
+  --corporate-sidebar-accent: #732b6f; /* Sidebar accent color */
+  --corporate-sidebar-accent-foreground: #ffffff; /* Sidebar accent text color */
+  --corporate-sidebar-border: #424242; /* Sidebar border color */
+  --corporate-sidebar-ring: rgba(186, 51, 100, 0.5); /* Sidebar focus ring color */
+
+  /* Added design tokens for wedding services pages with romantic luxury aesthetic */
+  --wedding-background: #ffffff; /* Light neutral background for a clean, soft look */
+  --wedding-foreground: #4b1f4d; /* Deep burgundy for primary text */
+  --wedding-card: #f7f0f6; /* Soft lavender for card backgrounds */
+  --wedding-card-foreground: #4b1f4d; /* Deep burgundy for card text */
+  --wedding-popover: #ffffff; /* White for popover backgrounds */
+  --wedding-popover-foreground: #4b1f4d; /* Deep burgundy for popover text */
+  --wedding-primary: #ba3364; /* Primary burgundy for call-to-action buttons - using user's color */
+  --wedding-primary-foreground: #ffffff; /* White text on primary buttons */
+  --wedding-secondary: #732b6f; /* Rich purple for secondary actions - using user's color */
+  --wedding-secondary-foreground: #ffffff; /* White text on secondary buttons */
+  --wedding-muted: #f7f0f6; /* Soft lavender for muted elements */
+  --wedding-muted-foreground: #4b1f4d; /* Deep burgundy for muted text */
+  --wedding-accent: #732b6f; /* Rich purple for accents and highlights - using user's color */
+  --wedding-accent-foreground: #ffffff; /* White text on accent elements */
+  --wedding-destructive: #e63946; /* Red for error messages */
+  --wedding-destructive-foreground: #ffffff; /* White text on destructive elements */
+  --wedding-border: #d1d5db; /* Light gray for borders */
+  --wedding-input: #ffffff; /* White for input fields */
+  --wedding-ring: rgba(186, 51, 100, 0.2); /* Soft focus ring around inputs */
+  --wedding-chart-1: #732b6f; /* Rich purple for charts */
+  --wedding-chart-2: #ba3364; /* Deep burgundy for charts */
+  --wedding-chart-3: #f7f0f6; /* Soft lavender for charts */
+  --wedding-chart-4: #e63946; /* Red for charts */
+  --wedding-chart-5: #ffffff; /* White for charts */
+  --wedding-radius: 0.5rem; /* Soft rounding for cards and buttons */
+  --wedding-sidebar: #ffffff; /* White for sidebar background */
+  --wedding-sidebar-foreground: #4b1f4d; /* Deep burgundy for sidebar text */
+  --wedding-sidebar-primary: #732b6f; /* Rich purple for sidebar highlights */
+  --wedding-sidebar-primary-foreground: #ffffff; /* White text for sidebar primary elements */
+  --wedding-sidebar-accent: #ba3364; /* Deep burgundy for sidebar accent elements */
+  --wedding-sidebar-accent-foreground: #ffffff; /* White text for sidebar accent text */
+  --wedding-sidebar-border: #d1d5db; /* Light gray for sidebar borders */
+  --wedding-sidebar-ring: rgba(186, 51, 100, 0.2); /* Soft focus ring for sidebar */
 }
 
 * {
@@ -720,6 +860,206 @@ body {
 
 .animate-shop-filter-slide {
   animation: shopFilterSlide 0.8s ease-out;
+}
+
+/* Added sporting events page animations */
+@keyframes sportingFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sportingCardHover {
+  from {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  to {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(186, 51, 100, 0.25);
+  }
+}
+
+@keyframes sportingPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-sporting-fade-in {
+  animation: sportingFadeIn 1s ease-out;
+}
+
+.animate-sporting-card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-sporting-card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(186, 51, 100, 0.25);
+}
+
+.animate-sporting-pulse {
+  animation: sportingPulse 2s ease-in-out infinite;
+}
+
+/* Added balloon decor page animations */
+@keyframes balloonFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes balloonFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes balloonCardHover {
+  from {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  to {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(186, 51, 100, 0.25);
+  }
+}
+
+.animate-balloon-fade-in {
+  animation: balloonFadeIn 1s ease-out;
+}
+
+.animate-balloon-float {
+  animation: balloonFloat 3s ease-in-out infinite;
+}
+
+.animate-balloon-card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-balloon-card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(186, 51, 100, 0.25);
+}
+
+/* Added corporate services page animations */
+@keyframes corporateFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes corporateCardHover {
+  from {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  to {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(186, 51, 100, 0.25);
+  }
+}
+
+@keyframes corporatePulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.animate-corporate-fade-in {
+  animation: corporateFadeIn 1s ease-out;
+}
+
+.animate-corporate-card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-corporate-card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(186, 51, 100, 0.25);
+}
+
+.animate-corporate-pulse {
+  animation: corporatePulse 2s ease-in-out infinite;
+}
+
+/* Added wedding services page animations */
+@keyframes weddingFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes weddingCardHover {
+  from {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  to {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(186, 51, 100, 0.25);
+  }
+}
+
+@keyframes weddingFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-wedding-fade-in {
+  animation: weddingFadeIn 1s ease-out;
+}
+
+.animate-wedding-card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-wedding-card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(186, 51, 100, 0.25);
+}
+
+.animate-wedding-float {
+  animation: weddingFloat 3s ease-in-out infinite;
 }
 
 /* Swiper pagination styles */
