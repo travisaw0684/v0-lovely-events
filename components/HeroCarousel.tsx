@@ -103,7 +103,7 @@ export default function HeroCarousel() {
         </div>
       </div>
 
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows 
       <button
         onClick={prevSlide}
         className="absolute left-6 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors z-20"
@@ -117,9 +117,9 @@ export default function HeroCarousel() {
         aria-label="Next slide"
       >
         <ChevronRight className="h-12 w-12" />
-      </button>
+      </button> */}
 
-      {/* Slide Indicators */}
+      {/* Slide Indicators 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-2 z-20">
         {slides.map((_, index) => (
           <button
@@ -129,7 +129,7 @@ export default function HeroCarousel() {
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
-      </div>
+      </div>*/}
     </section>
   )
 }
