@@ -88,7 +88,7 @@ const TrustedBrands = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className={`text-center mb-12 ${isVisible ? "animate-brands-fade-in" : "opacity-0"}`}>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "var(--brands-primary)" }}>
+          <h2 className="text-3xl md:text-5xl lg:text-5xl font-extralight mb-6 leading-tight tracking-tight" style={{ color: "var(--brands-primary)" }}>
             Trusted By Leading Brands
           </h2>
           <p className="text-lg max-w-2xl mx-auto" style={{ color: "var(--brands-muted)" }}>

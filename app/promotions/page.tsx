@@ -255,7 +255,7 @@ export default function PromotionsPage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-[#ba3364] to-[#732b6f]">
+      <section className="py-20 px-6 bg-gradient-to-r from-[#355a75] to-[#15285c]">
         <div
           className={`max-w-4xl mx-auto text-center transition-all duration-1000 delay-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >

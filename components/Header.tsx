@@ -60,7 +60,7 @@ export default function Header() {
               onMouseEnter={() => setServicesDropdownOpen(true)}
               onMouseLeave={() => setServicesDropdownOpen(false)}
             >
-              <button className="text-white hover:text-gray-300 transition-colors duration-300 flex items-center">
+              <button className="text-white hover:text-gray-300 transition-colors duration-500 flex items-center">
                 Services
                 <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />

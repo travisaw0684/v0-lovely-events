@@ -79,13 +79,17 @@ export default function CallToAction() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className={`text-center lg:text-left ${isVisible ? "animate-cta-fade-in" : "opacity-0"}`}>
             <div className="mb-8">
-              <h1 className="font-serif text-4xl lg:text-6xl font-bold text-white mb-4">Lovely Events</h1>
+              <img
+              src="https://static.mywebsites360.com/d3536c889e90455b8c18f12a5d7c8646/i/a5f603b1a2214b0f8afdaccd0790e40b/1/5feFb8zhrk/fulllogo_transparent_nobuffer.png?dpr=2"
+              alt="Lovely Events Logo"
+              className="w-[20rem] h-[20rem]"
+            />
               <div className="w-24 h-1 bg-gradient-to-r from-secondary to-accent mx-auto lg:mx-0"></div>
             </div>
           </div>
 
           <div className={`text-center lg:text-left ${isVisible ? "animate-cta-fade-in" : "opacity-0"} delay-300`}>
-            <h2 className="font-serif text-3xl lg:text-5xl font-bold text-white mb-6">Make Your Event Unforgettable</h2>
+            <h2 className="text-3xl md:text-5xl lg:text-5xl font-extralight mb-6 leading-tight tracking-tight text-white mb-6">Make Your Event Unforgettable</h2>
 
             <p className="font-sans text-xl text-gray-200 mb-8 leading-relaxed">
               Transform your special moments with our sophisticated event planning services. From intimate weddings to
