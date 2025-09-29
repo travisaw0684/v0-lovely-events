@@ -14,7 +14,7 @@ export default function MissionStatement() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-extralight mb-6 leading-tight tracking-tight text-white mb-6">
             A History of Satisfaction
           </h2>
           <p className="text-xl text-gray-300 mb-12 leading-relaxed">

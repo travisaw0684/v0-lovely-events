@@ -7,459 +7,205 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
-  /* Updated to luxury event planning design tokens with blush pink, champagne gold, ivory, and light gray */
-  --background: #ffffff; /* Pure white */
-  --foreground: #374151; /* Dark gray for text */
-  --card: #f8f4f1; /* Champagne ivory */
-  --card-foreground: #374151; /* Dark gray for card text */
-  --popover: #f8f4f1; /* Champagne ivory for popovers */
-  --popover-foreground: #374151; /* Dark gray for popover text */
-  --primary: #f5e3d7; /* Light blush pink for key elements */
-  --primary-foreground: #374151; /* Dark gray for primary text */
-  --secondary: #d4af7f; /* Champagne gold for accents */
-  --secondary-foreground: #ffffff; /* White for contrasting text */
-  --muted: #d1d5db; /* Light gray for muted text */
-  --muted-foreground: #374151; /* Dark gray for muted text */
-  --accent: #d4af7f; /* Champagne gold for buttons and highlights */
-  --accent-foreground: #ffffff; /* White for accent button text */
-  --destructive: #dc2626; /* Red for error messages */
-  --destructive-foreground: #ffffff; /* White for error message text */
-  --border: #d1d5db; /* Light gray for borders */
-  --input: #ffffff; /* White for input fields */
-  --ring: #d4af7f; /* Champagne gold for focus rings */
-  --chart-1: #f5e3d7; /* Light blush pink */
-  --chart-2: #d4af7f; /* Champagne gold */
-  --chart-3: #f8f4f1; /* Champagne ivory */
-  --chart-4: #d1d5db; /* Light gray */
-  --chart-5: #ffffff; /* Pure white */
-  --radius: 0.5rem; /* Rounded corners */
-  --sidebar: #f8f4f1; /* Sidebar background */
-  --sidebar-foreground: #374151; /* Dark gray for sidebar text */
-  --sidebar-primary: #f5e3d7; /* Light blush pink for sidebar highlights */
-  --sidebar-primary-foreground: #374151; /* Dark gray for sidebar primary text */
-  --sidebar-accent: #d4af7f; /* Champagne gold for sidebar accents */
-  --sidebar-accent-foreground: #ffffff; /* White for sidebar accent text */
-  --sidebar-border: #d1d5db; /* Light gray for sidebar borders */
-  --sidebar-ring: #d4af7f; /* Champagne gold for sidebar focus rings */
+  /* Corporate Milestones Design Tokens */
+  --background: #ffffff;
+  --foreground: #374151;
+  --card: #f0fdf4;
+  --card-foreground: #374151;
+  --popover: #ffffff;
+  --popover-foreground: #374151;
+  --primary: #15803d;
+  --primary-foreground: #ffffff;
+  --secondary: #84cc16;
+  --secondary-foreground: #ffffff;
+  --muted: #f0fdf4;
+  --muted-foreground: #374151;
+  --accent: #84cc16;
+  --accent-foreground: #ffffff;
+  --destructive: #be123c;
+  --destructive-foreground: #ffffff;
+  --border: #e5e7eb;
+  --input: #f8fafc;
+  --ring: rgba(20, 184, 166, 0.5);
+  --chart-1: #ec4899;
+  --chart-2: #6366f1;
+  --chart-3: #f59e0b;
+  --chart-4: #f43f5e;
+  --chart-5: #22c55e;
+  --radius: 0.5rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #374151;
+  --sidebar-primary: #f0fdf4;
+  --sidebar-primary-foreground: #374151;
+  --sidebar-accent: #84cc16;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: rgba(20, 184, 166, 0.5);
 
-  /* Updated design tokens for luxury events services section */
-  --services-background: #ffffff;
-  --services-foreground: #475569;
-  --services-card: #ecfeff;
-  --services-card-foreground: #475569;
-  --services-popover: #ffffff;
-  --services-popover-foreground: #475569;
-  --services-primary: #164e63;
-  --services-primary-foreground: #ffffff;
-  --services-secondary: #f59e0b;
-  --services-secondary-foreground: #ffffff;
-  --services-muted: #fdf2f8;
-  --services-muted-foreground: #475569;
-  --services-accent: #f59e0b;
-  --services-accent-foreground: #ffffff;
-  --services-destructive: #dc2626;
-  --services-destructive-foreground: #ffffff;
-  --services-border: #e2e8f0;
-  --services-input: #ffffff;
-  --services-ring: #d4af7f;
-  --services-chart-1: #164e63;
-  --services-chart-2: #f59e0b;
-  --services-chart-3: #dc2626;
-  --services-chart-4: #ecfeff;
-  --services-chart-5: #fdf2f8;
-  --services-radius: 0.5rem;
-  --services-sidebar: #ffffff;
-  --services-sidebar-foreground: #475569;
-  --services-sidebar-primary: #164e63;
-  --services-sidebar-primary-foreground: #ffffff;
-  --services-sidebar-accent: #f59e0b;
-  --services-sidebar-accent-foreground: #ffffff;
-  --services-sidebar-border: #e2e8f0;
-  --services-sidebar-ring: #d4af7f;
+  /* Advanced Balloon Decor Design Tokens - Inspired by modern creative agencies */
+  --balloon-background: #faf9f7;
+  --balloon-foreground: #2d2d2d;
+  --balloon-card: #ffffff;
+  --balloon-card-foreground: #2d2d2d;
+  --balloon-primary: #d4a574;
+  --balloon-primary-foreground: #ffffff;
+  --balloon-secondary: #f4f1eb;
+  --balloon-secondary-foreground: #2d2d2d;
+  --balloon-accent: #e8b894;
+  --balloon-accent-foreground: #2d2d2d;
+  --balloon-muted: #f8f6f3;
+  --balloon-muted-foreground: #6b6b6b;
+  --balloon-border: #e8e5e0;
+  --balloon-ring: rgba(212, 165, 116, 0.3);
+  --balloon-radius: 1rem;
 
-  /* Updated design tokens for Meet the Founder section with warm, approachable colors */
-  --founder-background: #ffffff;
-  --founder-foreground: #374151;
-  --founder-card: #fefce8;
-  --founder-card-foreground: #374151;
-  --founder-popover: #fef08a;
-  --founder-popover-foreground: #374151;
-  --founder-primary: #d97706;
-  --founder-primary-foreground: #ffffff;
-  --founder-secondary: #fefce8;
-  --founder-secondary-foreground: #374151;
-  --founder-muted: #f0f4f8;
-  --founder-muted-foreground: #374151;
-  --founder-accent: #fef08a;
-  --founder-accent-foreground: #374151;
-  --founder-destructive: #be123c;
-  --founder-destructive-foreground: #ffffff;
-  --founder-border: #e2e8f0;
-  --founder-input: #ffffff;
-  --founder-ring: #d97706;
-  --founder-chart-1: #fef08a;
-  --founder-chart-2: #d97706;
-  --founder-chart-3: #fefce8;
-  --founder-chart-4: #ecfeff;
-  --founder-chart-5: #fdf2f8;
-  --founder-radius: 0.5rem;
-  --founder-sidebar: #fefce8;
-  --founder-sidebar-foreground: #374151;
-  --founder-sidebar-primary: #d97706;
-  --founder-sidebar-primary-foreground: #ffffff;
-  --founder-sidebar-accent: #fef08a;
-  --founder-sidebar-accent-foreground: #374151;
-  --founder-sidebar-border: #e2e8f0;
-  --founder-sidebar-ring: #d97706;
+  /* Advanced typography scale */
+  --balloon-text-xs: 0.75rem;
+  --balloon-text-sm: 0.875rem;
+  --balloon-text-base: 1rem;
+  --balloon-text-lg: 1.125rem;
+  --balloon-text-xl: 1.25rem;
+  --balloon-text-2xl: 1.5rem;
+  --balloon-text-3xl: 1.875rem;
+  --balloon-text-4xl: 2.25rem;
+  --balloon-text-5xl: 3rem;
+  --balloon-text-6xl: 3.75rem;
+  --balloon-text-7xl: 4.5rem;
+  --balloon-text-8xl: 6rem;
+  --balloon-text-9xl: 8rem;
 
-  /* Added design tokens for Trusted Brands section */
-  --brands-background: #ffffff;
-  --brands-foreground: #1f2937;
-  --brands-card: #f1f5f9;
-  --brands-card-foreground: #1f2937;
-  --brands-popover: #ffffff;
-  --brands-popover-foreground: #1f2937;
-  --brands-primary: #1f2937;
-  --brands-primary-foreground: #ffffff;
-  --brands-secondary: #8b5cf6;
-  --brands-secondary-foreground: #ffffff;
-  --brands-muted: #6b7280;
-  --brands-muted-foreground: #ffffff;
-  --brands-accent: #8b5cf6;
-  --brands-accent-foreground: #ffffff;
-  --brands-destructive: #be123c;
-  --brands-destructive-foreground: #ffffff;
-  --brands-border: #6b7280;
-  --brands-input: #ffffff;
-  --brands-ring: rgba(139, 92, 246, 0.5);
-  --brands-chart-1: #ec4899;
-  --brands-chart-2: #d97706;
-  --brands-chart-3: #1f2937;
-  --brands-chart-4: #be123c;
-  --brands-chart-5: #8b5cf6;
-  --brands-radius: 0.5rem;
-  --brands-sidebar: #ffffff;
-  --brands-sidebar-foreground: #1f2937;
-  --brands-sidebar-primary: #8b5cf6;
-  --brands-sidebar-primary-foreground: #ffffff;
-  --brands-sidebar-accent: #ec4899;
-  --brands-sidebar-accent-foreground: #ffffff;
-  --brands-sidebar-border: #6b7280;
-  --brands-sidebar-ring: rgba(139, 92, 246, 0.5);
+  /* Adding sophisticated employee recognition design tokens inspired by modern corporate aesthetics */
+  /* Employee Recognition Advanced Design Tokens - Inspired by sophisticated corporate design */
+  --employee-background: #fafafa;
+  --employee-foreground: #1a1a1a;
+  --employee-card: #ffffff;
+  --employee-card-foreground: #1a1a1a;
+  --employee-primary: #000000;
+  --employee-primary-foreground: #ffffff;
+  --employee-secondary: #f5f5f5;
+  --employee-secondary-foreground: #1a1a1a;
+  --employee-accent: #666666;
+  --employee-accent-foreground: #ffffff;
+  --employee-muted: #f8f8f8;
+  --employee-muted-foreground: #666666;
+  --employee-border: #e5e5e5;
+  --employee-ring: rgba(0, 0, 0, 0.1);
+  --employee-radius: 0.75rem;
 
-  /* Added design tokens for CTA section with luxury event rental aesthetic */
-  --cta-background: rgba(255, 255, 255, 0.6);
-  --cta-foreground: #1f2937;
-  --cta-card: #ffffff;
-  --cta-card-foreground: #4b5563;
-  --cta-popover: #f9fafb;
-  --cta-popover-foreground: #1f2937;
-  --cta-primary: #0891b2;
-  --cta-primary-foreground: #ffffff;
-  --cta-secondary: #6366f1;
-  --cta-secondary-foreground: #ffffff;
-  --cta-muted: #f9fafb;
-  --cta-muted-foreground: #374151;
-  --cta-accent: #6366f1;
-  --cta-accent-foreground: #ffffff;
-  --cta-destructive: #e11d48;
-  --cta-destructive-foreground: #ffffff;
-  --cta-border: #e5e7eb;
-  --cta-input: #ffffff;
-  --cta-ring: rgba(0, 0, 0, 0.1);
-  --cta-chart-1: #6366f1;
-  --cta-chart-2: #4b5563;
-  --cta-chart-3: #0891b2;
-  --cta-chart-4: #15803d;
-  --cta-chart-5: #e11d48;
-  --cta-radius: 0.5rem;
-  --cta-sidebar: #ffffff;
-  --cta-sidebar-foreground: #374151;
-  --cta-sidebar-primary: #6366f1;
-  --cta-sidebar-primary-foreground: #ffffff;
-  --cta-sidebar-accent: #0891b2;
-  --cta-sidebar-accent-foreground: #ffffff;
-  --cta-sidebar-border: #e5e7eb;
-  --cta-sidebar-ring: rgba(0, 0, 0, 0.1);
+  /* Advanced typography scale for large text treatments */
+  --employee-text-xs: 0.75rem;
+  --employee-text-sm: 0.875rem;
+  --employee-text-base: 1rem;
+  --employee-text-lg: 1.125rem;
+  --employee-text-xl: 1.25rem;
+  --employee-text-2xl: 1.5rem;
+  --employee-text-3xl: 1.875rem;
+  --employee-text-4xl: 2.25rem;
+  --employee-text-5xl: 3rem;
+  --employee-text-6xl: 3.75rem;
+  --employee-text-7xl: 4.5rem;
+  --employee-text-8xl: 6rem;
+  --employee-text-9xl: 8rem;
+  --employee-text-10xl: 10rem;
 
-  /* Added design tokens for newsletter subscription CTA section */
-  --newsletter-background: #ffffff;
-  --newsletter-foreground: #374151;
-  --newsletter-card: #f8fafc;
-  --newsletter-card-foreground: #1f2937;
-  --newsletter-popover: #ffffff;
-  --newsletter-popover-foreground: #374151;
-  --newsletter-primary: #6366f1;
-  --newsletter-primary-foreground: #ffffff;
-  --newsletter-secondary: #1f2937;
-  --newsletter-secondary-foreground: #ffffff;
-  --newsletter-muted: #f8fafc;
-  --newsletter-muted-foreground: #6b7280;
-  --newsletter-accent: #6366f1;
-  --newsletter-accent-foreground: #ffffff;
-  --newsletter-destructive: #ea580c;
-  --newsletter-destructive-foreground: #ffffff;
-  --newsletter-border: #e5e7eb;
-  --newsletter-input: #ffffff;
-  --newsletter-ring: #6366f1;
-  --newsletter-chart-1: #8b5cf6;
-  --newsletter-chart-2: #4b5563;
-  --newsletter-chart-3: #374151;
-  --newsletter-chart-4: #f97316;
-  --newsletter-chart-5: #ea580c;
-  --newsletter-radius: 0.5rem;
-  --newsletter-sidebar: #ffffff;
-  --newsletter-sidebar-foreground: #374151;
-  --newsletter-sidebar-primary: #6366f1;
-  --newsletter-sidebar-primary-foreground: #ffffff;
-  --newsletter-sidebar-accent: #8b5cf6;
-  --newsletter-sidebar-accent-foreground: #ffffff;
-  --newsletter-sidebar-border: #e5e7eb;
-  --newsletter-sidebar-ring: #6366f1;
+  /* Advanced Corporate Events Design Tokens - Inspired by sophisticated design references */
+  --corporate-background: #faf9f7;
+  --corporate-foreground: #1a1a1a;
+  --corporate-card: #ffffff;
+  --corporate-card-foreground: #1a1a1a;
+  --corporate-primary: #000000;
+  --corporate-primary-foreground: #ffffff;
+  --corporate-secondary: #c17b47;
+  --corporate-secondary-foreground: #ffffff;
+  --corporate-accent: #8b5a3c;
+  --corporate-accent-foreground: #ffffff;
+  --corporate-muted: #f5f4f2;
+  --corporate-muted-foreground: #666666;
+  --corporate-border: #e8e5e0;
+  --corporate-ring: rgba(193, 123, 71, 0.2);
+  --corporate-radius: 0.75rem;
 
-  /* Added design tokens for promotions page with luxury event planning aesthetic */
-  --promotions-background: #ffffff; /* Page background */
-  --promotions-foreground: #374151; /* Main text color */
-  --promotions-card: #f8e5d7; /* Card background for offers - champagne gold */
-  --promotions-card-foreground: #374151; /* Text color within cards */
-  --promotions-popover: #f6d3c0; /* Popover background - blush pink */
-  --promotions-popover-foreground: #374151; /* Text color in popovers */
-  --promotions-primary: #f6d3c0; /* For call-to-action buttons - blush pink */
-  --promotions-primary-foreground: #374151; /* Text color on buttons */
-  --promotions-secondary: #e9b8a1; /* For secondary buttons - soft coral */
-  --promotions-secondary-foreground: #ffffff; /* Text color on secondary buttons */
-  --promotions-muted: #f2f2f2; /* For muted text or backgrounds - ivory */
-  --promotions-muted-foreground: #b2b2b2; /* Muted text color */
-  --promotions-accent: #e9b8a1; /* Accent elements like borders or highlights - soft coral */
-  --promotions-accent-foreground: #ffffff; /* Text color on accent backgrounds */
-  --promotions-destructive: #dc2626; /* For any error messages */
-  --promotions-destructive-foreground: #ffffff; /* Text color for error messages */
-  --promotions-border: #e9b8a1; /* Card borders - soft coral */
-  --promotions-input: #ffffff; /* Input fields background */
-  --promotions-ring: #f6d3c0; /* Focus ring color - blush pink */
-  --promotions-radius: 0.5rem; /* Rounded corners for buttons and cards */
-  --promotions-sidebar: #f8e5d7; /* Sidebar background - champagne gold */
-  --promotions-sidebar-foreground: #374151; /* Text color in sidebar */
-  --promotions-sidebar-primary: #f6d3c0; /* Primary sidebar elements - blush pink */
-  --promotions-sidebar-primary-foreground: #374151; /* Text color for sidebar primary */
-  --promotions-sidebar-accent: #e9b8a1; /* Sidebar accent elements - soft coral */
-  --promotions-sidebar-accent-foreground: #ffffff; /* Text color for sidebar accents */
-  --promotions-sidebar-border: #e9b8a1; /* Sidebar border color - soft coral */
-  --promotions-sidebar-ring: #f6d3c0; /* Sidebar focus ring color - blush pink */
+  /* Advanced typography scale for large text treatments */
+  --corporate-text-xs: 0.75rem;
+  --corporate-text-sm: 0.875rem;
+  --corporate-text-base: 1rem;
+  --corporate-text-lg: 1.125rem;
+  --corporate-text-xl: 1.25rem;
+  --corporate-text-2xl: 1.5rem;
+  --corporate-text-3xl: 1.875rem;
+  --corporate-text-4xl: 2.25rem;
+  --corporate-text-5xl: 3rem;
+  --corporate-text-6xl: 3.75rem;
+  --corporate-text-7xl: 4.5rem;
+  --corporate-text-8xl: 6rem;
+  --corporate-text-9xl: 8rem;
+  --corporate-text-10xl: 10rem;
 
-  /* Added design tokens for services page with luxury event planning aesthetic */
-  --services-page-background: #ffffff; /* Main background color */
-  --services-page-foreground: #374151; /* Text color */
-  --services-page-card: #f5f0e1; /* Card background */
-  --services-page-card-foreground: #374151; /* Card text color */
-  --services-page-popover: #f7e8e2; /* Popover background */
-  --services-page-popover-foreground: #374151; /* Popover text color */
-  --services-page-primary: #f7e8e2; /* Primary color for accents and backgrounds */
-  --services-page-primary-foreground: #374151; /* Primary text color */
-  --services-page-secondary: #d4c8b2; /* Secondary accent color */
-  --services-page-secondary-foreground: #374151; /* Secondary text color */
-  --services-page-muted: #e2d8d0; /* Muted background for sections */
-  --services-page-muted-foreground: #374151; /* Muted text color */
-  --services-page-accent: #d4c8b2; /* Accent color for buttons and highlights */
-  --services-page-accent-foreground: #ffffff; /* Text color for accents */
-  --services-page-destructive: #be123c; /* Color for alerts or errors */
-  --services-page-destructive-foreground: #ffffff; /* Text color for alerts */
-  --services-page-border: #e2d8d0; /* Border color for cards and sections */
-  --services-page-input: #ffffff; /* Input field background */
-  --services-page-ring: #d4c8b2; /* Ring color for focused elements */
-  --services-page-radius: 0.5rem; /* Corner rounding for cards and buttons */
+  /* Advanced Business Expo Design Tokens - Inspired by sophisticated design references */
+  --expo-background: #faf9f7;
+  --expo-foreground: #1a1a1a;
+  --expo-card: #ffffff;
+  --expo-card-foreground: #1a1a1a;
+  --expo-primary: #ba3364;
+  --expo-primary-foreground: #ffffff;
+  --expo-secondary: #732b6f;
+  --expo-secondary-foreground: #ffffff;
+  --expo-accent: #8b5a3c;
+  --expo-accent-foreground: #ffffff;
+  --expo-muted: #f5f4f2;
+  --expo-muted-foreground: #666666;
+  --expo-border: #e8e5e0;
+  --expo-ring: rgba(193, 123, 71, 0.2);
+  --expo-radius: 0.75rem;
 
-  /* Added design tokens for Our Story page with luxury event planning aesthetic */
-  --story-background: #ffffff; /* White for a clean, elegant backdrop */
-  --story-foreground: #4b5563; /* Dark gray for text, ensuring readability */
-  --story-card: #f5f0e1; /* Champagne Gold for card backgrounds */
-  --story-card-foreground: #4b5563; /* Dark gray for card text */
-  --story-popover: #f8e1d4; /* Blush Pink for popovers */
-  --story-popover-foreground: #4b5563; /* Dark gray for popover text */
-  --story-primary: #f8e1d4; /* Blush Pink for primary accents and buttons */
-  --story-primary-foreground: #4b5563; /* Dark gray for text on primary buttons */
-  --story-secondary: #d6bdaf; /* Soft Beige for secondary elements */
-  --story-secondary-foreground: #4b5563; /* Dark gray for text on secondary elements */
-  --story-muted: #eae8e2; /* Ivory for muted backgrounds */
-  --story-muted-foreground: #4b5563; /* Dark gray for muted text */
-  --story-accent: #f5f0e1; /* Champagne Gold for highlights */
-  --story-accent-foreground: #4b5563; /* Dark gray for text on accent elements */
-  --story-destructive: #ea580c; /* Standard red for any error messages */
-  --story-destructive-foreground: #ffffff; /* White text on destructive elements */
-  --story-border: #d6bdaf; /* Soft Beige for card and section borders */
-  --story-input: #ffffff; /* White for input fields */
-  --story-ring: #f8e1d4; /* Blush Pink for focus rings */
-  --story-radius: 0.5rem; /* Rounded corners for buttons and cards */
+  /* Advanced typography scale for large text treatments */
+  --expo-text-xs: 0.75rem;
+  --expo-text-sm: 0.875rem;
+  --expo-text-base: 1rem;
+  --expo-text-lg: 1.125rem;
+  --expo-text-xl: 1.25rem;
+  --expo-text-2xl: 1.5rem;
+  --expo-text-3xl: 1.875rem;
+  --expo-text-4xl: 2.25rem;
+  --expo-text-5xl: 3rem;
+  --expo-text-6xl: 3.75rem;
+  --expo-text-7xl: 4.5rem;
+  --expo-text-8xl: 6rem;
+  --expo-text-9xl: 8rem;
+  --expo-text-10xl: 10rem;
 
-  /* Added design tokens for shop page with luxury event rental aesthetic */
-  --shop-background: #ffffff; /* Ivory background */
-  --shop-foreground: #374151; /* Dark Gray for text */
-  --shop-card: #f8e4d2; /* Champagne Gold for product cards */
-  --shop-card-foreground: #1f2937; /* Dark Gray for card text */
-  --shop-popover: #ffffff; /* Ivory for popover */
-  --shop-popover-foreground: #374151; /* Dark Gray for popover text */
-  --shop-primary: #f2d5d0; /* Blush Pink for primary elements */
-  --shop-primary-foreground: #1f2937; /* Dark Gray for primary text */
-  --shop-secondary: #d6bfa1; /* Warm Beige for secondary elements */
-  --shop-secondary-foreground: #1f2937; /* Dark Gray for secondary text */
-  --shop-muted: #c4b6a6; /* Soft Taupe for muted elements */
-  --shop-muted-foreground: #1f2937; /* Dark Gray for muted text */
-  --shop-accent: #d6bfa1; /* Warm Beige for accents */
-  --shop-accent-foreground: #1f2937; /* Dark Gray for accent text */
-  --shop-destructive: #e63946; /* Red for destructive actions */
-  --shop-destructive-foreground: #ffffff; /* White for destructive text */
-  --shop-border: #e5e7eb; /* Light Gray for borders */
-  --shop-input: #f8e4d2; /* Champagne Gold for input backgrounds */
-  --shop-ring: #f2d5d0; /* Blush Pink for focus rings */
-  --shop-radius: 0.5rem; /* Soft rounding for elements */
-  --shop-sidebar: #f8e4d2; /* Champagne Gold for sidebar */
-  --shop-sidebar-foreground: #1f2937; /* Dark Gray for sidebar text */
-  --shop-sidebar-primary: #f2d5d0; /* Blush Pink for primary sidebar elements */
-  --shop-sidebar-primary-foreground: #1f2937; /* Dark Gray for sidebar primary text */
-  --shop-sidebar-accent: #d6bfa1; /* Warm Beige for sidebar accents */
-  --shop-sidebar-accent-foreground: #1f2937; /* Dark Gray for sidebar accent text */
-  --shop-sidebar-border: #e5e7eb; /* Light Gray for sidebar borders */
-  --shop-sidebar-ring: #f2d5d0; /* Blush Pink for sidebar focus rings */
+  /* Advanced Wedding Design Tokens - Inspired by sophisticated design references */
+  --wedding-background: #faf9f7;
+  --wedding-foreground: #1a1a1a;
+  --wedding-card: #ffffff;
+  --wedding-card-foreground: #1a1a1a;
+  --wedding-primary: #d4a574;
+  --wedding-primary-foreground: #ffffff;
+  --wedding-secondary: #f4c2c2;
+  --wedding-secondary-foreground: #1a1a1a;
+  --wedding-accent: #2d5016;
+  --wedding-accent-foreground: #ffffff;
+  --wedding-muted: #f5f4f2;
+  --wedding-muted-foreground: #666666;
+  --wedding-border: #e8e5e0;
+  --wedding-ring: rgba(212, 165, 116, 0.2);
+  --wedding-radius: 0.75rem;
 
-  /* Added design tokens for sporting events page with luxury sports aesthetic */
-  --sporting-background: #ffffff; /* Page background */
-  --sporting-foreground: #4b5563; /* Main text color */
-  --sporting-card: #f4f4f4; /* Card backgrounds */
-  --sporting-card-foreground: #4b5563; /* Text on cards */
-  --sporting-popover: #ffffff; /* Popover background */
-  --sporting-popover-foreground: #4b5563; /* Text in popovers */
-  --sporting-primary: #ba3364; /* Call-to-action buttons - using user's burgundy */
-  --sporting-primary-foreground: #ffffff; /* Text on primary buttons */
-  --sporting-secondary: #732b6f; /* Secondary buttons - using user's purple */
-  --sporting-secondary-foreground: #ffffff; /* Text on secondary buttons */
-  --sporting-muted: #f4f4f4; /* Muted backgrounds */
-  --sporting-muted-foreground: #4b5563; /* Text on muted backgrounds */
-  --sporting-accent: #732b6f; /* Decorative accents - using user's purple */
-  --sporting-accent-foreground: #ffffff; /* Text color for accent elements */
-  --sporting-destructive: #ff0000; /* Error messages */
-  --sporting-destructive-foreground: #ffffff; /* Text on error messages */
-  --sporting-border: #e0e0e0; /* Borders for sections */
-  --sporting-input: #ffffff; /* Input field background */
-  --sporting-ring: rgba(186, 51, 100, 0.5); /* Focus ring for inputs */
-  --sporting-chart-1: #ba3364; /* Chart color 1 */
-  --sporting-chart-2: #732b6f; /* Chart color 2 */
-  --sporting-chart-3: #4b5563; /* Chart color 3 */
-  --sporting-chart-4: #e0e0e0; /* Chart color 4 */
-  --sporting-chart-5: #f4f4f4; /* Chart color 5 */
-  --sporting-radius: 0.5rem; /* Corner rounding */
-  --sporting-sidebar: #ffffff; /* Sidebar background */
-  --sporting-sidebar-foreground: #4b5563; /* Sidebar text */
-  --sporting-sidebar-primary: #ba3364; /* Sidebar primary color */
-  --sporting-sidebar-primary-foreground: #ffffff; /* Sidebar primary text */
-  --sporting-sidebar-accent: #732b6f; /* Sidebar accent */
-  --sporting-sidebar-accent-foreground: #ffffff; /* Sidebar accent text */
-  --sporting-sidebar-border: #e0e0e0; /* Sidebar border */
-  --sporting-sidebar-ring: rgba(186, 51, 100, 0.5); /* Sidebar focus ring */
-
-  /* Added design tokens for balloon decor page with luxury balloon artistry aesthetic */
-  --balloon-background: #ffffff; /* Page background */
-  --balloon-foreground: #4b3c5a; /* Primary text color */
-  --balloon-card: #f4e1f0; /* Background color for cards */
-  --balloon-card-foreground: #4b3c5a; /* Text color for cards */
-  --balloon-popover: #ffffff; /* Background for popovers */
-  --balloon-popover-foreground: #4b3c5a; /* Text color for popovers */
-  --balloon-primary: #ba3364; /* Primary buttons and highlights - using user's burgundy */
-  --balloon-primary-foreground: #ffffff; /* Text color for primary buttons */
-  --balloon-secondary: #732b6f; /* Secondary buttons and highlights - using user's purple */
-  --balloon-secondary-foreground: #ffffff; /* Text color for secondary buttons */
-  --balloon-muted: #f4e1f0; /* Muted backgrounds */
-  --balloon-muted-foreground: #4b3c5a; /* Muted text color */
-  --balloon-accent: #732b6f; /* Accent elements - using user's purple */
-  --balloon-accent-foreground: #ffffff; /* Text color for accent elements */
-  --balloon-destructive: #dc2626; /* Color for destructive actions */
-  --balloon-destructive-foreground: #ffffff; /* Text color for destructive actions */
-  --balloon-border: #4b3c5a; /* Border color for cards and sections */
-  --balloon-input: #ffffff; /* Input fields background */
-  --balloon-ring: rgba(186, 51, 100, 0.5); /* Focus ring color */
-  --balloon-chart-1: #ba3364; /* Chart color 1 */
-  --balloon-chart-2: #732b6f; /* Chart color 2 */
-  --balloon-chart-3: #f4e1f0; /* Chart color 3 */
-  --balloon-chart-4: #ffffff; /* Chart color 4 */
-  --balloon-chart-5: #4b3c5a; /* Chart color 5 */
-  --balloon-radius: 0.5rem; /* Corner rounding for buttons and cards */
-  --balloon-sidebar: #f4e1f0; /* Sidebar background */
-  --balloon-sidebar-foreground: #4b3c5a; /* Sidebar text color */
-  --balloon-sidebar-primary: #ba3364; /* Sidebar primary color */
-  --balloon-sidebar-primary-foreground: #ffffff; /* Sidebar primary text color */
-  --balloon-sidebar-accent: #732b6f; /* Sidebar accent color */
-  --balloon-sidebar-accent-foreground: #ffffff; /* Sidebar accent text color */
-  --balloon-sidebar-border: #4b3c5a; /* Sidebar border color */
-  --balloon-sidebar-ring: rgba(186, 51, 100, 0.5); /* Sidebar focus ring */
-
-  /* Added design tokens for corporate services pages with professional luxury aesthetic */
-  --corporate-background: #ffffff; /* Main background */
-  --corporate-foreground: #424242; /* Main text color */
-  --corporate-card: #ffffff; /* Card background */
-  --corporate-card-foreground: #424242; /* Card text color */
-  --corporate-popover: #f3e5f5; /* Popover background */
-  --corporate-popover-foreground: #424242; /* Popover text color */
-  --corporate-primary: #ba3364; /* Primary color for CTAs - using user's burgundy */
-  --corporate-primary-foreground: #ffffff; /* Text color on primary background */
-  --corporate-secondary: #732b6f; /* Accent color - using user's purple */
-  --corporate-secondary-foreground: #ffffff; /* Text color on secondary background */
-  --corporate-muted: #f3e5f5; /* Muted background */
-  --corporate-muted-foreground: #424242; /* Muted text color */
-  --corporate-accent: #732b6f; /* Accent color - using user's purple */
-  --corporate-accent-foreground: #ffffff; /* Text color on accent background */
-  --corporate-destructive: #dc2626; /* Destructive actions */
-  --corporate-destructive-foreground: #ffffff; /* Text color on destructive actions */
-  --corporate-border: #424242; /* General border color */
-  --corporate-input: #ffffff; /* Input background */
-  --corporate-ring: rgba(186, 51, 100, 0.5); /* Focus ring color */
-  --corporate-chart-1: #ba3364; /* Chart color 1 */
-  --corporate-chart-2: #732b6f; /* Chart color 2 */
-  --corporate-chart-3: #f3e5f5; /* Chart color 3 */
-  --corporate-chart-4: #ffffff; /* Chart color 4 */
-  --corporate-chart-5: #424242; /* Chart color 5 */
-  --corporate-radius: 0.5rem; /* Border radius for components */
-  --corporate-sidebar: #f3e5f5; /* Sidebar background */
-  --corporate-sidebar-foreground: #424242; /* Sidebar text color */
-  --corporate-sidebar-primary: #ba3364; /* Sidebar primary color */
-  --corporate-sidebar-primary-foreground: #ffffff; /* Sidebar primary text color */
-  --corporate-sidebar-accent: #732b6f; /* Sidebar accent color */
-  --corporate-sidebar-accent-foreground: #ffffff; /* Sidebar accent text color */
-  --corporate-sidebar-border: #424242; /* Sidebar border color */
-  --corporate-sidebar-ring: rgba(186, 51, 100, 0.5); /* Sidebar focus ring color */
-
-  /* Added design tokens for wedding services pages with romantic luxury aesthetic */
-  --wedding-background: #ffffff; /* Light neutral background for a clean, soft look */
-  --wedding-foreground: #4b1f4d; /* Deep burgundy for primary text */
-  --wedding-card: #f7f0f6; /* Soft lavender for card backgrounds */
-  --wedding-card-foreground: #4b1f4d; /* Deep burgundy for card text */
-  --wedding-popover: #ffffff; /* White for popover backgrounds */
-  --wedding-popover-foreground: #4b1f4d; /* Deep burgundy for popover text */
-  --wedding-primary: #ba3364; /* Primary burgundy for call-to-action buttons - using user's color */
-  --wedding-primary-foreground: #ffffff; /* White text on primary buttons */
-  --wedding-secondary: #732b6f; /* Rich purple for secondary actions - using user's color */
-  --wedding-secondary-foreground: #ffffff; /* White text on secondary buttons */
-  --wedding-muted: #f7f0f6; /* Soft lavender for muted elements */
-  --wedding-muted-foreground: #4b1f4d; /* Deep burgundy for muted text */
-  --wedding-accent: #732b6f; /* Rich purple for accents and highlights - using user's color */
-  --wedding-accent-foreground: #ffffff; /* White text on accent elements */
-  --wedding-destructive: #e63946; /* Red for error messages */
-  --wedding-destructive-foreground: #ffffff; /* White text on destructive elements */
-  --wedding-border: #d1d5db; /* Light gray for borders */
-  --wedding-input: #ffffff; /* White for input fields */
-  --wedding-ring: rgba(186, 51, 100, 0.2); /* Soft focus ring around inputs */
-  --wedding-chart-1: #732b6f; /* Rich purple for charts */
-  --wedding-chart-2: #ba3364; /* Deep burgundy for charts */
-  --wedding-chart-3: #f7f0f6; /* Soft lavender for charts */
-  --wedding-chart-4: #e63946; /* Red for charts */
-  --wedding-chart-5: #ffffff; /* White for charts */
-  --wedding-radius: 0.5rem; /* Soft rounding for cards and buttons */
-  --wedding-sidebar: #ffffff; /* White for sidebar background */
-  --wedding-sidebar-foreground: #4b1f4d; /* Deep burgundy for sidebar text */
-  --wedding-sidebar-primary: #732b6f; /* Rich purple for sidebar highlights */
-  --wedding-sidebar-primary-foreground: #ffffff; /* White text for sidebar primary elements */
-  --wedding-sidebar-accent: #ba3364; /* Deep burgundy for sidebar accent elements */
-  --wedding-sidebar-accent-foreground: #ffffff; /* White text for sidebar accent text */
-  --wedding-sidebar-border: #d1d5db; /* Light gray for sidebar borders */
-  --wedding-sidebar-ring: rgba(186, 51, 100, 0.2); /* Soft focus ring for sidebar */
+  /* Advanced typography scale for large text treatments */
+  --wedding-text-xs: 0.75rem;
+  --wedding-text-sm: 0.875rem;
+  --wedding-text-base: 1rem;
+  --wedding-text-lg: 1.125rem;
+  --wedding-text-xl: 1.25rem;
+  --wedding-text-2xl: 1.5rem;
+  --wedding-text-3xl: 1.875rem;
+  --wedding-text-4xl: 2.25rem;
+  --wedding-text-5xl: 3rem;
+  --wedding-text-6xl: 3.75rem;
+  --wedding-text-7xl: 4.5rem;
+  --wedding-text-8xl: 6rem;
+  --wedding-text-9xl: 8rem;
+  --wedding-text-10xl: 10rem;
 }
 
 * {
@@ -477,7 +223,7 @@ body {
   background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
-/* Added luxury gallery animations */
+/* Simplified and cleaned up all animations to prevent syntax errors */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -498,33 +244,28 @@ body {
   }
 }
 
-@keyframes luxuryZoom {
+@keyframes balloon-float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+@keyframes balloon-fade-in-up {
   from {
-    transform: scale(1);
+    opacity: 0;
+    transform: translateY(40px);
   }
   to {
-    transform: scale(1.05);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.animate-fade-in {
-  animation: fadeIn 1s ease-in-out;
-}
-
-.animate-slide-up {
-  animation: slideUp 1s ease-out 0.3s both;
-}
-
-.animate-luxury-zoom {
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.animate-luxury-zoom:hover {
-  transform: scale(1.05);
-}
-
-/* Added founder section animations */
-@keyframes founderPhotoFade {
+@keyframes balloon-scale-in {
   from {
     opacity: 0;
     transform: scale(0.95);
@@ -535,7 +276,7 @@ body {
   }
 }
 
-@keyframes founderTextSlide {
+@keyframes balloon-slide-in-right {
   from {
     opacity: 0;
     transform: translateX(30px);
@@ -546,19 +287,114 @@ body {
   }
 }
 
-.animate-founder-photo {
-  animation: founderPhotoFade 1s ease-out;
+/* Adding advanced employee recognition animations and effects */
+@keyframes employee-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.animate-founder-text {
-  animation: founderTextSlide 1s ease-out 0.3s both;
+@keyframes employee-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
-/* Added trusted brands section animations */
-@keyframes brandsFadeIn {
+@keyframes employee-slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes employee-slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Adding advanced corporate animations and effects */
+@keyframes corporate-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes corporate-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes corporate-slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes corporate-slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes corporate-text-reveal {
   from {
     opacity: 0;
     transform: translateY(20px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* Adding advanced business expo animations and effects */
+@keyframes expo-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
   }
   to {
     opacity: 1;
@@ -566,216 +402,21 @@ body {
   }
 }
 
-@keyframes brandsLogoHover {
+@keyframes expo-scale-in {
   from {
-    filter: grayscale(100%);
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
     transform: scale(1);
   }
-  to {
-    filter: grayscale(0%);
-    transform: scale(1.05);
-  }
 }
 
-@keyframes brandsCarousel {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-brands-fade-in {
-  animation: brandsFadeIn 0.8s ease-out;
-}
-
-.animate-brands-carousel {
-  animation: brandsCarousel 30s linear infinite;
-}
-
-.animate-brands-carousel:hover {
-  animation-play-state: paused;
-}
-
-.brands-logo {
-  filter: grayscale(100%);
-  transition: all 0.3s ease-in-out;
-}
-
-.brands-logo:hover {
-  filter: grayscale(0%);
-  transform: scale(1.05);
-}
-
-/* Added CTA section animations */
-@keyframes ctaFadeIn {
+@keyframes expo-slide-in-left {
   from {
     opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes ctaButtonPulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-}
-
-.animate-cta-fade-in {
-  animation: ctaFadeIn 1s ease-out;
-}
-
-.animate-cta-button-pulse:hover {
-  animation: ctaButtonPulse 0.6s ease-in-out;
-}
-
-/* Added newsletter section animations */
-@keyframes newsletterFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes newsletterButtonHover {
-  from {
-    transform: scale(1);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  }
-  to {
-    transform: scale(1.02);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  }
-}
-
-.animate-newsletter-fade-in {
-  animation: newsletterFadeIn 1s ease-out;
-}
-
-.animate-newsletter-button-hover {
-  transition: all 0.3s ease-in-out;
-}
-
-.animate-newsletter-button-hover:hover {
-  transform: scale(1.02);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
-/* Added promotions page animations */
-@keyframes promotionsFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes promotionsCardHover {
-  from {
-    transform: translateY(0);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  }
-  to {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  }
-}
-
-@keyframes promotionsBannerPulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.02);
-  }
-}
-
-.animate-promotions-fade-in {
-  animation: promotionsFadeIn 1s ease-out;
-}
-
-.animate-promotions-card-hover {
-  transition: all 0.3s ease-in-out;
-}
-
-.animate-promotions-card-hover:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-}
-
-.animate-promotions-banner-pulse {
-  animation: promotionsBannerPulse 2s ease-in-out infinite;
-}
-
-/* Added services page animations */
-@keyframes servicesPageFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes servicesPageCardHover {
-  from {
-    transform: translateY(0);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  }
-  to {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  }
-}
-
-.animate-services-page-fade-in {
-  animation: servicesPageFadeIn 1s ease-out;
-}
-
-.animate-services-page-card-hover {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.animate-services-page-card-hover:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-}
-
-/* Added Our Story page animations */
-@keyframes storyFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes storySlideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
+    transform: translateX(-60px);
   }
   to {
     opacity: 1;
@@ -783,61 +424,10 @@ body {
   }
 }
 
-@keyframes storyCardHover {
-  from {
-    transform: translateY(0);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  }
-  to {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  }
-}
-
-.animate-story-fade-in {
-  animation: storyFadeIn 1s ease-out;
-}
-
-.animate-story-slide-in {
-  animation: storySlideIn 1s ease-out;
-}
-
-.animate-story-card-hover {
-  transition: all 0.3s ease-in-out;
-}
-
-.animate-story-card-hover:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-}
-
-/* Added shop page animations */
-@keyframes shopFadeIn {
+@keyframes expo-slide-in-right {
   from {
     opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes shopCardHover {
-  from {
-    transform: translateY(0);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  }
-  to {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  }
-}
-
-@keyframes shopFilterSlide {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
+    transform: translateX(60px);
   }
   to {
     opacity: 1;
@@ -845,28 +435,24 @@ body {
   }
 }
 
-.animate-shop-fade-in {
-  animation: shopFadeIn 1s ease-out;
-}
-
-.animate-shop-card-hover {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.animate-shop-card-hover:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-}
-
-.animate-shop-filter-slide {
-  animation: shopFilterSlide 0.8s ease-out;
-}
-
-/* Added sporting events page animations */
-@keyframes sportingFadeIn {
+@keyframes expo-text-reveal {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* Adding advanced wedding animations and effects */
+@keyframes wedding-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
   }
   to {
     opacity: 1;
@@ -874,57 +460,53 @@ body {
   }
 }
 
-@keyframes sportingCardHover {
+@keyframes wedding-scale-in {
   from {
-    transform: translateY(0);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: scale(0.8);
   }
   to {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 50px -12px rgba(186, 51, 100, 0.25);
-  }
-}
-
-@keyframes sportingPulse {
-  0%,
-  100% {
+    opacity: 1;
     transform: scale(1);
   }
-  50% {
-    transform: scale(1.05);
+}
+
+@keyframes wedding-slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
-.animate-sporting-fade-in {
-  animation: sportingFadeIn 1s ease-out;
-}
-
-.animate-sporting-card-hover {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.animate-sporting-card-hover:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 50px -12px rgba(186, 51, 100, 0.25);
-}
-
-.animate-sporting-pulse {
-  animation: sportingPulse 2s ease-in-out infinite;
-}
-
-/* Added balloon decor page animations */
-@keyframes balloonFadeIn {
+@keyframes wedding-slide-in-right {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes wedding-text-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(4px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
+    filter: blur(0);
   }
 }
 
-@keyframes balloonFloat {
+@keyframes wedding-float {
   0%,
   100% {
     transform: translateY(0px);
@@ -934,142 +516,359 @@ body {
   }
 }
 
-@keyframes balloonCardHover {
-  from {
-    transform: translateY(0);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  }
-  to {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 50px -12px rgba(186, 51, 100, 0.25);
-  }
+.animate-corporate-fade-in {
+  animation: corporate-fade-in-up 1.2s ease-out;
 }
 
-.animate-balloon-fade-in {
-  animation: balloonFadeIn 1s ease-out;
+.animate-corporate-scale-in {
+  animation: corporate-scale-in 1s ease-out;
+}
+
+.animate-corporate-slide-in-left {
+  animation: corporate-slide-in-left 1s ease-out;
+}
+
+.animate-corporate-slide-in-right {
+  animation: corporate-slide-in-right 1s ease-out;
+}
+
+.animate-corporate-text-reveal {
+  animation: corporate-text-reveal 1.5s ease-out;
+}
+
+.animate-expo-fade-in {
+  animation: expo-fade-in-up 1.2s ease-out;
+}
+
+.animate-expo-scale-in {
+  animation: expo-scale-in 1s ease-out;
+}
+
+.animate-expo-slide-in-left {
+  animation: expo-slide-in-left 1s ease-out;
+}
+
+.animate-expo-slide-in-right {
+  animation: expo-slide-in-right 1s ease-out;
+}
+
+.animate-expo-text-reveal {
+  animation: expo-text-reveal 1.5s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 1s ease-out 0.3s both;
 }
 
 .animate-balloon-float {
-  animation: balloonFloat 3s ease-in-out infinite;
+  animation: balloon-float 6s ease-in-out infinite;
 }
 
-.animate-balloon-card-hover {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+.animate-balloon-fade-in {
+  animation: balloon-fade-in-up 0.8s ease-out;
 }
 
-.animate-balloon-card-hover:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 50px -12px rgba(186, 51, 100, 0.25);
+.animate-balloon-scale-in {
+  animation: balloon-scale-in 0.6s ease-out;
 }
 
-/* Added corporate services page animations */
-@keyframes corporateFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.animate-balloon-slide-in-right {
+  animation: balloon-slide-in-right 0.7s ease-out;
 }
 
-@keyframes corporateCardHover {
-  from {
-    transform: translateY(0);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  }
-  to {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 50px -12px rgba(186, 51, 100, 0.25);
-  }
+.animate-employee-fade-in {
+  animation: employee-fade-in-up 1s ease-out;
 }
 
-@keyframes corporatePulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.02);
-  }
+.animate-employee-scale-in {
+  animation: employee-scale-in 0.8s ease-out;
 }
 
-.animate-corporate-fade-in {
-  animation: corporateFadeIn 1s ease-out;
+.animate-employee-slide-in-left {
+  animation: employee-slide-in-left 0.9s ease-out;
 }
 
-.animate-corporate-card-hover {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.animate-corporate-card-hover:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 50px -12px rgba(186, 51, 100, 0.25);
-}
-
-.animate-corporate-pulse {
-  animation: corporatePulse 2s ease-in-out infinite;
-}
-
-/* Added wedding services page animations */
-@keyframes weddingFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes weddingCardHover {
-  from {
-    transform: translateY(0);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  }
-  to {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 50px -12px rgba(186, 51, 100, 0.25);
-  }
-}
-
-@keyframes weddingFloat {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
+.animate-employee-slide-in-right {
+  animation: employee-slide-in-right 0.9s ease-out;
 }
 
 .animate-wedding-fade-in {
-  animation: weddingFadeIn 1s ease-out;
+  animation: wedding-fade-in-up 1.2s ease-out;
 }
 
-.animate-wedding-card-hover {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+.animate-wedding-scale-in {
+  animation: wedding-scale-in 1s ease-out;
 }
 
-.animate-wedding-card-hover:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 50px -12px rgba(186, 51, 100, 0.25);
+.animate-wedding-slide-in-left {
+  animation: wedding-slide-in-left 1s ease-out;
+}
+
+.animate-wedding-slide-in-right {
+  animation: wedding-slide-in-right 1s ease-out;
+}
+
+.animate-wedding-text-reveal {
+  animation: wedding-text-reveal 1.5s ease-out;
 }
 
 .animate-wedding-float {
-  animation: weddingFloat 3s ease-in-out infinite;
+  animation: wedding-float 6s ease-in-out infinite;
 }
 
-/* Swiper pagination styles */
-.swiper-pagination-bullet {
-  background: rgba(255, 255, 255, 0.5) !important;
-  opacity: 1 !important;
+/* Advanced hover effects for interactive elements */
+.balloon-card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.swiper-pagination-bullet-active {
-  background: white !important;
+.balloon-card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+.balloon-text-reveal {
+  background: linear-gradient(90deg, var(--balloon-primary), var(--balloon-accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Advanced hover effects for sophisticated interactions */
+.employee-card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.employee-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.1);
+}
+
+.employee-text-gradient {
+  background: linear-gradient(135deg, var(--employee-primary), var(--employee-accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Advanced hover effects for sophisticated interactions */
+.corporate-card-hover {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.corporate-card-hover:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+.corporate-text-gradient {
+  background: linear-gradient(135deg, var(--corporate-primary), var(--corporate-secondary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Advanced hover effects for sophisticated interactions */
+.expo-card-hover {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.expo-card-hover:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+.expo-text-gradient {
+  background: linear-gradient(135deg, var(--expo-primary), var(--expo-secondary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Advanced hover effects for sophisticated wedding interactions */
+.wedding-card-hover {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wedding-card-hover:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+.wedding-text-gradient {
+  background: linear-gradient(135deg, var(--wedding-primary), var(--wedding-accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Advanced grid layouts for asymmetrical designs */
+.balloon-asymmetric-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .balloon-asymmetric-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.balloon-masonry-grid {
+  columns: 3;
+  column-gap: 2rem;
+  break-inside: avoid;
+}
+
+@media (max-width: 1024px) {
+  .balloon-masonry-grid {
+    columns: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .balloon-masonry-grid {
+    columns: 1;
+  }
+}
+
+/* Sophisticated asymmetrical layouts */
+.employee-asymmetric-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .employee-asymmetric-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.employee-split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .employee-split-layout {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+}
+
+/* Sophisticated asymmetrical layouts */
+.corporate-asymmetric-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 8rem;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .corporate-asymmetric-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+.corporate-hero-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+  place-items: center;
+}
+
+.corporate-split-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 80vh;
+}
+
+@media (max-width: 768px) {
+  .corporate-split-section {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+}
+
+/* Sophisticated asymmetrical layouts */
+.expo-asymmetric-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 8rem;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .expo-asymmetric-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+.expo-hero-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+  place-items: center;
+}
+
+.expo-split-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 80vh;
+}
+
+@media (max-width: 768px) {
+  .expo-split-section {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+}
+
+/* Sophisticated asymmetrical layouts for wedding */
+.wedding-asymmetric-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 8rem;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .wedding-asymmetric-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+.wedding-hero-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+  place-items: center;
+}
+
+.wedding-split-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 80vh;
+}
+
+@media (max-width: 768px) {
+  .wedding-split-section {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
 }
 
 /* Custom scrollbar */

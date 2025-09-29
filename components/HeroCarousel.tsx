@@ -80,7 +80,7 @@ export default function HeroCarousel() {
       {/* Content Overlay */}
       <div className="absolute inset-0 flex items-center justify-center z-10">
         <div className="text-center text-white max-w-6xl px-6 pl-12 md:pl-16 lg:pl-20">
-          <h1 className="text-3xl md:text-5xl lg:text-7xl font-extralight mb-6 leading-tight tracking-tight">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl font-thin mb-6 leading-tight tracking-tight">
             LOVELY EVENTS GROUP
           </h1>
           <p className="text-xl md:text-2xl lg:text-3xl mb-20 font-light max-w-4xl">

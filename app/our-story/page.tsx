@@ -2,6 +2,7 @@ import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import { Heart, Star, Users, Award, Calendar, Sparkles } from "lucide-react"
 import Image from "next/image"
+import LuxuryEventsGallery from "@/components/LuxuryEventsGallery"
 
 export default function OurStoryPage() {
   return (
@@ -22,8 +23,8 @@ export default function OurStoryPage() {
         </div>
 
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6 animate-story-fade-in">
-          <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6 text-balance">
-            Crafting Unforgettable Moments
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-extralight mb-6 leading-tight tracking-tight text-white mb-6">
+            Built with Intention, Led with Heart
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-pretty leading-relaxed">
             The story of Lovely Events began with a simple belief: every celebration deserves to be extraordinary.
@@ -34,8 +35,10 @@ export default function OurStoryPage() {
         </div>
       </section>
 
+      {/*<LuxuryEventsGallery />*/}
+
       {/* Brand History Timeline */}
-      <section className="py-20 px-6">
+      {/* <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-story-fade-in">
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our Journey</h2>
@@ -45,9 +48,9 @@ export default function OurStoryPage() {
             </p>
           </div>
 
-          <div className="space-y-16">
+          <div className="space-y-16"> */}
             {/* Timeline Item 1 */}
-            <div className="flex flex-col md:flex-row items-center gap-12 animate-story-slide-in">
+            {/*<div className="flex flex-col md:flex-row items-center gap-12 animate-story-slide-in">
               <div className="md:w-1/2">
                 <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-story-card-hover">
                   <div className="flex items-center mb-4">
@@ -70,10 +73,10 @@ export default function OurStoryPage() {
                   className="rounded-2xl shadow-lg"
                 />
               </div>
-            </div>
+            </div> */}
 
             {/* Timeline Item 2 */}
-            <div className="flex flex-col md:flex-row-reverse items-center gap-12 animate-story-slide-in">
+            {/* <div className="flex flex-col md:flex-row-reverse items-center gap-12 animate-story-slide-in">
               <div className="md:w-1/2">
                 <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-story-card-hover">
                   <div className="flex items-center mb-4">
@@ -96,10 +99,10 @@ export default function OurStoryPage() {
                   className="rounded-2xl shadow-lg"
                 />
               </div>
-            </div>
+            </div> */}
 
             {/* Timeline Item 3 */}
-            <div className="flex flex-col md:flex-row items-center gap-12 animate-story-slide-in">
+            {/*<div className="flex flex-col md:flex-row items-center gap-12 animate-story-slide-in">
               <div className="md:w-1/2">
                 <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-story-card-hover">
                   <div className="flex items-center mb-4">
@@ -125,7 +128,7 @@ export default function OurStoryPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* Mission Statement */}
       <section className="py-20 bg-[#732b6f] text-white">

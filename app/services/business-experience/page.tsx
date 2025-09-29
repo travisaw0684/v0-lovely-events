@@ -1,330 +1,310 @@
+"use client"
+
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
-import { Lightbulb, Network, Handshake, Globe, Zap, Users } from "lucide-react"
+import { motion } from "framer-motion"
+import { ArrowRight, Users, Target, TrendingUp, Award, CheckCircle } from "lucide-react"
 
 export default function BusinessExperiencePage() {
   return (
     <div
       className="min-h-screen"
-      style={{ backgroundColor: "var(--corporate-background)", color: "var(--corporate-foreground)" }}
+      style={{ backgroundColor: "var(--expo-background)", color: "var(--expo-foreground)" }}
     >
       <Header />
 
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage:
-              "url('/placeholder.svg?height=1080&width=1920&text=Premium+Business+Experience+Event+Networking')",
-          }}
-        />
-        <div className="absolute inset-0" style={{ backgroundColor: "rgba(186, 51, 100, 0.7)" }} />
+      {/* Hero Section - Inspired by "Optimal organization meets exquisite design" */}
+      <section className="expo-hero-layout px-6 py-20 relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <video autoPlay muted loop playsInline className="w-full h-full object-cover">
+            <source src="https://videos.pexels.com/video-files/7648337/7648337-sd_640_360_30fps.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          {/* Video overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/40" style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }} />
+        </div>
 
-        <div className="relative z-10 text-center text-white px-6 max-w-4xl animate-corporate-fade-in">
-          <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6 text-balance">
-            Business Experience Event Planner
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 font-light leading-relaxed">
-            Create transformative business experiences that drive connections, innovation, and growth through expertly
-            curated events
-          </p>
-          <button
-            className="px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 animate-corporate-pulse hover:scale-105"
-            style={{
-              backgroundColor: "var(--corporate-secondary)",
-              color: "var(--corporate-secondary-foreground)",
-            }}
+        <div className="max-w-6xl mx-auto text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className="mb-12"
           >
-            Create Your Experience
-          </button>
+            <h1
+              className="font-sans text-6xl md:text-8xl font-light mb-8 text-balance leading-none lg:text-8xl"
+              style={{ color: "var(--expo-primary)" }}
+            >
+              Sophisticated fun meets
+              <br />
+              <span className="expo-text-gradient">business success</span>
+            </h1>
+            <p
+              className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed mb-12"
+              style={{ color: "var(--expo-muted-foreground)" }}
+            >
+              Transform your business expo into a powerful networking experience that drives connections, promotes your
+              brand, and creates lasting relationships with potential customers.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+          >
+            <button
+              className="group px-12 py-6 rounded-full text-lg font-semibold transition-all duration-500 hover:scale-105 flex items-center gap-3"
+              style={{
+                backgroundColor: "var(--expo-primary)",
+                color: "var(--expo-primary-foreground)",
+              }}
+            >
+              Get Your Free Consultation
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
+            <button
+              className="px-12 py-6 rounded-full text-lg font-semibold border-2 transition-all duration-500 hover:scale-105"
+              style={{
+                borderColor: "var(--expo-border)",
+                color: "var(--expo-foreground)",
+              }}
+            >
+              View Our Work
+            </button>
+          </motion.div>
         </div>
       </section>
 
-      {/* Services Overview */}
-      <section className="py-20 px-6">
+      {/* Benefits Section - Inspired by numbered sections */}
+      <section className="py-32 px-6" style={{ backgroundColor: "var(--expo-muted)" }}>
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-corporate-fade-in">
-            <h2
-              className="font-serif text-4xl md:text-5xl font-bold mb-6"
-              style={{ color: "var(--corporate-primary)" }}
-            >
-              Transformative Business Experiences
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <h2 className="font-serif text-5xl md:text-6xl font-bold mb-6" style={{ color: "var(--expo-primary)" }}>
+              Benefits of Business Expos
             </h2>
-            <p className="text-xl max-w-3xl mx-auto leading-relaxed">
-              We design immersive business events that go beyond traditional meetings to create meaningful connections
-              and drive real business outcomes
+            <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: "var(--expo-muted-foreground)" }}>
+              Create lasting relationships that will grow your business into the future while increasing brand awareness
+              through expertly curated expo experiences.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {[
               {
-                icon: Network,
-                title: "Executive Networking Events",
-                description:
-                  "Curated networking experiences that facilitate meaningful connections between industry leaders and decision-makers.",
-              },
-              {
-                icon: Lightbulb,
-                title: "Innovation Workshops",
-                description:
-                  "Interactive sessions that spark creativity, foster collaboration, and drive breakthrough thinking in your organization.",
-              },
-              {
-                icon: Handshake,
-                title: "Partnership Summits",
-                description:
-                  "Strategic events designed to strengthen business relationships and explore new partnership opportunities.",
-              },
-              {
-                icon: Globe,
-                title: "Industry Forums",
-                description:
-                  "Thought leadership events that position your company at the forefront of industry trends and discussions.",
-              },
-              {
-                icon: Zap,
-                title: "Customer Experience Events",
-                description:
-                  "Immersive experiences that showcase your products or services while building stronger customer relationships.",
-              },
-              {
+                number: "01",
                 icon: Users,
-                title: "Leadership Retreats",
+                title: "Target Market Engagement",
                 description:
-                  "Strategic off-site experiences that align leadership teams and drive organizational transformation.",
+                  "Further engage with your target market and create those lasting relationships that drive business growth and customer loyalty.",
               },
-            ].map((service, index) => (
-              <div
+              {
+                number: "02",
+                icon: Target,
+                title: "Brand Awareness",
+                description:
+                  "Get your products and services into the minds of potential customers through strategic expo positioning and memorable experiences.",
+              },
+              {
+                number: "03",
+                icon: TrendingUp,
+                title: "Business Growth",
+                description:
+                  "Transform expo connections into measurable business outcomes with our proven relationship-building strategies.",
+              },
+            ].map((benefit, index) => (
+              <motion.div
                 key={index}
-                className="p-8 rounded-xl animate-corporate-card-hover cursor-pointer"
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className="expo-card-hover p-8 rounded-2xl"
                 style={{
-                  backgroundColor: "var(--corporate-card)",
-                  border: "1px solid var(--corporate-border)",
-                  boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
+                  backgroundColor: "var(--expo-card)",
+                  border: "1px solid var(--expo-border)",
                 }}
               >
-                <service.icon className="w-12 h-12 mb-6" style={{ color: "var(--corporate-primary)" }} />
-                <h3 className="font-serif text-2xl font-bold mb-4" style={{ color: "var(--corporate-primary)" }}>
-                  {service.title}
+                <div className="flex items-center gap-4 mb-6">
+                  <div
+                    className="w-12 h-12 rounded-full flex items-center justify-center text-2xl font-bold"
+                    style={{
+                      backgroundColor: "var(--expo-primary)",
+                      color: "var(--expo-primary-foreground)",
+                    }}
+                  >
+                    {benefit.number}
+                  </div>
+                  <benefit.icon className="w-8 h-8" style={{ color: "var(--expo-secondary)" }} />
+                </div>
+                <h3 className="font-serif text-2xl font-bold mb-4" style={{ color: "var(--expo-primary)" }}>
+                  {benefit.title}
                 </h3>
-                <p className="leading-relaxed">{service.description}</p>
-              </div>
+                <p className="leading-relaxed" style={{ color: "var(--expo-muted-foreground)" }}>
+                  {benefit.description}
+                </p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Experience Design Section */}
-      <section className="py-20 px-6" style={{ backgroundColor: "var(--corporate-muted)" }}>
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 animate-corporate-fade-in">
-            <h2
-              className="font-serif text-4xl md:text-5xl font-bold mb-6"
-              style={{ color: "var(--corporate-primary)" }}
+      {/* Process Section - Asymmetrical layout inspired by ARTIFACT */}
+      <section className="py-32 px-6 bg-slate-800">
+        <div className="max-w-7xl mx-auto">
+          <div className="expo-asymmetric-grid">
+            <motion.div
+              initial={{ opacity: 0, x: -60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1.2 }}
+              viewport={{ once: true }}
             >
-              Experience Design Philosophy
-            </h2>
-            <p className="text-xl max-w-3xl mx-auto leading-relaxed">
-              Every business experience we create is designed with intention, purpose, and measurable outcomes in mind
-            </p>
-          </div>
+              <h2
+                className="font-serif text-5xl md:text-7xl font-bold mb-8 leading-tight"
+                style={{ color: "var(--expo-primary)" }}
+              >
+                Guidance From
+                <br />
+                <span style={{ color: "var(--expo-secondary)" }}>Start to Finish</span>
+              </h2>
+              <p className="text-xl leading-relaxed mb-12" style={{ color: "var(--expo-muted-foreground)" }}>
+                When you work with us, you can spend time focusing on other important things. We will work with you to
+                determine your vision and then use our expertise to make it happen.
+              </p>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="animate-corporate-fade-in">
-              <h3 className="font-serif text-3xl font-bold mb-6" style={{ color: "var(--corporate-primary)" }}>
-                Strategic Experience Design
-              </h3>
-              <div className="space-y-6">
+              <div className="space-y-8">
                 {[
-                  {
-                    title: "Objective-Driven Planning",
-                    description: "Every element serves a specific business purpose and measurable outcome.",
-                  },
-                  {
-                    title: "Participant Journey Mapping",
-                    description: "Carefully crafted experiences that guide attendees through meaningful interactions.",
-                  },
-                  {
-                    title: "Engagement Innovation",
-                    description: "Creative formats that break traditional event molds and drive deeper engagement.",
-                  },
-                  {
-                    title: "ROI Measurement",
-                    description: "Clear metrics and follow-up strategies to measure event success and impact.",
-                  },
-                ].map((item, index) => (
-                  <div key={index} className="flex items-start space-x-4">
-                    <div
-                      className="w-3 h-3 rounded-full mt-2 flex-shrink-0"
-                      style={{ backgroundColor: "var(--corporate-primary)" }}
-                    />
-                    <div>
-                      <h4 className="font-semibold mb-2" style={{ color: "var(--corporate-primary)" }}>
-                        {item.title}
-                      </h4>
-                      <p className="leading-relaxed">{item.description}</p>
-                    </div>
-                  </div>
+                  "Our team pays attention to all details, both big and small",
+                  "Whether planning for 50 people or 500, we get the job done",
+                  "We bring sophisticated fun to your event experience",
+                  "Proven track record with numerous successful events",
+                ].map((point, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex items-center gap-4"
+                  >
+                    <CheckCircle className="w-6 h-6 flex-shrink-0" style={{ color: "var(--expo-secondary)" }} />
+                    <p className="text-lg" style={{ color: "var(--expo-card)" }}>
+                      {point}
+                    </p>
+                  </motion.div>
                 ))}
               </div>
-            </div>
-            <div className="animate-corporate-fade-in">
-              <img
-                src="/placeholder.svg?height=500&width=600&text=Business+Experience+Design+Process"
-                alt="Business Experience Design"
-                className="rounded-xl shadow-lg w-full"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+            </motion.div>
 
-      {/* Process Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 animate-corporate-fade-in">
-            <h2
-              className="font-serif text-4xl md:text-5xl font-bold mb-6"
-              style={{ color: "var(--corporate-primary)" }}
+            <motion.div
+              initial={{ opacity: 0, x: 60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1.2 }}
+              viewport={{ once: true }}
+              className="relative"
             >
-              Our Experience Creation Process
-            </h2>
-            <p className="text-xl max-w-3xl mx-auto leading-relaxed">
-              A comprehensive approach that transforms business objectives into memorable, impactful experiences
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              {
-                step: "01",
-                title: "Discovery & Strategy",
-                description:
-                  "Deep dive into your business objectives, audience analysis, and desired outcomes to create the foundation.",
-              },
-              {
-                step: "02",
-                title: "Experience Architecture",
-                description:
-                  "Design the overall experience flow, touchpoints, and engagement moments that will drive results.",
-              },
-              {
-                step: "03",
-                title: "Content & Programming",
-                description:
-                  "Develop compelling content, speakers, and interactive elements that align with your strategic goals.",
-              },
-              {
-                step: "04",
-                title: "Execution & Optimization",
-                description:
-                  "Flawless delivery with real-time optimization and post-event analysis to maximize impact.",
-              },
-            ].map((process, index) => (
-              <div key={index} className="text-center animate-corporate-fade-in">
-                <div
-                  className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold"
-                  style={{
-                    backgroundColor: "var(--corporate-primary)",
-                    color: "var(--corporate-primary-foreground)",
-                  }}
-                >
-                  {process.step}
-                </div>
-                <h3 className="font-serif text-xl font-bold mb-4" style={{ color: "var(--corporate-primary)" }}>
-                  {process.title}
-                </h3>
-                <p className="leading-relaxed">{process.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Success Stories */}
-      <section className="py-20 px-6" style={{ backgroundColor: "var(--corporate-muted)" }}>
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 animate-corporate-fade-in">
-            <h2
-              className="font-serif text-4xl md:text-5xl font-bold mb-6"
-              style={{ color: "var(--corporate-primary)" }}
-            >
-              Transformative Results
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                quote:
-                  "The leadership retreat they designed completely transformed our executive team's approach to collaboration. The ROI in terms of improved decision-making and strategic alignment has been remarkable.",
-                author: "Catherine Brooks",
-                title: "CEO, Strategic Ventures Group",
-                image: "/placeholder.svg?height=80&width=80&text=CB",
-              },
-              {
-                quote:
-                  "Our customer experience event generated more qualified leads than our last three trade shows combined. The immersive format created genuine connections that translated directly to business growth.",
-                author: "Michael Torres",
-                title: "VP of Sales, Enterprise Solutions",
-                image: "/placeholder.svg?height=80&width=80&text=MT",
-              },
-            ].map((testimonial, index) => (
               <div
-                key={index}
-                className="p-8 rounded-xl animate-corporate-card-hover"
-                style={{
-                  backgroundColor: "var(--corporate-background)",
-                  border: "1px solid var(--corporate-border)",
-                  boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
-                }}
+                className="aspect-[4/5] rounded-3xl overflow-hidden"
+                style={{ backgroundColor: "var(--expo-secondary)" }}
               >
-                <p className="text-lg italic mb-6 leading-relaxed">"{testimonial.quote}"</p>
-                <div className="flex items-center">
-                  <img
-                    src={testimonial.image || "/placeholder.svg"}
-                    alt={testimonial.author}
-                    className="w-12 h-12 rounded-full mr-4"
-                  />
-                  <div>
-                    <h4 className="font-semibold" style={{ color: "var(--corporate-primary)" }}>
-                      {testimonial.author}
-                    </h4>
-                    <p className="text-sm" style={{ color: "var(--corporate-muted-foreground)" }}>
-                      {testimonial.title}
-                    </p>
-                  </div>
-                </div>
+                <img
+                  src="/images/design-mode/Business_expo.png"
+                  alt="Business Expo Planning"
+                  className="w-full h-full object-cover"
+                />
               </div>
+              <div
+                className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full flex items-center justify-center"
+                style={{ backgroundColor: "var(--expo-primary)" }}
+              >
+                <Award className="w-16 h-16" style={{ color: "var(--expo-primary-foreground)" }} />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section - Inspired by clean grid layouts */}
+      <section className="py-32 px-6" style={{ backgroundColor: "var(--expo-muted)" }}>
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <h2 className="font-serif text-5xl md:text-6xl font-bold mb-6" style={{ color: "var(--expo-primary)" }}>
+              Our Latest Work
+            </h2>
+            <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: "var(--expo-muted-foreground)" }}>
+              Explore our portfolio of successful business expos that have transformed companies and created lasting
+              business relationships.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { src: "/placeholder.svg?height=400&width=300&text=Gallery+1", alt: "Business Expo Gallery 1" },
+              { src: "/placeholder.svg?height=400&width=300&text=Gallery+2", alt: "Business Expo Gallery 2" },
+              { src: "/placeholder.svg?height=400&width=300&text=Gallery+3", alt: "Business Expo Gallery 3" },
+              { src: "/placeholder.svg?height=400&width=300&text=Gallery+4", alt: "Business Expo Gallery 4" },
+            ].map((image, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="expo-card-hover aspect-[3/4] rounded-2xl overflow-hidden"
+              >
+                <img src={image.src || "/placeholder.svg"} alt={image.alt} className="w-full h-full object-cover" />
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-6 text-center" style={{ backgroundColor: "var(--corporate-primary)" }}>
-        <div className="max-w-4xl mx-auto animate-corporate-fade-in">
-          <h2
-            className="font-serif text-4xl md:text-5xl font-bold mb-6"
-            style={{ color: "var(--corporate-primary-foreground)" }}
+      {/* CTA Section - Inspired by dark themes with contrast */}
+      <section className="py-32 px-6 text-center bg-[#000000]">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2 }}
+            viewport={{ once: true }}
           >
-            Ready to Transform Your Business Events?
-          </h2>
-          <p className="text-xl mb-8 leading-relaxed" style={{ color: "var(--corporate-primary-foreground)" }}>
-            Let's create a business experience that drives real results and transforms how your organization connects
-            and grows.
-          </p>
-          <button
-            className="px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-            style={{
-              backgroundColor: "var(--corporate-secondary)",
-              color: "var(--corporate-secondary-foreground)",
-            }}
-          >
-            Begin Your Transformation
-          </button>
+            <h2
+              className="font-serif text-5xl md:text-7xl font-bold mb-8 text-balance"
+              style={{ color: "var(--expo-primary-foreground)" }}
+            >
+              Ready to Transform Your Business Expo?
+            </h2>
+            <p
+              className="text-xl md:text-2xl mb-12 leading-relaxed max-w-3xl mx-auto"
+              style={{ color: "var(--expo-primary-foreground)" }}
+            >
+              Our corporate event planning company in Las Vegas has successfully planned and implemented numerous
+              events. Yours will be no different.
+            </p>
+            <button
+              className="group px-12 py-6 rounded-full text-lg font-semibold transition-all duration-500 hover:scale-105 flex items-center gap-3 mx-auto"
+              style={{
+                backgroundColor: "var(--expo-secondary)",
+                color: "var(--expo-secondary-foreground)",
+              }}
+            >
+              Get Your Free Consultation Today
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
+          </motion.div>
         </div>
       </section>
 

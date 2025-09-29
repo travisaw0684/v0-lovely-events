@@ -7,34 +7,47 @@ import "swiper/css"
 import "swiper/css/effect-fade"
 import "swiper/css/pagination"
 
-const heroImages = ["/elegant-wedding-reception-with-beautiful-table-set.png", "/sophisticated-corporate-event-with-modern-decor--a.png", "/luxurious-social-gathering-with-champagne--elegant.png"]
+const heroImages = [
+  "/elegant-wedding-reception-with-beautiful-table-set.png",
+  "/sophisticated-corporate-event-with-modern-decor--a.png",
+  "/luxurious-social-gathering-with-champagne--elegant.png",
+]
 
 export default function HeroSection() {
   return (
     <section className="relative h-screen overflow-hidden">
-      <Swiper
-        modules={[EffectFade, Autoplay, Pagination]}
-        effect="fade"
-        fadeEffect={{ crossFade: true }}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-          bulletClass: "swiper-pagination-bullet",
-          bulletActiveClass: "swiper-pagination-bullet-active",
-        }}
-        loop={true}
-        className="h-full"
-      >
-        {heroImages.map((image, index) => (
-          <SwiperSlide key={index}>
-            <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${image})` }} />
-            <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-black/40" />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className="absolute inset-0 z-0">
+        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
+          <source src="https://www.pexels.com/download/video/7648408/" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/50" />
+      </div>
+
+      <div className="absolute inset-0 z-1 opacity-0 hover:opacity-100 transition-opacity duration-1000">
+        <Swiper
+          modules={[EffectFade, Autoplay, Pagination]}
+          effect="fade"
+          fadeEffect={{ crossFade: true }}
+          autoplay={{
+            delay: 8000,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+            bulletClass: "swiper-pagination-bullet",
+            bulletActiveClass: "swiper-pagination-bullet-active",
+          }}
+          loop={true}
+          className="h-full"
+        >
+          {heroImages.map((image, index) => (
+            <SwiperSlide key={index}>
+              <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${image})` }} />
+              <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-black/40" />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
 
       {/* Hero Content */}
       <div className="absolute inset-0 flex items-center justify-center z-10">

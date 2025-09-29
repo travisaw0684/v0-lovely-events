@@ -116,7 +116,7 @@ export default function PromotionsPage() {
         <div
           className={`relative z-10 text-center max-w-4xl mx-auto px-6 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          <h1 className="font-serif text-5xl md:text-6xl font-bold text-white mb-6">Exclusive Event Packages</h1>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-extralight mb-6 leading-tight tracking-tight text-white mb-6">Exclusive Event Packages</h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
             Discover our limited-time offers and seasonal packages designed to make your special moments extraordinary
           </p>
@@ -145,7 +145,7 @@ export default function PromotionsPage() {
           <div
             className={`text-center mb-16 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           >
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-gray-800 mb-6">Current Promotions</h2>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-extralight mb-6 leading-tight tracking-tight text-black mb-6">Current Promotions</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Take advantage of our exclusive offers and create unforgettable memories with our premium event planning
               services
@@ -169,7 +169,7 @@ export default function PromotionsPage() {
                 </div>
 
                 <CardHeader>
-                  <CardTitle className="font-serif text-2xl text-gray-800">{promo.title}</CardTitle>
+                  <CardTitle className="text-2xl font-extralight leading-tight tracking-tight text-gray-800">{promo.title}</CardTitle>
                   <CardDescription className="text-gray-600 text-base leading-relaxed">
                     {promo.description}
                   </CardDescription>
@@ -213,7 +213,7 @@ export default function PromotionsPage() {
           <div
             className={`text-center mb-16 transition-all duration-1000 delay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           >
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-gray-800 mb-6">What Our Clients Say</h2>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-extralight mb-6 leading-tight tracking-tight text-white mb-6">What Our Clients Say</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Hear from couples and organizations who trusted us with their most important celebrations
             </p>
@@ -259,7 +259,7 @@ export default function PromotionsPage() {
         <div
           className={`max-w-4xl mx-auto text-center transition-all duration-1000 delay-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Ready to Create Magic?</h2>
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-extralight mb-6 leading-tight tracking-tight text-white mb-6">Ready to Create Magic?</h2>
           <p className="text-xl text-white/90 mb-8 leading-relaxed">
             Don't miss out on these exclusive offers. Contact us today to start planning your unforgettable event.
           </p>

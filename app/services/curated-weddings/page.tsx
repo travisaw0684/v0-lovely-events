@@ -1,6 +1,9 @@
+"use client"
+
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import { Heart, Sparkles, Camera, Flower, Music, Crown } from "lucide-react"
+import { motion } from "framer-motion"
 
 export default function CuratedWeddingsPage() {
   return (
@@ -10,101 +13,169 @@ export default function CuratedWeddingsPage() {
     >
       <Header />
 
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage:
-              "url('/placeholder.svg?height=1080&width=1920&text=Elegant+Luxury+Wedding+Ceremony+Setup')",
-          }}
-        />
-        <div className="absolute inset-0" style={{ backgroundColor: "rgba(186, 51, 100, 0.6)" }} />
+      {/* Hero Section - Inspired by "Optimal organization meets exquisite design" */}
+      <section className="wedding-hero-layout px-6 py-20 relative overflow-hidden">
+        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0">
+          <source src="https://videos.pexels.com/video-files/8775886/8775886-sd_640_360_25fps.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/30 z-10"></div>
 
-        <div className="relative z-10 text-center text-white px-6 max-w-4xl animate-wedding-fade-in">
-          <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6 text-balance animate-wedding-float">
-            Curated Wedding Experiences
-          </h1>
-          <h2 className="text-2xl md:text-3xl mb-8 font-light italic">With Style & Intention</h2>
-          <p className="text-xl md:text-2xl mb-8 font-light leading-relaxed">
-            Every detail thoughtfully designed to reflect your unique love story and create an unforgettable celebration
-          </p>
-          <button
-            className="px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-            style={{
-              backgroundColor: "var(--wedding-secondary)",
-              color: "var(--wedding-secondary-foreground)",
-            }}
+        <div className="max-w-6xl mx-auto text-center relative z-20">
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className="mb-12"
           >
-            Begin Your Journey
-          </button>
-        </div>
-      </section>
-
-      {/* Philosophy Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 animate-wedding-fade-in">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6" style={{ color: "var(--wedding-primary)" }}>
-              Our Wedding Philosophy
-            </h2>
-            <p className="text-xl max-w-3xl mx-auto leading-relaxed">
-              We believe every wedding should be a true reflection of your love story, crafted with intention and
-              executed with flawless attention to detail
+            <h1
+              className="font-serif text-6xl md:text-8xl lg:text-9xl font-light mb-8 text-balance leading-none"
+              style={{ color: "var(--wedding-primary)" }}
+            >
+              Curated wedding experiences
+            </h1>
+            <p className="text-xl md:text-2xl mb-12 font-light leading-relaxed max-w-3xl mx-auto">
+              Transform your wedding dreams into functional works of art with Lovely Events Group's curated design
+              solutions.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Heart,
-                title: "Style with Substance",
-                description:
-                  "Beautiful aesthetics that carry deep meaning, ensuring every element tells part of your unique story.",
-              },
-              {
-                icon: Sparkles,
-                title: "Intentional Design",
-                description:
-                  "Every choice is purposeful, from color palettes to floral arrangements, creating cohesive elegance.",
-              },
-              {
-                icon: Crown,
-                title: "Luxury Experience",
-                description:
-                  "Premium service and attention to detail that makes you feel like royalty on your special day.",
-              },
-            ].map((philosophy, index) => (
-              <div
-                key={index}
-                className="text-center p-8 rounded-xl animate-wedding-card-hover"
-                style={{
-                  backgroundColor: "var(--wedding-card)",
-                  border: "1px solid var(--wedding-border)",
-                }}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+          >
+            <button
+              className="px-12 py-4 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105"
+              style={{
+                backgroundColor: "var(--wedding-primary)",
+                color: "var(--wedding-primary-foreground)",
+              }}
+            >
+              LEARN OUR UNTOLD STORY
+            </button>
+            <button
+              className="px-12 py-4 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105"
+              style={{
+                backgroundColor: "var(--wedding-secondary)",
+                color: "var(--wedding-secondary-foreground)",
+              }}
+            >
+              DISCOVER OUR SERVICES
+            </button>
+          </motion.div>
+        </div>
+
+        {/* Central Image - Inspired by design reference */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 0.6 }}
+          className="mt-20 max-w-4xl mx-auto relative z-20"
+        >
+          <div
+            className="aspect-[4/3] rounded-2xl overflow-hidden"
+            style={{
+              backgroundImage: "url('/placeholder.svg?height=600&width=800&text=Elegant+Wedding+Setup')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          />
+        </motion.div>
+      </section>
+
+      {/* Philosophy Section - Inspired by ARTIFACT design */}
+      <section className="py-32 px-6" style={{ backgroundColor: "var(--wedding-secondary)" }}>
+        <div className="max-w-7xl mx-auto">
+          <div className="wedding-asymmetric-grid">
+            <motion.div
+              initial={{ opacity: 0, x: -60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1.2 }}
+              viewport={{ once: true }}
+            >
+              <h2
+                className="font-serif text-5xl md:text-7xl font-bold mb-8 leading-tight"
+                style={{ color: "var(--wedding-foreground)" }}
               >
-                <philosophy.icon className="w-12 h-12 mx-auto mb-6" style={{ color: "var(--wedding-primary)" }} />
-                <h3 className="font-serif text-2xl font-bold mb-4" style={{ color: "var(--wedding-primary)" }}>
-                  {philosophy.title}
-                </h3>
-                <p className="leading-relaxed">{philosophy.description}</p>
+                LOVELY WEDDINGS
+              </h2>
+              <p className="text-xl leading-relaxed mb-8">
+                We believe every wedding should be a true reflection of your love story, crafted with intention and
+                executed with flawless attention to detail. Our curated approach ensures every element tells part of
+                your unique narrative.
+              </p>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div
+                    className="w-8 h-8 rounded-full flex items-center justify-center mt-1"
+                    style={{ backgroundColor: "var(--wedding-accent)" }}
+                  >
+                    <span className="text-white text-sm font-bold">1</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">Style with Substance</h3>
+                    <p className="text-base leading-relaxed">
+                      Beautiful aesthetics that carry deep meaning, ensuring every element tells part of your unique
+                      story.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div
+                    className="w-8 h-8 rounded-full flex items-center justify-center mt-1"
+                    style={{ backgroundColor: "var(--wedding-accent)" }}
+                  >
+                    <span className="text-white text-sm font-bold">2</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">Intentional Design</h3>
+                    <p className="text-base leading-relaxed">
+                      Every choice is purposeful, from color palettes to floral arrangements, creating cohesive
+                      elegance.
+                    </p>
+                  </div>
+                </div>
               </div>
-            ))}
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1.2, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div
+                className="aspect-[3/4] rounded-2xl overflow-hidden"
+                style={{
+                  backgroundImage: "url('https://static.mywebsites360.com/d3536c889e90455b8c18f12a5d7c8646/i/b240e0d138924c80908851527071b653/1/2GTQbgiNxerRr5gcT6hkjr8dsnb6NBTxXMi2obS?dpr=2/20220219_185025.jpg?dpr=2')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Services Overview */}
-      <section className="py-20 px-6" style={{ backgroundColor: "var(--wedding-muted)" }}>
+      {/* Services Grid - Inspired by Casa Portufornia layout */}
+      <section className="py-32 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-wedding-fade-in">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6" style={{ color: "var(--wedding-primary)" }}>
-              Curated Wedding Services
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <h2 className="font-serif text-4xl md:text-6xl font-bold mb-6" style={{ color: "var(--wedding-primary)" }}>
+              Our Wedding Services
             </h2>
             <p className="text-xl max-w-3xl mx-auto leading-relaxed">
               Comprehensive wedding planning services that transform your vision into an extraordinary celebration
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -145,39 +216,48 @@ export default function CuratedWeddingsPage() {
                   "Flawless execution ensuring you can focus on celebrating while we manage every detail seamlessly.",
               },
             ].map((service, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="p-8 rounded-xl animate-wedding-card-hover cursor-pointer"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="wedding-card-hover p-8 rounded-xl cursor-pointer"
                 style={{
-                  backgroundColor: "var(--wedding-background)",
+                  backgroundColor: "var(--wedding-card)",
                   border: "1px solid var(--wedding-border)",
-                  boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
                 }}
               >
                 <service.icon className="w-12 h-12 mb-6" style={{ color: "var(--wedding-primary)" }} />
-                <h3 className="font-serif text-2xl font-bold mb-4" style={{ color: "var(--wedding-primary)" }}>
+                <h3 className="font-serif text-xl font-bold mb-4" style={{ color: "var(--wedding-primary)" }}>
                   {service.title}
                 </h3>
                 <p className="leading-relaxed">{service.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-20 px-6">
+      {/* Process Section - Inspired by Typeform's clean layout */}
+      <section className="py-32 px-6" style={{ backgroundColor: "var(--wedding-muted)" }}>
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 animate-wedding-fade-in">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6" style={{ color: "var(--wedding-primary)" }}>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <h2 className="font-serif text-4xl md:text-6xl font-bold mb-6" style={{ color: "var(--wedding-primary)" }}>
               Your Wedding Journey
             </h2>
             <p className="text-xl max-w-3xl mx-auto leading-relaxed">
               A carefully crafted process that guides you from initial vision to your perfect wedding day
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 step: "01",
@@ -203,7 +283,14 @@ export default function CuratedWeddingsPage() {
                   "Professional coordination on your wedding day, allowing you to be fully present for every moment.",
               },
             ].map((process, index) => (
-              <div key={index} className="text-center animate-wedding-fade-in">
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
                 <div
                   className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold"
                   style={{
@@ -217,22 +304,28 @@ export default function CuratedWeddingsPage() {
                   {process.title}
                 </h3>
                 <p className="leading-relaxed">{process.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 px-6" style={{ backgroundColor: "var(--wedding-muted)" }}>
+      {/* Testimonials Section */}
+      <section className="py-32 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 animate-wedding-fade-in">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6" style={{ color: "var(--wedding-primary)" }}>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <h2 className="font-serif text-4xl md:text-6xl font-bold mb-6" style={{ color: "var(--wedding-primary)" }}>
               Love Stories We've Crafted
             </h2>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-12">
             {[
               {
                 quote:
@@ -249,13 +342,16 @@ export default function CuratedWeddingsPage() {
                 image: "/placeholder.svg?height=80&width=80&text=S&M",
               },
             ].map((testimonial, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="p-8 rounded-xl animate-wedding-card-hover"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className="wedding-card-hover p-8 rounded-xl"
                 style={{
-                  backgroundColor: "var(--wedding-background)",
+                  backgroundColor: "var(--wedding-card)",
                   border: "1px solid var(--wedding-border)",
-                  boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
                 }}
               >
                 <p className="text-lg italic mb-6 leading-relaxed">"{testimonial.quote}"</p>
@@ -274,33 +370,41 @@ export default function CuratedWeddingsPage() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-6 text-center" style={{ backgroundColor: "var(--wedding-primary)" }}>
-        <div className="max-w-4xl mx-auto animate-wedding-fade-in">
-          <h2
-            className="font-serif text-4xl md:text-5xl font-bold mb-6"
-            style={{ color: "var(--wedding-primary-foreground)" }}
+      {/* CTA Section - Inspired by large typography treatments */}
+      <section className="py-32 px-6 text-center" style={{ backgroundColor: "var(--wedding-accent)" }}>
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
           >
-            Ready to Create Your Dream Wedding?
-          </h2>
-          <p className="text-xl mb-8 leading-relaxed" style={{ color: "var(--wedding-primary-foreground)" }}>
-            Let's begin crafting a wedding experience that perfectly reflects your love story with style and intention.
-          </p>
-          <button
-            className="px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-            style={{
-              backgroundColor: "var(--wedding-secondary)",
-              color: "var(--wedding-secondary-foreground)",
-            }}
-          >
-            Schedule Your Consultation
-          </button>
+            <h2
+              className="font-serif text-4xl md:text-6xl font-bold mb-6"
+              style={{ color: "var(--wedding-accent-foreground)" }}
+            >
+              Ready to Create Your Dream Wedding?
+            </h2>
+            <p className="text-xl mb-12 leading-relaxed" style={{ color: "var(--wedding-accent-foreground)" }}>
+              Let's begin crafting a wedding experience that perfectly reflects your love story with style and
+              intention.
+            </p>
+            <button
+              className="px-12 py-4 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105"
+              style={{
+                backgroundColor: "var(--wedding-primary)",
+                color: "var(--wedding-primary-foreground)",
+              }}
+            >
+              Schedule Your Consultation
+            </button>
+          </motion.div>
         </div>
       </section>
 

@@ -10,7 +10,7 @@ export default function Footer() {
           <div>
             <div className="mb-4">
               <img
-                src="https://static.mywebsites360.com/d3536c889e90455b8c18f12a5d7c8646/i/a5f603b1a2214b0f8afdaccd0790e40b/1/5feFb8zhrk/fulllogo_transparent_nobuffer.png?dpr=2"
+                src="/images/design-mode/fulllogo_transparent_nobuffer%281%29.png"
                 alt="Lovely Events Logo"
                 className="w-24 h-24 object-contain"
               />

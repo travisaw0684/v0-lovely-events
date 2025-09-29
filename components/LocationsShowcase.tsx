@@ -98,7 +98,7 @@ export default function LocationsShowcase() {
             titleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-200 mb-4">Versatile Service</h2>
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-extralight mb-6 leading-tight tracking-tight text-white mb-6">Versatile Service</h2>
           <h4 className="text-2xl text-gray-200 max-w-3xl mx-auto">
             We design events that reflect your vision—seamlessly and beautifully.
           </h4>

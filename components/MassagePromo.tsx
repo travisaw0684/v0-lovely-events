@@ -28,7 +28,7 @@ export default function MassagePromo() {
       {/* Right image section */}
       <div className="relative md:w-1/2 h-[400px] md:h-full">
         <img
-          src="https://images.pexels.com/photos/2306281/pexels-photo-2306281.jpeg"
+          src="/images/design-mode/pexels-photo-2306281%281%29.jpeg"
           alt="Massage"
           className="object-cover w-full h-full"
         />

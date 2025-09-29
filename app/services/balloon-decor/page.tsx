@@ -1,8 +1,33 @@
+"use client"
+
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
-import { Palette, Heart, Star, Sparkles, Gift, Camera } from "lucide-react"
+import { motion } from "framer-motion"
+import { ArrowRight, Star, CheckCircle, Sparkles } from "lucide-react"
 
 export default function BalloonDecorPage() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  }
+
   return (
     <div
       className="min-h-screen"
@@ -10,306 +35,402 @@ export default function BalloonDecorPage() {
     >
       <Header />
 
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage:
-              "url('/placeholder.svg?height=1080&width=1920&text=Elegant+Balloon+Installation+at+Luxury+Event')",
-          }}
-        />
-        <div className="absolute inset-0" style={{ backgroundColor: "rgba(186, 51, 100, 0.6)" }} />
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-orange-50 to-pink-50" />
 
-        <div className="relative z-10 text-center text-white px-6 max-w-4xl animate-balloon-fade-in">
-          <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6 text-balance animate-balloon-float">
-            Balloon Artistry & Decor
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 font-light leading-relaxed">
-            Transform your events with sophisticated balloon installations that blend creativity with luxury
-          </p>
-          <button
-            className="px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-            style={{
-              backgroundColor: "var(--balloon-secondary)",
-              color: "var(--balloon-secondary-foreground)",
-            }}
-          >
-            Explore Our Artistry
-          </button>
-        </div>
-      </section>
-
-      {/* Services Overview */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-balloon-fade-in">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6" style={{ color: "var(--balloon-primary)" }}>
-              Elevated Balloon Experiences
-            </h2>
-            <p className="text-xl max-w-3xl mx-auto leading-relaxed">
-              From intimate celebrations to grand corporate events, our balloon artistry creates unforgettable
-              atmospheres
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Heart,
-                title: "Wedding Celebrations",
-                description:
-                  "Romantic balloon arches, ceiling installations, and aisle decorations that create magical moments for your special day.",
-              },
-              {
-                icon: Star,
-                title: "Corporate Events",
-                description:
-                  "Professional balloon displays featuring company colors and branding for conferences, product launches, and celebrations.",
-              },
-              {
-                icon: Gift,
-                title: "Birthday Parties",
-                description:
-                  "Custom balloon sculptures, themed installations, and interactive balloon experiences for memorable birthday celebrations.",
-              },
-              {
-                icon: Sparkles,
-                title: "Grand Openings",
-                description:
-                  "Eye-catching balloon releases, entrance arches, and promotional displays that draw attention and create excitement.",
-              },
-              {
-                icon: Palette,
-                title: "Custom Installations",
-                description:
-                  "Bespoke balloon artistry tailored to your vision, including organic arrangements and sculptural pieces.",
-              },
-              {
-                icon: Camera,
-                title: "Photo Backdrops",
-                description:
-                  "Instagram-worthy balloon walls and interactive photo opportunities that guests will love to share.",
-              },
-            ].map((service, index) => (
-              <div
-                key={index}
-                className="p-8 rounded-xl animate-balloon-card-hover cursor-pointer"
-                style={{
-                  backgroundColor: "var(--balloon-card)",
-                  border: "1px solid var(--balloon-border)",
-                }}
-              >
-                <service.icon className="w-12 h-12 mb-6" style={{ color: "var(--balloon-primary)" }} />
-                <h3 className="font-serif text-2xl font-bold mb-4" style={{ color: "var(--balloon-primary)" }}>
-                  {service.title}
-                </h3>
-                <p className="leading-relaxed">{service.description}</p>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
+          <div className="balloon-asymmetric-grid">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="space-y-8"
+            >
+              <div className="space-y-4">
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.3, duration: 0.6 }}
+                  className="text-sm font-medium tracking-wider uppercase"
+                  style={{ color: "var(--balloon-primary)" }}
+                >
+                  Lovely Events Group
+                </motion.p>
+                <h1 className="font-serif text-6xl md:text-8xl font-bold leading-none">
+                  <span className="block">Balloon</span>
+                  <span className="block balloon-text-reveal">Artistry</span>
+                  <span className="block text-4xl md:text-5xl font-light mt-4">meets exquisite design</span>
+                </h1>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Gallery Section */}
-      <section className="py-20 px-6" style={{ backgroundColor: "var(--balloon-muted)" }}>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-balloon-fade-in">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6" style={{ color: "var(--balloon-primary)" }}>
-              Our Balloon Artistry
-            </h2>
-            <p className="text-xl max-w-3xl mx-auto leading-relaxed">
-              Discover the beauty and creativity of our balloon installations
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                image: "/placeholder.svg?height=400&width=600&text=Elegant+Wedding+Balloon+Arch",
-                title: "Wedding Balloon Arch",
-                description: "Romantic organic arch in blush and gold tones",
-              },
-              {
-                image: "/placeholder.svg?height=400&width=600&text=Corporate+Balloon+Installation",
-                title: "Corporate Installation",
-                description: "Professional branded balloon display",
-              },
-              {
-                image: "/placeholder.svg?height=400&width=600&text=Birthday+Balloon+Sculpture",
-                title: "Birthday Sculpture",
-                description: "Custom balloon sculpture for milestone celebration",
-              },
-              {
-                image: "/placeholder.svg?height=400&width=600&text=Grand+Opening+Balloon+Release",
-                title: "Grand Opening Display",
-                description: "Spectacular balloon release and entrance decor",
-              },
-              {
-                image: "/placeholder.svg?height=400&width=600&text=Photo+Backdrop+Balloons",
-                title: "Photo Backdrop",
-                description: "Instagram-worthy balloon wall installation",
-              },
-              {
-                image: "/placeholder.svg?height=400&width=600&text=Ceiling+Balloon+Installation",
-                title: "Ceiling Installation",
-                description: "Floating balloon clouds creating magical atmosphere",
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="rounded-xl overflow-hidden animate-balloon-card-hover cursor-pointer"
-                style={{ backgroundColor: "var(--balloon-background)" }}
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.6, duration: 0.6 }}
+                className="text-xl leading-relaxed max-w-lg"
+                style={{ color: "var(--balloon-muted-foreground)" }}
               >
-                <img src={item.image || "/placeholder.svg"} alt={item.title} className="w-full h-64 object-cover" />
-                <div className="p-6">
-                  <h3 className="font-serif text-xl font-bold mb-2" style={{ color: "var(--balloon-primary)" }}>
-                    {item.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed">{item.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+                Transform your events into functional works of art with Lovely Events Group's custom balloon design
+                solutions.
+              </motion.p>
 
-      {/* Process Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 animate-balloon-fade-in">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6" style={{ color: "var(--balloon-primary)" }}>
-              Our Creative Process
-            </h2>
-            <p className="text-xl max-w-3xl mx-auto leading-relaxed">
-              From concept to installation, we bring your balloon decor vision to life
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              {
-                step: "01",
-                title: "Design Consultation",
-                description:
-                  "We discuss your vision, theme, and requirements to create a custom balloon design concept.",
-              },
-              {
-                step: "02",
-                title: "Color & Style Selection",
-                description:
-                  "Choose from our premium balloon collection and finalize colors that match your event aesthetic.",
-              },
-              {
-                step: "03",
-                title: "Professional Installation",
-                description:
-                  "Our skilled team arrives early to create your balloon installation with precision and care.",
-              },
-              {
-                step: "04",
-                title: "Event Support",
-                description: "We provide on-site support throughout your event to ensure everything looks perfect.",
-              },
-            ].map((process, index) => (
-              <div key={index} className="text-center animate-balloon-fade-in">
-                <div
-                  className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold animate-balloon-float"
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.9, duration: 0.6 }}
+                className="flex flex-col sm:flex-row gap-4 pt-8"
+              >
+                <button
+                  className="group px-8 py-4 rounded-full font-semibold transition-all duration-300 flex items-center gap-2"
                   style={{
                     backgroundColor: "var(--balloon-primary)",
                     color: "var(--balloon-primary-foreground)",
-                    animationDelay: `${index * 0.5}s`,
                   }}
                 >
-                  {process.step}
-                </div>
-                <h3 className="font-serif text-xl font-bold mb-4" style={{ color: "var(--balloon-primary)" }}>
-                  {process.title}
-                </h3>
-                <p className="leading-relaxed">{process.description}</p>
+                  Start Your Project
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </button>
+                <button
+                  className="px-8 py-4 rounded-full font-semibold border-2 transition-all duration-300 hover:scale-105"
+                  style={{
+                    borderColor: "var(--balloon-primary)",
+                    color: "var(--balloon-primary)",
+                  }}
+                >
+                  View Portfolio
+                </button>
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              className="relative"
+            >
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <img
+                  src="/placeholder.svg?height=600&width=800&text=Elegant+Balloon+Installation"
+                  alt="Elegant Balloon Installation"
+                  className="w-full h-[600px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Testimonials */}
-      <section className="py-20 px-6" style={{ backgroundColor: "var(--balloon-muted)" }}>
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 animate-balloon-fade-in">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6" style={{ color: "var(--balloon-primary)" }}>
-              What Our Clients Say
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                quote:
-                  "The balloon installation at our wedding was absolutely breathtaking. It transformed our venue into a fairy tale setting that exceeded our wildest dreams.",
-                author: "Emma Thompson",
-                title: "Bride, Thompson-Williams Wedding",
-                image: "/placeholder.svg?height=80&width=80&text=ET",
-              },
-              {
-                quote:
-                  "Lovely Events created the most professional and eye-catching balloon display for our product launch. The attention to detail and brand integration was flawless.",
-                author: "David Chen",
-                title: "Marketing Director, Innovation Tech",
-                image: "/placeholder.svg?height=80&width=80&text=DC",
-              },
-            ].map((testimonial, index) => (
-              <div
-                key={index}
-                className="p-8 rounded-xl animate-balloon-card-hover"
-                style={{
-                  backgroundColor: "var(--balloon-background)",
-                  border: "1px solid var(--balloon-border)",
-                }}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.2, duration: 0.6 }}
+                className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-xl"
               >
-                <p className="text-lg italic mb-6 leading-relaxed">"{testimonial.quote}"</p>
-                <div className="flex items-center">
-                  <img
-                    src={testimonial.image || "/placeholder.svg"}
-                    alt={testimonial.author}
-                    className="w-12 h-12 rounded-full mr-4"
-                  />
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-pink-400 to-orange-400 flex items-center justify-center">
+                    <Star className="w-6 h-6 text-white" />
+                  </div>
                   <div>
-                    <h4 className="font-semibold" style={{ color: "var(--balloon-primary)" }}>
-                      {testimonial.author}
-                    </h4>
-                    <p className="text-sm" style={{ color: "var(--balloon-muted-foreground)" }}>
-                      {testimonial.title}
+                    <p className="text-2xl font-bold" style={{ color: "var(--balloon-primary)" }}>
+                      500+
                     </p>
+                    <p className="text-sm text-gray-600">Events Created</p>
                   </div>
                 </div>
-              </div>
-            ))}
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-6 text-center" style={{ backgroundColor: "var(--balloon-primary)" }}>
-        <div className="max-w-4xl mx-auto animate-balloon-fade-in">
-          <h2
-            className="font-serif text-4xl md:text-5xl font-bold mb-6"
-            style={{ color: "var(--balloon-primary-foreground)" }}
+      <section className="py-32 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="text-center mb-20"
           >
-            Ready to Create Balloon Magic?
-          </h2>
-          <p className="text-xl mb-8 leading-relaxed" style={{ color: "var(--balloon-primary-foreground)" }}>
-            Let's discuss how our balloon artistry can transform your event into an unforgettable experience.
-          </p>
-          <button
-            className="px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 animate-balloon-float"
-            style={{
-              backgroundColor: "var(--balloon-secondary)",
-              color: "var(--balloon-secondary-foreground)",
-            }}
+            <motion.h2 variants={itemVariants} className="font-serif text-5xl md:text-6xl font-bold mb-6">
+              What We Create
+            </motion.h2>
+            <motion.p
+              variants={itemVariants}
+              className="text-xl max-w-3xl mx-auto leading-relaxed"
+              style={{ color: "var(--balloon-muted-foreground)" }}
+            >
+              From intimate celebrations to grand corporate events, we craft balloon installations that tell your story
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            Book Your Consultation
-          </button>
+            {[
+              {
+                title: "Organic Garlands",
+                description: "Flowing, natural balloon arrangements that create stunning backdrops",
+                image: "/placeholder.svg?height=400&width=600&text=Organic+Balloon+Garland",
+                price: "From $350",
+                features: ["Custom color palette", "7-12ft lengths", "Setup included"],
+              },
+              {
+                title: "Ceiling Installations",
+                description: "Dramatic overhead displays that transform any space",
+                image: "/placeholder.svg?height=400&width=600&text=Ceiling+Installation",
+                price: "From $500",
+                features: ["Helium balloons", "Professional rigging", "Impact lighting"],
+              },
+              {
+                title: "Sculptural Pieces",
+                description: "Artistic balloon sculptures as centerpieces and focal points",
+                image: "/placeholder.svg?height=400&width=600&text=Balloon+Sculpture",
+                price: "From $250",
+                features: ["Custom designs", "Themed elements", "Photo-ready"],
+              },
+            ].map((service, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className="group relative rounded-3xl overflow-hidden balloon-card-hover cursor-pointer"
+                style={{ backgroundColor: "var(--balloon-card)" }}
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={service.image || "/placeholder.svg"}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                </div>
+
+                <div className="p-8">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="font-serif text-2xl font-bold" style={{ color: "var(--balloon-primary)" }}>
+                      {service.title}
+                    </h3>
+                    <span className="text-lg font-semibold" style={{ color: "var(--balloon-primary)" }}>
+                      {service.price}
+                    </span>
+                  </div>
+
+                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+
+                  <div className="space-y-2 mb-6">
+                    {service.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4" style={{ color: "var(--balloon-primary)" }} />
+                        <span className="text-sm text-gray-600">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <button
+                    className="w-full py-3 rounded-full font-semibold transition-all duration-300 group-hover:scale-105"
+                    style={{
+                      backgroundColor: "var(--balloon-secondary)",
+                      color: "var(--balloon-secondary-foreground)",
+                    }}
+                  >
+                    Learn More
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-32 px-6" style={{ backgroundColor: "var(--balloon-muted)" }}>
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-20"
+          >
+            <h2 className="font-serif text-5xl md:text-6xl font-bold mb-6">Our Creative Process</h2>
+            <p
+              className="text-xl max-w-3xl mx-auto leading-relaxed"
+              style={{ color: "var(--balloon-muted-foreground)" }}
+            >
+              From concept to celebration, we guide you through every step of bringing your vision to life
+            </p>
+          </motion.div>
+
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-transparent via-amber-200 to-transparent hidden lg:block" />
+
+            <div className="space-y-20">
+              {[
+                {
+                  step: "01",
+                  title: "Discovery & Vision",
+                  description:
+                    "We start by understanding your event, style preferences, and budget to create a tailored approach.",
+                  icon: <Sparkles className="w-8 h-8" />,
+                },
+                {
+                  step: "02",
+                  title: "Design & Planning",
+                  description:
+                    "Our team creates detailed mockups and plans, ensuring every element aligns with your vision.",
+                  icon: <Star className="w-8 h-8" />,
+                },
+                {
+                  step: "03",
+                  title: "Creation & Installation",
+                  description:
+                    "Expert installation on-site, with attention to every detail for a flawless final result.",
+                  icon: <CheckCircle className="w-8 h-8" />,
+                },
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  className={`flex items-center gap-12 ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}
+                >
+                  <div className="flex-1 max-w-lg">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div
+                        className="w-16 h-16 rounded-full flex items-center justify-center"
+                        style={{ backgroundColor: "var(--balloon-primary)" }}
+                      >
+                        <span className="text-white font-bold text-lg">{item.step}</span>
+                      </div>
+                      <div
+                        className="w-12 h-12 rounded-full flex items-center justify-center"
+                        style={{ backgroundColor: "var(--balloon-accent)" }}
+                      >
+                        {item.icon}
+                      </div>
+                    </div>
+                    <h3 className="font-serif text-3xl font-bold mb-4" style={{ color: "var(--balloon-primary)" }}>
+                      {item.title}
+                    </h3>
+                    <p className="text-lg leading-relaxed" style={{ color: "var(--balloon-muted-foreground)" }}>
+                      {item.description}
+                    </p>
+                  </div>
+
+                  <div className="flex-1 max-w-lg">
+                    <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+                      <img
+                        src={`/ceholder-svg-height-400-width-600-text-process-ste.jpg?height=400&width=600&text=Process+Step+${item.step}`}
+                        alt={item.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-32 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-20"
+          >
+            <h2 className="font-serif text-5xl md:text-6xl font-bold mb-6">Recent Creations</h2>
+            <p
+              className="text-xl max-w-3xl mx-auto leading-relaxed"
+              style={{ color: "var(--balloon-muted-foreground)" }}
+            >
+              Explore our latest balloon artistry and see how we transform spaces into extraordinary experiences
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
+            {[
+              { span: "lg:col-span-2 lg:row-span-2", height: "h-96 lg:h-full" },
+              { span: "lg:col-span-1", height: "h-48" },
+              { span: "lg:col-span-1", height: "h-48" },
+              { span: "lg:col-span-1", height: "h-48" },
+              { span: "lg:col-span-1", height: "h-48" },
+              { span: "lg:col-span-2", height: "h-64" },
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className={`${item.span} ${item.height} rounded-3xl overflow-hidden balloon-card-hover cursor-pointer`}
+              >
+                <img
+                  src={`/ceholder-svg-height-400-width-600-text-gallery-ima.jpg?height=400&width=600&text=Gallery+Image+${index + 1}`}
+                  alt={`Gallery ${index + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-32 px-6" style={{ backgroundColor: "var(--balloon-primary)" }}>
+        <div className="max-w-7xl mx-auto">
+          <div className="balloon-asymmetric-grid">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="font-serif text-5xl md:text-6xl font-bold mb-6 text-white">
+                Ready to create something extraordinary?
+              </h2>
+              <p className="text-xl leading-relaxed text-white/90 mb-8">
+                Let's discuss your vision and bring it to life with our signature balloon artistry.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button
+                  className="px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105"
+                  style={{
+                    backgroundColor: "var(--balloon-secondary)",
+                    color: "var(--balloon-secondary-foreground)",
+                  }}
+                >
+                  Start Your Project
+                </button>
+                <button className="px-8 py-4 rounded-full font-semibold border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-all duration-300">
+                  View Portfolio
+                </button>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
+                <img
+                  src="/placeholder.svg?height=600&width=600&text=Contact+CTA+Image"
+                  alt="Contact Us"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 

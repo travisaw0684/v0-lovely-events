@@ -65,7 +65,7 @@ export default function CallToAction() {
   return (
     <section
       id="cta-section"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-[50vh] flex items-center justify-center overflow-hidden"
       style={{
         backgroundImage: `url('/elegant-event-setup-with-beautiful-table-settings-.png')`,
         backgroundSize: "cover",
@@ -80,25 +80,25 @@ export default function CallToAction() {
           <div className={`text-center lg:text-left ${isVisible ? "animate-cta-fade-in" : "opacity-0"}`}>
             <div className="mb-8">
               <img
-              src="https://static.mywebsites360.com/d3536c889e90455b8c18f12a5d7c8646/i/a5f603b1a2214b0f8afdaccd0790e40b/1/5feFb8zhrk/fulllogo_transparent_nobuffer.png?dpr=2"
+              src="/images/design-mode/fulllogo_transparent_nobuffer%281%29.png"
               alt="Lovely Events Logo"
-              className="w-[20rem] h-[20rem]"
+              className="w-[23rem] h-[23rem]"
             />
               <div className="w-24 h-1 bg-gradient-to-r from-secondary to-accent mx-auto lg:mx-0"></div>
             </div>
           </div>
 
           <div className={`text-center lg:text-left ${isVisible ? "animate-cta-fade-in" : "opacity-0"} delay-300`}>
-            <h2 className="text-3xl md:text-5xl lg:text-5xl font-extralight mb-6 leading-tight tracking-tight text-white mb-6">Make Your Event Unforgettable</h2>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-extralight mb-6 leading-tight tracking-tight text-white mb-6">Make Your Event Unforgettable</h2>
 
-            <p className="font-sans text-xl text-gray-200 mb-8 leading-relaxed">
+            <p className="font-sans text-xl text-gray-200 mb-8">
               Transform your special moments with our sophisticated event planning services. From intimate weddings to
               grand corporate celebrations, we bring your vision to life with unmatched attention to detail and luxury.
             </p>
 
             <Button
               size="lg"
-              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4 text-lg font-medium rounded-lg shadow-lg animate-cta-button-pulse mb-12 transition-all duration-300 hover:scale-105"
+              className="bg-secondary hover:bg-secondary/90 bg-gradient-to-r from-[#ba3364] to-[#732b6f] text-secondary-foreground px-8 py-4 text-lg font-medium rounded-lg shadow-lg animate-cta-button-pulse mb-12 transition-all duration-300 hover:scale-105 text-gray-200"
             >
               Book Your Consultation
             </Button>

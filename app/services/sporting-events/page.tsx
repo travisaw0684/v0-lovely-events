@@ -1,6 +1,9 @@
+"use client"
+
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
-import { Trophy, Users, Calendar, Award, Target, Zap } from "lucide-react"
+import { Trophy, Users, Calendar, ArrowRight } from "lucide-react"
+import { motion } from "framer-motion"
 
 export default function SportingEventsPage() {
   return (
@@ -12,29 +15,25 @@ export default function SportingEventsPage() {
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('/placeholder.svg?key=2qi0e')",
-          }}
-        />
-        <div className="absolute inset-0" style={{ backgroundColor: "rgba(186, 51, 100, 0.7)" }} />
+        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
+          <source src="https://videos.pexels.com/video-files/11208468/11208468-sd_640_360_30fps.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/60" />
 
-        <div className="relative z-10 text-center text-white px-6 max-w-4xl animate-sporting-fade-in">
+        <div className="relative z-10 text-center text-white px-6 max-w-5xl animate-fade-in">
           <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6 text-balance">Sporting Event Planning</h1>
-          <p className="text-xl md:text-2xl mb-8 font-light leading-relaxed">
+          <p className="text-xl md:text-2xl mb-8 font-light leading-relaxed max-w-3xl mx-auto">
             Elevate your corporate sporting events with professional planning that delivers championship-level
             experiences
           </p>
-          <button
-            className="px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 animate-sporting-pulse hover:scale-105"
-            style={{
-              backgroundColor: "var(--sporting-secondary)",
-              color: "var(--sporting-secondary-foreground)",
-            }}
-          >
-            Plan Your Event
-          </button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
+              Book a Free Consultation
+            </button>
+            <button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
+              Plan My Event
+            </button>
+          </div>
         </div>
       </section>
 
@@ -46,8 +45,9 @@ export default function SportingEventsPage() {
               Championship-Level Events
             </h2>
             <p className="text-xl max-w-3xl mx-auto leading-relaxed">
-              From corporate tournaments to award ceremonies, we create sporting events that inspire, engage, and
-              celebrate excellence
+              What sets Lovely Events Group apart is our proven expertise in producing large-scale, high-impact sporting
+              events and premium experiences. Founder Shawanda Holsey brings a wealth of industry knowledge, having led
+              logistics and coordination for nationally recognized collegiate events.
             </p>
           </div>
 
@@ -55,39 +55,21 @@ export default function SportingEventsPage() {
             {[
               {
                 icon: Trophy,
-                title: "Corporate Tournaments",
+                title: "From Kickoff to Celebration: Curating Fan Experiences",
                 description:
-                  "Multi-day tournaments with professional coordination, scoring systems, and award ceremonies that build team spirit and healthy competition.",
+                  "Our team has proudly produced and supported ancillary experiences for major games like the MEAC/SWAC Challenge Kickoff and the Celebration Bowl, delivering everything from VIP receptions and hospitality suites to branded fan activations and curated cultural moments.",
               },
               {
                 icon: Users,
-                title: "Team Building Events",
+                title: "Where Tradition Meets Innovation",
                 description:
-                  "Interactive sporting activities designed to strengthen workplace relationships and improve collaboration through friendly competition.",
+                  "With a deep respect for the legacy and impact of Historically Black Colleges and Universities (HBCUs), we take pride in creating polished, meaningful experiences that reflect the heart of the culture and the spirit of the game.",
               },
               {
                 icon: Calendar,
-                title: "Annual Sports Days",
+                title: "Shaping the Culture Around the Game",
                 description:
-                  "Company-wide sporting events featuring multiple activities, catering, entertainment, and professional event management.",
-              },
-              {
-                icon: Award,
-                title: "Award Ceremonies",
-                description:
-                  "Elegant recognition events celebrating athletic achievements with sophisticated staging, lighting, and presentation.",
-              },
-              {
-                icon: Target,
-                title: "Skills Competitions",
-                description:
-                  "Specialized competitions focusing on specific sports skills with professional judging and interactive audience engagement.",
-              },
-              {
-                icon: Zap,
-                title: "Wellness Challenges",
-                description:
-                  "Health-focused sporting events promoting employee wellness through engaging physical activities and educational components.",
+                  "When you partner with Lovely Events Group, you're choosing precision, passion, and peace of mind—so you can focus on enjoying the moment while we handle the rest.",
               },
             ].map((service, index) => (
               <div
@@ -110,61 +92,103 @@ export default function SportingEventsPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 px-6" style={{ backgroundColor: "var(--sporting-muted)" }}>
+      <section className="py-20 px-6 bg-[#2F5068] text-[#ffffff]">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 animate-sporting-fade-in">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6" style={{ color: "var(--sporting-primary)" }}>
-              Our Winning Process
+              Comprehensive Event Execution, From Strategy to Show Time
             </h2>
             <p className="text-xl max-w-3xl mx-auto leading-relaxed">
-              Every successful sporting event starts with meticulous planning and attention to detail
+              At Lovely Events Group, we specialize in managing the full scope of live sporting event logistics and
+              experiences—from behind-the-scenes coordination to on-the-ground excellence. Our founder, Shawanda Holsey,
+              brings elite-level expertise to every project, overseeing all operational and hospitality elements with
+              precision and professionalism.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
             {[
               {
                 step: "01",
-                title: "Strategy Session",
+                title: "Peripheral Event Management",
                 description:
-                  "We analyze your objectives, audience, and requirements to create a customized event strategy.",
+                  "VIP receptions, media days, sponsor activations, and ancillary experiences that enhance the core event",
               },
               {
                 step: "02",
-                title: "Venue & Logistics",
-                description:
-                  "Secure the perfect venue with all necessary equipment, permits, and safety protocols in place.",
+                title: "Vendor & Sponsorship Coordination",
+                description: "Onboarding, scheduling, activation strategy, and relationship management",
               },
               {
                 step: "03",
-                title: "Team Coordination",
+                title: "Hospitality Oversight",
                 description:
-                  "Manage participant registration, team formation, and communication leading up to the event.",
+                  "Serving as the liaison for hotel partnerships, ensuring seamless accommodations and experiences for student-athletes, bands, sponsors, volunteers, and vendors",
               },
               {
                 step: "04",
-                title: "Event Execution",
-                description: "Professional on-site management ensuring smooth operations and memorable experiences.",
+                title: "Ticketing Operations",
+                description:
+                  "Managing distribution, tracking, and promotion for participating schools, conferences, corporate partners, and group sales",
+              },
+              {
+                step: "05",
+                title: "Gifting & Branded Materials",
+                description:
+                  "Curating and executing team gifts, sponsor appreciation, staff uniforms, promotional items, and award/trophy ordering",
               },
             ].map((process, index) => (
-              <div key={index} className="text-center animate-sporting-fade-in">
-                <div
-                  className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold"
-                  style={{
-                    backgroundColor: "var(--sporting-primary)",
-                    color: "var(--sporting-primary-foreground)",
-                  }}
-                >
-                  {process.step}
+              <motion.div
+                key={index}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-[#732b6f]/30 hover:border-[#732b6f] transition-all duration-300"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-8 h-8 bg-[#732b6f] rounded-full flex items-center justify-center">
+                      <div className="w-3 h-3 bg-white rounded-full"></div>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-sm font-medium text-[#732b6f] bg-white/20 px-3 py-1 rounded-full">
+                        {process.step}
+                      </span>
+                    </div>
+                    <h3 className="font-serif text-xl font-bold mb-2 text-white">{process.title}</h3>
+                    <p className="text-gray-200 text-sm leading-relaxed mb-4">{process.description}</p>
+                    <button className="inline-flex items-center gap-2 text-[#732b6f] hover:text-white bg-white/20 hover:bg-[#732b6f] px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 group">
+                      Learn More
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
                 </div>
-                <h3 className="font-serif text-xl font-bold mb-4" style={{ color: "var(--sporting-primary)" }}>
-                  {process.title}
-                </h3>
-                <p className="leading-relaxed">{process.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
+
+        <motion.div
+          className="px-[30%] py-[10%]"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <p>
+            From the first planning call to the final whistle, we ensure that every detail is handled with excellence—so
+            your team, guests, and partners can focus on the experience, not the logistics.
+          </p>
+        </motion.div>
       </section>
 
       {/* Testimonials */}
