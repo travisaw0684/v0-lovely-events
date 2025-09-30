@@ -40,7 +40,7 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div className="mt-[0px]">
+          <div className="mt-[150px]">
             <h4 className="font-serif text-xl font-semibold mb-6 text-white">Our Services</h4>
             <ul className="space-y-3">
               <li>
@@ -80,7 +80,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="mt-[0px]">
+          <div className="mt-[150px]">
             <h4 className="font-serif text-xl font-semibold mb-6 text-white">Quick Links</h4>
             <ul className="space-y-3">
               <li>
@@ -112,7 +112,7 @@ export default function Footer() {
           </div>
 
           {/* Connect With Us */}
-          <div className="mt-[0px]">
+          <div className="mt-[150px]">
             <h4 className="font-serif text-xl font-semibold mb-6 text-white">Connect With Us</h4>
             <p className="text-white/80 mb-6 leading-relaxed">
               Follow us for inspiration and behind-the-scenes moments from our latest events.
