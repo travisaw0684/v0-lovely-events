@@ -63,7 +63,7 @@ const tileData = [
 
 export default function FeaturedCampaigns() {
   return (
-    <section className="py-16 px-4 bg-background pb-[200px]">
+    <section className="py-16 px-4 bg-background pb-[400px]">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-extralight mb-6 leading-tight tracking-tight text-black mb-6 text-center">Recent Highlights</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

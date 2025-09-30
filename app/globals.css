@@ -206,6 +206,16 @@
   --wedding-text-8xl: 6rem;
   --wedding-text-9xl: 8rem;
   --wedding-text-10xl: 10rem;
+
+  /* Trusted Brands Design Tokens */
+  --brands-background: #ffffff;
+  --brands-foreground: #1a1a1a;
+  --brands-card: #fafafa;
+  --brands-card-foreground: #1a1a1a;
+  --brands-primary: #ba3364;
+  --brands-primary-foreground: #ffffff;
+  --brands-muted: #666666;
+  --brands-border: #e5e5e5;
 }
 
 * {
@@ -516,6 +526,26 @@ body {
   }
 }
 
+@keyframes brands-carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes brands-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .animate-corporate-fade-in {
   animation: corporate-fade-in-up 1.2s ease-out;
 }
@@ -618,6 +648,14 @@ body {
 
 .animate-wedding-float {
   animation: wedding-float 6s ease-in-out infinite;
+}
+
+.animate-brands-carousel {
+  animation: brands-carousel 40s linear infinite;
+}
+
+.animate-brands-fade-in {
+  animation: brands-fade-in 0.8s ease-out;
 }
 
 /* Advanced hover effects for interactive elements */

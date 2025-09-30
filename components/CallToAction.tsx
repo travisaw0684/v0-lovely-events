@@ -82,7 +82,7 @@ export default function CallToAction() {
               <img
               src="/images/design-mode/fulllogo_transparent_nobuffer%281%29.png"
               alt="Lovely Events Logo"
-              className="w-[23rem] h-[23rem]"
+              className="w-[24rem] h-[24rem] mx-auto"
             />
               <div className="w-24 h-1 bg-gradient-to-r from-secondary to-accent mx-auto lg:mx-0"></div>
             </div>

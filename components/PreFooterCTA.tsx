@@ -38,7 +38,7 @@ export default function PreFooterCTA() {
       whileInView="visible"
       viewport={{ once: true }}
       variants={containerVariants}
-      className="absolute -top-32 left-1/2 transform -translate-x-1/2 z-20 w-full max-w-6xl px-6"
+      className="absolute -top-[20rem] left-1/2 transform -translate-x-1/2 z-20 w-full max-w-6xl px-6"
     >
       <div className="rounded-2xl shadow-2xl overflow-hidden relative">
         {/* Left side - Gradient background with content */}

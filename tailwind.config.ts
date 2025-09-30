@@ -90,10 +90,30 @@ const config: Config = {
             height: "0",
           },
         },
+        "brands-carousel": {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateX(-50%)",
+          },
+        },
+        "brands-fade-in": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(20px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "brands-carousel": "brands-carousel 30s linear infinite",
+        "brands-fade-in": "brands-fade-in 0.8s ease-out forwards",
       },
     },
   },
