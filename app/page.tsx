@@ -9,6 +9,7 @@ import MissionStatement from "@/components/MissionStatement"
 import FeaturedCampaigns from "@/components/FeaturedCampaigns"
 import Footer from "@/components/Footer"
 import NewsletterSubscription from "@/components/NewsletterSubscription"
+import PreFooterCTA from "@/components/PreFooterCTA"
 
 export default function HomePage() {
   return (
@@ -25,7 +26,10 @@ export default function HomePage() {
       <LocationsShowcase />
       <MissionStatement />
       <FeaturedCampaigns />
-      <Footer />
+      <div className="relative">
+        <PreFooterCTA />
+        <Footer />
+      </div>
       {/* <CookieNotice /> */}
     </div>
   )

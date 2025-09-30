@@ -645,7 +645,7 @@ export default function WeddingOfficiantPage() {
         variants={containerVariants}
         className="py-20 px-6"
       >
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto mb-[100px]">
           <motion.div variants={itemVariants} className="text-center mb-16">
             <motion.h2
               variants={itemVariants}
@@ -716,54 +716,83 @@ export default function WeddingOfficiantPage() {
         </div>
       </motion.section>
 
-      {/* CTA Section with Magnetic Effect */}
-      <motion.section
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={containerVariants}
-        className="py-20 px-6 text-center"
-        style={{ backgroundColor: "var(--wedding-primary)" }}
-      >
-        <motion.div variants={itemVariants} className="max-w-4xl mx-auto">
-          <motion.h2
-            variants={itemVariants}
-            className="font-sans text-4xl md:text-5xl font-light mb-6"
-            style={{ color: "var(--wedding-primary-foreground)" }}
-          >
-            Ready to Say "I Do" in Las Vegas?
-          </motion.h2>
-          <motion.p
-            variants={itemVariants}
-            className="text-xl mb-8 leading-relaxed"
-            style={{ color: "var(--wedding-primary-foreground)" }}
-          >
-            Let's create a ceremony that's meaningful, memorable, and uniquely yours. With years of experience in both
-            event planning and officiating, you'll be guided by someone who truly understands how to make your moment
-            shine.
-          </motion.p>
-          <motion.button
-            variants={itemVariants}
-            whileHover={{
-              scale: 1.05,
-              y: -3,
-              boxShadow: "0 15px 35px rgba(0,0,0,0.2)",
-              rotate: [0, -1, 1, 0],
-            }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="px-8 py-4 text-lg font-semibold rounded-lg"
+      {/* CTA Section with Magnetic Effect - CONVERTED TO PRE-FOOTER CTA */}
+      <div className="relative">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
+          className="absolute -top-32 left-1/2 transform -translate-x-1/2 z-20 w-full max-w-6xl px-6"
+        >
+          <div
+            className="rounded-2xl p-8 md:p-12 shadow-2xl overflow-hidden"
             style={{
-              backgroundColor: "var(--wedding-secondary)",
-              color: "var(--wedding-secondary-foreground)",
+              backgroundColor: "var(--wedding-background)",
+              border: "2px solid var(--wedding-border)",
             }}
           >
-            Get a Free Consultation
-          </motion.button>
-        </motion.div>
-      </motion.section>
+            {/* Decorative elements */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-pink-100 to-transparent opacity-30 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-purple-100 to-transparent opacity-20 rounded-full blur-2xl" />
 
-      <Footer />
+            <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+              {/* Left content */}
+              <motion.div variants={itemVariants}>
+                <motion.h2
+                  variants={itemVariants}
+                  className="font-sans text-3xl md:text-4xl font-light mb-4"
+                  style={{ color: "var(--wedding-secondary)" }}
+                >
+                  Get in Touch to Arrange a Wedding
+                </motion.h2>
+                <motion.p
+                  variants={itemVariants}
+                  className="text-lg mb-6 leading-relaxed"
+                  style={{ color: "var(--wedding-foreground)" }}
+                >
+                  Every wedding is unique, and we strive to provide personalized service to each of our couples.
+                </motion.p>
+                <motion.button
+                  variants={itemVariants}
+                  whileHover={{
+                    scale: 1.05,
+                    y: -2,
+                    boxShadow: "0 10px 25px rgba(186, 51, 100, 0.3)",
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  className="px-8 py-3 text-lg font-semibold rounded-full"
+                  style={{
+                    backgroundColor: "var(--wedding-secondary)",
+                    color: "var(--wedding-secondary-foreground)",
+                  }}
+                >
+                  Book Now
+                </motion.button>
+              </motion.div>
+
+              {/* Right image */}
+              <motion.div
+                variants={itemVariants}
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 300 }}
+                className="relative"
+              >
+                <div className="absolute -top-4 -right-4 w-full h-full rounded-full bg-gradient-to-br from-pink-200 to-purple-200 opacity-20 blur-xl" />
+                <img
+                  src="/placeholder.svg?height=400&width=500&text=Happy+Wedding+Couple"
+                  alt="Happy Wedding Couple"
+                  className="relative z-10 rounded-2xl shadow-lg w-full object-cover"
+                  style={{ aspectRatio: "5/4" }}
+                />
+              </motion.div>
+            </div>
+          </div>
+        </motion.div>
+
+        <Footer />
+      </div>
     </div>
   )
 }

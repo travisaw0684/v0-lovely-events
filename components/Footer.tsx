@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-br from-[#ba3364] to-[#732b6f] text-white py-16">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 mt-[380px]">
           {/* Company Info */}
           <div>
             <div className="mb-4">
@@ -15,7 +15,7 @@ export default function Footer() {
                 className="w-24 h-24 object-contain"
               />
             </div>
-            <h3 className="font-serif text-3xl font-bold mb-6 text-white">LOVELY EVENTS</h3>
+            <h3 className="font-sans text-3xl font-thin mb-6 text-white">LOVELY EVENTS</h3>
             <p className="text-white/80 mb-6 leading-relaxed">
               Creating unforgettable moments through sophisticated event planning and elegant design.
             </p>
@@ -40,7 +40,7 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div>
+          <div className="mt-[200px]">
             <h4 className="font-serif text-xl font-semibold mb-6 text-white">Our Services</h4>
             <ul className="space-y-3">
               <li>
@@ -80,7 +80,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="mt-[200px]">
             <h4 className="font-serif text-xl font-semibold mb-6 text-white">Quick Links</h4>
             <ul className="space-y-3">
               <li>
@@ -112,7 +112,7 @@ export default function Footer() {
           </div>
 
           {/* Connect With Us */}
-          <div>
+          <div className="mt-[200px]">
             <h4 className="font-serif text-xl font-semibold mb-6 text-white">Connect With Us</h4>
             <p className="text-white/80 mb-6 leading-relaxed">
               Follow us for inspiration and behind-the-scenes moments from our latest events.
