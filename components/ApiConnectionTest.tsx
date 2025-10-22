@@ -14,7 +14,7 @@ export default function ApiConnectionTest() {
 
     try {
       console.log("[v0] Testing API connection to WordPress...");
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp/v2/posts`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/wp/v2/posts`, {
         headers: process.env.NEXT_PUBLIC_JWT_TOKEN
           ? { Authorization: `Bearer ${process.env.NEXT_PUBLIC_JWT_TOKEN}` }
           : {},
