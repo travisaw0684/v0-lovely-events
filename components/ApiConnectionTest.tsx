@@ -16,6 +16,7 @@ export default function ApiConnectionTest() {
       const response = await fetch("https://api.lovely.crabdance.com/wp-json/wp/v2/posts")
 
       const text = await response.text()
+      console.log(response)
 
       if (response.ok) {
         try {
