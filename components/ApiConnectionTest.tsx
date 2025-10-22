@@ -10,7 +10,7 @@ export default function ApiConnectionTest() {
     const testConnection = async () => {
       try {
         console.log("[v0] Testing API connection to WordPress...")
-        const response = await fetch("http://54.83.102.176/wp-json/wp/v2/posts")
+        const response = await fetch("https://api.lovely.crabdance.com/")
 
         if (response.ok) {
           const data = await response.json()
