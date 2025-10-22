@@ -1,14 +1,15 @@
 import Header from "@/components/Header"
 import HeroCarousel from "@/components/HeroCarousel"
+import ApiConnectionTest from "@/components/ApiConnectionTest"
 import MeetTheFounder from "@/components/MeetTheFounder"
 import TrustedBrands from "@/components/TrustedBrands"
 import CallToAction from "@/components/CallToAction"
 import TestimonialsSection from "@/components/TestimonialsSection"
+import NewsletterSubscription from "@/components/NewsletterSubscription"
 import LocationsShowcase from "@/components/LocationsShowcase"
 import MissionStatement from "@/components/MissionStatement"
 import FeaturedCampaigns from "@/components/FeaturedCampaigns"
 import Footer from "@/components/Footer"
-import NewsletterSubscription from "@/components/NewsletterSubscription"
 import PreFooterCTA from "@/components/PreFooterCTA"
 
 export default function HomePage() {
@@ -16,6 +17,7 @@ export default function HomePage() {
     <div className="min-h-screen">
       <Header />
       <HeroCarousel />
+      <ApiConnectionTest />
       {/* <ScrollZoomLayout /> */}
       {/* <HeroSection /> */}
       <MeetTheFounder />
