@@ -1,6 +1,5 @@
 import Header from "@/components/Header"
 import HeroCarousel from "@/components/HeroCarousel"
-import ApiConnectionTest from "@/components/ApiConnectionTest"
 import MeetTheFounder from "@/components/MeetTheFounder"
 import TrustedBrands from "@/components/TrustedBrands"
 import CallToAction from "@/components/CallToAction"
@@ -17,9 +16,6 @@ export default function HomePage() {
     <div className="min-h-screen">
       <Header />
       <HeroCarousel />
-      <ApiConnectionTest />
-      {/* <ScrollZoomLayout /> */}
-      {/* <HeroSection /> */}
       <MeetTheFounder />
       <TrustedBrands />
       <CallToAction />
@@ -32,7 +28,6 @@ export default function HomePage() {
         <PreFooterCTA />
         <Footer />
       </div>
-      {/* <CookieNotice /> */}
     </div>
   )
 }
