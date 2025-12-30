@@ -14,13 +14,11 @@ export default function Header() {
       const currentScrollY = window.scrollY
 
       if (currentScrollY < lastScrollY || currentScrollY < 10) {
-        // Scrolling up or at top - show navbar
         setIsVisible(true)
       } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down and past threshold - hide navbar
         setIsVisible(false)
-        setMobileMenuOpen(false) // Close mobile menu when hiding
-        setServicesDropdownOpen(false) // Close services dropdown when hiding
+        setMobileMenuOpen(false)
+        setServicesDropdownOpen(false)
       }
 
       setLastScrollY(currentScrollY)
@@ -32,7 +30,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm transition-transform duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-black/20 transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -141,39 +139,44 @@ export default function Header() {
             className="lg:hidden text-white p-2 hover:bg-white/10 rounded-md transition-colors duration-200"
             aria-label="Toggle mobile menu"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+            {mobileMenuOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12M6 12h16" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 bg-black/40 backdrop-blur-sm rounded-lg px-4 animate-fade-in">
-            <nav className="flex flex-col space-y-4 py-4">
+          <div className="fixed inset-0 top-[72px] bg-gradient-to-br from-[#ba3364] to-[#732b6f] backdrop-blur-md z-40 lg:hidden animate-fade-in">
+            <nav className="flex flex-col items-center justify-center h-full space-y-8 px-6">
               <Link
                 href="/"
-                className="text-white hover:text-[#ba3364] transition-colors duration-300 py-2 border-b border-white/20"
+                className="text-white text-2xl font-light hover:text-white/80 transition-all duration-300 transform hover:scale-105"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
                 href="/promotions"
-                className="text-white hover:text-[#ba3364] transition-colors duration-300 py-2 border-b border-white/20"
+                className="text-white text-2xl font-light hover:text-white/80 transition-all duration-300 transform hover:scale-105"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Current Promotions
               </Link>
 
-              <div className="border-b border-white/20 pb-2">
+              <div className="flex flex-col items-center">
                 <button
                   onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
-                  className="text-white hover:text-[#ba3364] transition-colors duration-300 flex items-center justify-between w-full text-left py-2"
+                  className="text-white text-2xl font-light hover:text-white/80 transition-all duration-300 flex items-center"
                 >
                   Services
                   <svg
-                    className={`ml-1 w-4 h-4 transition-transform duration-200 ${servicesDropdownOpen ? "rotate-180" : ""}`}
+                    className={`ml-2 w-5 h-5 transition-transform duration-300 ${servicesDropdownOpen ? "rotate-180" : ""}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -182,62 +185,62 @@ export default function Header() {
                   </svg>
                 </button>
                 {servicesDropdownOpen && (
-                  <div className="ml-4 mt-2 space-y-2 bg-white/5 rounded-md p-3">
+                  <div className="mt-4 space-y-3 text-center animate-fade-in">
                     <Link
                       href="/services/sporting-events"
-                      className="block text-gray-300 hover:text-[#ba3364] transition-colors duration-200 py-1"
+                      className="block text-white/90 text-lg hover:text-white transition-colors duration-200"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Sporting Event Planning
                     </Link>
                     <Link
                       href="/services/balloon-decor"
-                      className="block text-gray-300 hover:text-[#ba3364] transition-colors duration-200 py-1"
+                      className="block text-white/90 text-lg hover:text-white transition-colors duration-200"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Balloon Decor
                     </Link>
                     <Link
                       href="/services/corporate-milestones"
-                      className="block text-gray-300 hover:text-[#ba3364] transition-colors duration-200 py-1"
+                      className="block text-white/90 text-lg hover:text-white transition-colors duration-200"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Corporate Milestones
                     </Link>
                     <Link
                       href="/services/employee-recognition"
-                      className="block text-gray-300 hover:text-[#ba3364] transition-colors duration-200 py-1"
+                      className="block text-white/90 text-lg hover:text-white transition-colors duration-200"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Employee Recognition Dinners
                     </Link>
                     <Link
                       href="/services/corporate-events"
-                      className="block text-gray-300 hover:text-[#ba3364] transition-colors duration-200 py-1"
+                      className="block text-white/90 text-lg hover:text-white transition-colors duration-200"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Corporate Event Planning
                     </Link>
                     <Link
                       href="/services/business-experience"
-                      className="block text-gray-300 hover:text-[#ba3364] transition-colors duration-200 py-1"
+                      className="block text-white/90 text-lg hover:text-white transition-colors duration-200"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Business Experience Event Planner
                     </Link>
                     <Link
                       href="/services/curated-weddings"
-                      className="block text-gray-300 hover:text-[#ba3364] transition-colors duration-200 py-1"
+                      className="block text-white/90 text-lg hover:text-white transition-colors duration-200"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Curated Wedding Experiences With Style & Intention
+                      Curated Wedding Experiences
                     </Link>
                     <Link
                       href="/services/wedding-officiant"
-                      className="block text-gray-300 hover:text-[#ba3364] transition-colors duration-200 py-1"
+                      className="block text-white/90 text-lg hover:text-white transition-colors duration-200"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Personalized Wedding Officiant Services
+                      Wedding Officiant Services
                     </Link>
                   </div>
                 )}
@@ -245,21 +248,21 @@ export default function Header() {
 
               <Link
                 href="/our-story"
-                className="text-white hover:text-[#ba3364] transition-colors duration-300 py-2 border-b border-white/20"
+                className="text-white text-2xl font-light hover:text-white/80 transition-all duration-300 transform hover:scale-105"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Our Story
               </Link>
               <Link
                 href="/shop"
-                className="text-white hover:text-[#ba3364] transition-colors duration-300 py-2 border-b border-white/20"
+                className="text-white text-2xl font-light hover:text-white/80 transition-all duration-300 transform hover:scale-105"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Shop
               </Link>
               <Link
                 href="#contact"
-                className="text-white hover:text-[#ba3364] transition-colors duration-300 py-2"
+                className="text-white text-2xl font-light hover:text-white/80 transition-all duration-300 transform hover:scale-105"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact Us

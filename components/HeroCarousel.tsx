@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronRight } from "lucide-react"
 
 const slides = [
   {
@@ -20,12 +20,12 @@ const slides = [
     video: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5396971-hd_1920_1080_30fps-b4nrnBthWWabKzc5aHPINogTZnqbVz.mp4",
     alt: "Las Vegas boulevard traffic and billboards",
   },
-  { 
+  {
     id: 4,
     video: "https://videos.pexels.com/video-files/7509495/7509495-hd_1920_1080_25fps.mp4",
     alt: "Las Vegas cityscape with casino lights",
   },
-  { 
+  {
     id: 5,
     video: "https://videos.pexels.com/video-files/855677/855677-hd_1920_1080_30fps.mp4",
     alt: "Las Vegas cityscape with casino lights",
@@ -39,6 +39,7 @@ const slides = [
 
 export default function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [showContent, setShowContent] = useState(false)
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -46,6 +47,14 @@ export default function HeroCarousel() {
     }, 10000)
     return () => clearInterval(timer)
   }, [])
+
+  useEffect(() => {
+    setShowContent(false)
+    const revealTimer = setTimeout(() => {
+      setShowContent(true)
+    }, 150) // 150ms delay after video is visible
+    return () => clearTimeout(revealTimer)
+  }, [currentSlide])
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length)
@@ -79,7 +88,11 @@ export default function HeroCarousel() {
 
       {/* Content Overlay */}
       <div className="absolute inset-0 flex items-center justify-center z-10">
-        <div className="text-center text-white max-w-6xl px-6 pl-12 md:pl-16 lg:pl-20">
+        <div
+          className={`text-center text-white max-w-6xl px-6 pl-12 md:pl-16 lg:pl-20 transition-all duration-[350ms] ease-out ${
+            showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+          }`}
+        >
           <h1 className="text-3xl md:text-5xl lg:text-7xl font-thin mb-6 leading-tight tracking-tight">
             LOVELY EVENTS GROUP
           </h1>
@@ -89,13 +102,13 @@ export default function HeroCarousel() {
           <div className="justify-center flex flex-col sm:flex-row gap-4">
             <Button
               size="lg"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300 px-8 py-4 text-lg font-semibold tracking-wide"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(255,255,255,0.5)] transition-all duration-150 px-8 py-4 text-lg font-semibold tracking-wide"
             >
               Let's Get Started <ChevronRight className="ml-2 h-5 w-5" />
             </Button>
             <Button
               size="lg"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300 px-8 py-4 text-lg font-semibold tracking-wide"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(255,255,255,0.5)] transition-all duration-150 px-8 py-4 text-lg font-semibold tracking-wide"
             >
               Free Consultation <ChevronRight className="ml-2 h-5 w-5" />
             </Button>
