@@ -299,7 +299,7 @@ export default function Header() {
                   />
                 </button>
                 {servicesDropdownOpen && (
-                  <div className="pb-4 space-y-1 bg-white/10 rounded-lg px-4 animate-mobile-dropdown-refined">
+                  <div className="pb-4 space-y-1 bg-black/10 rounded-lg px-4 animate-mobile-dropdown-refined">
                     <Link
                       href="/services/sporting-events"
                       className="block py-2 text-white/90 text-lg font-light hover:text-white transition-colors duration-200 text-center"
