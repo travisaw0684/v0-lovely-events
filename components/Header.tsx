@@ -1,8 +1,8 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
-import { ChevronDown, X, Menu } from "lucide-react"
+import { ChevronDown } from "lucide-react"
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -10,6 +10,8 @@ export default function Header() {
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
   const [scrolled, setScrolled] = useState(false)
+  const mobileMenuRef = useRef<HTMLDivElement>(null)
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     const controlNavbar = () => {
@@ -41,18 +43,45 @@ export default function Header() {
       if (e.key === "Escape") {
         setMobileMenuOpen(false)
         setServicesDropdownOpen(false)
+        menuButtonRef.current?.focus()
+      }
+    }
+
+    const handleTab = (e: KeyboardEvent) => {
+      if (!mobileMenuOpen || !mobileMenuRef.current) return
+
+      const focusableElements = mobileMenuRef.current.querySelectorAll("a[href], button:not([disabled])")
+      const firstElement = focusableElements[0] as HTMLElement
+      const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
+
+      if (e.key === "Tab") {
+        if (e.shiftKey && document.activeElement === firstElement) {
+          e.preventDefault()
+          lastElement?.focus()
+        } else if (!e.shiftKey && document.activeElement === lastElement) {
+          e.preventDefault()
+          firstElement?.focus()
+        }
       }
     }
 
     if (mobileMenuOpen) {
       document.addEventListener("keydown", handleEscape)
+      document.addEventListener("keydown", handleTab)
       document.body.style.overflow = "hidden"
+
+      // Focus first link when menu opens
+      setTimeout(() => {
+        const firstLink = mobileMenuRef.current?.querySelector("a") as HTMLElement
+        firstLink?.focus()
+      }, 100)
     } else {
       document.body.style.overflow = "unset"
     }
 
     return () => {
       document.removeEventListener("keydown", handleEscape)
+      document.removeEventListener("keydown", handleTab)
       document.body.style.overflow = "unset"
     }
   }, [mobileMenuOpen])
@@ -185,15 +214,6 @@ export default function Header() {
             </Link>
             <Link
               href="#contact"
-              className={`nav-link px-4 py-2 text-sm font-light tracking-wide transition-colors duration-300 ${
-                scrolled ? "text-gray-800 hover:text-[#ba3364]" : "text-white hover:text-white/80"
-              }`}
-            >
-              More
-            </Link>
-
-            <Link
-              href="#contact"
               className={`ml-4 px-6 py-2.5 text-sm font-light tracking-wide rounded-sm transition-all duration-300 ${
                 scrolled ? "bg-[#ba3364] text-white hover:bg-[#732b6f]" : "bg-white/90 text-[#ba3364] hover:bg-white"
               }`}
@@ -203,43 +223,64 @@ export default function Header() {
           </nav>
 
           <button
+            ref={menuButtonRef}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className={`lg:hidden relative z-50 p-2 rounded-sm transition-colors duration-300 ${
-              mobileMenuOpen
-                ? "text-white"
-                : scrolled
-                  ? "text-gray-800 hover:bg-gray-100"
-                  : "text-white hover:bg-white/10"
+            className={`lg:hidden relative z-50 w-10 h-10 flex flex-col items-center justify-center gap-1.5 transition-colors duration-300 ${
+              mobileMenuOpen ? "text-white" : scrolled ? "text-gray-800" : "text-white"
             }`}
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {/* Top line */}
+            <span
+              className={`block h-[1.5px] bg-current transition-all duration-300 ease-out ${
+                mobileMenuOpen ? "w-5 rotate-45 translate-y-[5px]" : "w-6"
+              }`}
+            />
+            {/* Middle line */}
+            <span
+              className={`block h-[1.5px] w-6 bg-current transition-all duration-300 ease-out ${
+                mobileMenuOpen ? "opacity-0 scale-0" : "opacity-100 scale-100"
+              }`}
+            />
+            {/* Bottom line */}
+            <span
+              className={`block h-[1.5px] bg-current transition-all duration-300 ease-out ${
+                mobileMenuOpen ? "w-5 -rotate-45 -translate-y-[5px]" : "w-6"
+              }`}
+            />
           </button>
         </div>
       </div>
 
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-40 lg:hidden">
-          {/* Backdrop */}
+        <div
+          ref={mobileMenuRef}
+          className="fixed inset-0 z-40 lg:hidden"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Mobile navigation"
+        >
+          {/* Enhanced backdrop with blur */}
           <div
-            className="absolute inset-0 bg-gradient-to-br from-[#ba3364] to-[#732b6f] animate-mobile-menu-fade"
+            className="absolute inset-0 bg-gradient-to-br from-[#ba3364] to-[#732b6f] backdrop-blur-sm animate-mobile-menu-fade"
             onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
           />
 
-          {/* Menu content */}
-          <nav className="relative h-full flex flex-col items-center justify-center px-8 animate-mobile-menu-slide">
-            <div className="w-full max-w-md space-y-2">
+          {/* Menu content with refined slide animation */}
+          <nav className="relative h-full flex flex-col items-center justify-center px-8 animate-mobile-menu-slide-refined">
+            <div className="w-full max-w-md space-y-1">
               <Link
                 href="/"
-                className="block py-4 text-white text-2xl font-light tracking-wide hover:text-white/80 transition-all duration-300 text-center border-b border-white/10"
+                className="block py-4 text-white text-2xl font-light tracking-wide hover:text-white/80 transition-all duration-400 text-center border-b border-white/10 focus:outline-none focus:text-white/80"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
                 href="/promotions"
-                className="block py-4 text-white text-2xl font-light tracking-wide hover:text-white/80 transition-all duration-300 text-center border-b border-white/10"
+                className="block py-4 text-white text-2xl font-light tracking-wide hover:text-white/80 transition-all duration-400 text-center border-b border-white/10 focus:outline-none focus:text-white/80"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Current Promotions
@@ -249,16 +290,16 @@ export default function Header() {
               <div className="border-b border-white/10">
                 <button
                   onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
-                  className="w-full py-4 text-white text-2xl font-light tracking-wide hover:text-white/80 transition-all duration-300 flex items-center justify-center gap-2"
+                  className="w-full py-4 text-white text-2xl font-light tracking-wide hover:text-white/80 transition-all duration-400 flex items-center justify-center gap-2 focus:outline-none focus:text-white/80"
                   aria-expanded={servicesDropdownOpen}
                 >
                   Services
                   <ChevronDown
-                    className={`w-5 h-5 transition-transform duration-300 ${servicesDropdownOpen ? "rotate-180" : ""}`}
+                    className={`w-5 h-5 transition-transform duration-400 ease-out ${servicesDropdownOpen ? "rotate-180" : ""}`}
                   />
                 </button>
                 {servicesDropdownOpen && (
-                  <div className="pb-4 space-y-2 animate-nav-fade-in">
+                  <div className="pb-4 space-y-1 animate-mobile-dropdown-refined">
                     <Link
                       href="/services/sporting-events"
                       className="block py-2 text-white/90 text-lg font-light hover:text-white transition-colors duration-200 text-center"
@@ -321,21 +362,21 @@ export default function Header() {
 
               <Link
                 href="/our-story"
-                className="block py-4 text-white text-2xl font-light tracking-wide hover:text-white/80 transition-all duration-300 text-center border-b border-white/10"
+                className="block py-4 text-white text-2xl font-light tracking-wide hover:text-white/80 transition-all duration-400 text-center border-b border-white/10 focus:outline-none focus:text-white/80"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Our Story
               </Link>
               <Link
                 href="/shop"
-                className="block py-4 text-white text-2xl font-light tracking-wide hover:text-white/80 transition-all duration-300 text-center border-b border-white/10"
+                className="block py-4 text-white text-2xl font-light tracking-wide hover:text-white/80 transition-all duration-400 text-center border-b border-white/10 focus:outline-none focus:text-white/80"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Shop
               </Link>
               <Link
                 href="#contact"
-                className="block py-4 text-white text-2xl font-light tracking-wide hover:text-white/80 transition-all duration-300 text-center border-b border-white/10"
+                className="block py-4 text-white text-2xl font-light tracking-wide hover:text-white/80 transition-all duration-400 text-center border-b border-white/10 focus:outline-none focus:text-white/80"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact Us
@@ -345,7 +386,7 @@ export default function Header() {
               <div className="pt-8 text-center">
                 <Link
                   href="#contact"
-                  className="inline-block px-10 py-4 bg-white text-[#ba3364] text-lg font-light tracking-wide rounded-sm hover:bg-white/90 transition-all duration-300"
+                  className="inline-block px-10 py-4 bg-white text-[#ba3364] text-lg font-light tracking-wide rounded-sm hover:bg-white/90 transition-all duration-400 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-[#ba3364]"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Let's Get Started!

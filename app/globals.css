@@ -582,6 +582,31 @@ body {
   }
 }
 
+/* Refined animations matching Hotel Wellington timing and feel */
+@keyframes mobile-menu-slide-refined {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes mobile-dropdown-refined {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 1000px;
+  }
+}
+
 .animate-corporate-fade-in {
   animation: corporate-fade-in-up 1.2s ease-out;
 }
@@ -708,6 +733,14 @@ body {
 
 .animate-mobile-menu-slide {
   animation: mobile-menu-slide 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-mobile-menu-slide-refined {
+  animation: mobile-menu-slide-refined 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-mobile-dropdown-refined {
+  animation: mobile-dropdown-refined 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Luxury navigation hover effects */
