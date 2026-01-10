@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
-import { ChevronDown, Phone, User, FileText, Globe } from "lucide-react"
+import { ChevronDown, Phone, User, FileText, Globe, X } from "lucide-react"
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -166,23 +166,17 @@ export default function Header() {
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
           >
-            <span className="text-sm font-light tracking-widest uppercase">Menu</span>
+            <span className="text-sm font-light tracking-widest uppercase">{mobileMenuOpen ? "Close" : "Menu"}</span>
             <div className="w-8 h-6 flex flex-col items-end justify-center gap-1.5">
-              <span
-                className={`block h-[1.5px] bg-current transition-all duration-300 ease-out ${
-                  mobileMenuOpen ? "w-6 rotate-45 translate-y-[5px]" : "w-8"
-                }`}
-              />
-              <span
-                className={`block h-[1.5px] w-8 bg-current transition-all duration-300 ease-out ${
-                  mobileMenuOpen ? "opacity-0 scale-0" : "opacity-100 scale-100"
-                }`}
-              />
-              <span
-                className={`block h-[1.5px] bg-current transition-all duration-300 ease-out ${
-                  mobileMenuOpen ? "w-6 -rotate-45 -translate-y-[5px]" : "w-8"
-                }`}
-              />
+              {mobileMenuOpen ? (
+                <X className="w-5 h-5" strokeWidth={1.5} />
+              ) : (
+                <>
+                  <span className="block h-[1.5px] w-8 bg-current transition-all duration-300" />
+                  <span className="block h-[1.5px] w-8 bg-current transition-all duration-300" />
+                  <span className="block h-[1.5px] w-8 bg-current transition-all duration-300" />
+                </>
+              )}
             </div>
           </button>
         </div>
@@ -191,92 +185,93 @@ export default function Header() {
       {mobileMenuOpen && (
         <div
           ref={mobileMenuRef}
-          className="fixed inset-0 z-40"
+          className="fixed inset-0 z-40 bg-slate-900/98 backdrop-blur-lg"
           role="dialog"
           aria-modal="true"
           aria-label="Mobile navigation"
         >
-          <div
-            className="absolute inset-0 bg-gradient-to-br from-[#ba3364] to-[#732b6f] backdrop-blur-sm animate-mobile-menu-fade"
-            onClick={() => setMobileMenuOpen(false)}
-            aria-hidden="true"
-          />
+          <div className="absolute top-0 left-0 right-0 px-6 lg:px-12 h-16 lg:h-20 flex items-center justify-between border-b border-white/10">
+            <Link href="/" onClick={() => setMobileMenuOpen(false)}>
+              <img
+                src="/images/design-mode/fulllogo_transparent_nobuffer%281%29.png"
+                alt="Lovely Events Logo"
+                className="w-12 h-12 lg:w-14 lg:h-14"
+              />
+            </Link>
+          </div>
 
-          <nav className="relative h-full flex flex-col items-center justify-center px-8 animate-mobile-menu-slide-refined">
-            <div className="w-full max-w-md space-y-1">
+          <nav className="h-full flex items-center justify-center px-8">
+            <div className="w-full max-w-2xl space-y-2">
               <Link
                 href="/promotions"
-                className="block py-4 text-white text-2xl font-light tracking-wide hover:text-white/80 transition-all duration-400 text-center border-b border-white/10 focus:outline-none focus:text-white/80"
+                className="block py-5 text-white text-4xl md:text-5xl font-serif italic font-light tracking-wide hover:text-white/70 transition-all duration-500 text-center focus:outline-none focus:text-white/70"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Current Promotions
               </Link>
 
-              <div className="border-b border-white/10">
+              <div>
                 <button
                   onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
-                  className="w-full py-4 text-white text-2xl font-light tracking-wide hover:text-white/80 transition-all duration-400 flex items-center justify-center gap-2 focus:outline-none focus:text-white/80"
+                  className="w-full py-5 text-white text-4xl md:text-5xl font-serif italic font-light tracking-wide hover:text-white/70 transition-all duration-500 text-center focus:outline-none focus:text-white/70"
                   aria-expanded={servicesDropdownOpen}
                 >
                   Services
-                  <ChevronDown
-                    className={`w-5 h-5 transition-transform duration-400 ease-out ${servicesDropdownOpen ? "rotate-180" : ""}`}
-                  />
                 </button>
                 {servicesDropdownOpen && (
-                  <div className="pb-4 space-y-1 bg-black/10 rounded-lg px-4 animate-mobile-dropdown-refined">
+                  <div className="py-4 space-y-1 animate-mobile-dropdown-refined">
                     <Link
                       href="/services/sporting-events"
-                      className="block py-2 text-white/90 text-lg font-light hover:text-white transition-colors duration-200 text-center"
+                      className="block py-2 text-white/80 text-xl md:text-2xl font-serif italic font-light hover:text-white transition-colors duration-400 text-center"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Sporting Event Planning
                     </Link>
                     <Link
                       href="/services/balloon-decor"
-                      className="block py-2 text-white/90 text-lg font-light hover:text-white transition-colors duration-200 text-center"
+                      className="block py-2 text-white/80 text-xl md:text-2xl font-serif italic font-light hover:text-white transition-colors duration-400 text-center"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Balloon Decor
                     </Link>
                     <Link
                       href="/services/corporate-milestones"
-                      className="block py-2 text-white/90 text-lg font-light hover:text-white transition-colors duration-200 text-center"
+                      className="block py-2 text-white/80 text-xl md:text-2xl font-serif italic font-light hover:text-white transition-colors duration-400 text-center"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Corporate Milestones
                     </Link>
                     <Link
                       href="/services/employee-recognition"
-                      className="block py-2 text-white/90 text-lg font-light hover:text-white transition-colors duration-200 text-center"
+                      className="block py-2 text-white/80 text-xl md:text-2xl font-serif italic font-light hover:text-white transition-colors duration-400 text-center"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Employee Recognition Dinners
                     </Link>
                     <Link
                       href="/services/corporate-events"
-                      className="block py-2 text-white/90 text-lg font-light hover:text-white transition-colors duration-200 text-center"
+                      className="block py-2 text-white/80 text-xl md:text-2xl font-serif italic font-light hover:text-white transition-colors duration-400 text-center"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Corporate Event Planning
                     </Link>
                     <Link
                       href="/services/business-experience"
-                      className="block py-2 text-white/90 text-lg font-light hover:text-white transition-colors duration-200 text-center"
+                      className="block py-2 text-white/80 text-xl md:text-2xl font-serif italic font-light hover:text-white transition-colors duration-400 text-center"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Business Experience Event Planner
                     </Link>
                     <Link
                       href="/services/curated-weddings"
-                      className="block py-2 text-white/90 text-lg font-light hover:text-white transition-colors duration-200 text-center"
+                      className="block py-2 text-white/80 text-xl md:text-2xl font-serif italic font-light hover:text-white transition-colors duration-400 text-center"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Curated Wedding Experiences
                     </Link>
                     <Link
                       href="/services/wedding-officiant"
-                      className="block py-2 text-white/90 text-lg font-light hover:text-white transition-colors duration-200 text-center"
+                      className="block py-2 text-white/80 text-xl md:text-2xl font-serif italic font-light hover:text-white transition-colors duration-400 text-center"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Wedding Officiant Services
@@ -287,35 +282,11 @@ export default function Header() {
 
               <Link
                 href="/our-story"
-                className="block py-4 text-white text-2xl font-light tracking-wide hover:text-white/80 transition-all duration-400 text-center border-b border-white/10 focus:outline-none focus:text-white/80"
+                className="block py-5 text-white text-4xl md:text-5xl font-serif italic font-light tracking-wide hover:text-white/70 transition-all duration-500 text-center focus:outline-none focus:text-white/70"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Our Story
               </Link>
-              <Link
-                href="/shop"
-                className="block py-4 text-white text-2xl font-light tracking-wide hover:text-white/80 transition-all duration-400 text-center border-b border-white/10 focus:outline-none focus:text-white/80"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Shop
-              </Link>
-              <Link
-                href="#contact"
-                className="block py-4 text-white text-2xl font-light tracking-wide hover:text-white/80 transition-all duration-400 text-center border-b border-white/10 focus:outline-none focus:text-white/80"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Contact Us
-              </Link>
-
-              <div className="pt-8 text-center">
-                <Link
-                  href="#contact"
-                  className="inline-block px-10 py-4 bg-white text-[#ba3364] text-lg font-light tracking-wide rounded-sm hover:bg-white/90 transition-all duration-400 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-[#ba3364]"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Let's Get Started!
-                </Link>
-              </div>
             </div>
           </nav>
         </div>
