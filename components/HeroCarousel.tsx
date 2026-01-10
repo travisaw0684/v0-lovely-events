@@ -82,7 +82,7 @@ export default function HeroCarousel() {
             className="w-full h-full object-cover"
             aria-label={slide.alt}
           />
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60" />
         </div>
       ))}
 
