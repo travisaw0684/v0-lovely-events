@@ -205,13 +205,6 @@ export default function Header() {
           <nav className="relative h-full flex flex-col items-center justify-center px-8 animate-mobile-menu-slide-refined">
             <div className="w-full max-w-md space-y-1">
               <Link
-                href="/"
-                className="block py-4 text-white text-2xl font-light tracking-wide hover:text-white/80 transition-all duration-400 text-center border-b border-white/10 focus:outline-none focus:text-white/80"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Home
-              </Link>
-              <Link
                 href="/promotions"
                 className="block py-4 text-white text-2xl font-light tracking-wide hover:text-white/80 transition-all duration-400 text-center border-b border-white/10 focus:outline-none focus:text-white/80"
                 onClick={() => setMobileMenuOpen(false)}
