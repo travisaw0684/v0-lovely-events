@@ -2,11 +2,12 @@
 
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
-import { ChevronDown } from "lucide-react"
+import { ChevronDown, Phone, User, FileText, Globe } from "lucide-react"
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false)
+  const [languageDropdownOpen, setLanguageDropdownOpen] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
   const [scrolled, setScrolled] = useState(false)
@@ -29,6 +30,7 @@ export default function Header() {
         setIsVisible(false)
         setMobileMenuOpen(false)
         setServicesDropdownOpen(false)
+        setLanguageDropdownOpen(false)
       }
 
       setLastScrollY(currentScrollY)
@@ -43,6 +45,7 @@ export default function Header() {
       if (e.key === "Escape") {
         setMobileMenuOpen(false)
         setServicesDropdownOpen(false)
+        setLanguageDropdownOpen(false)
         menuButtonRef.current?.focus()
       }
     }
@@ -70,7 +73,6 @@ export default function Header() {
       document.addEventListener("keydown", handleTab)
       document.body.style.overflow = "hidden"
 
-      // Focus first link when menu opens
       setTimeout(() => {
         const firstLink = mobileMenuRef.current?.querySelector("a") as HTMLElement
         firstLink?.focus()
@@ -90,165 +92,98 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
-      } ${scrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-transparent"}`}
+      } ${scrolled ? "bg-slate-900/95 backdrop-blur-md shadow-lg" : "bg-slate-900/80 backdrop-blur-sm"}`}
     >
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-between h-20 lg:h-24">
+        <div className="flex items-center justify-between h-16 lg:h-20">
           <Link href="/" className="relative z-50 flex-shrink-0">
             <img
               src="/images/design-mode/fulllogo_transparent_nobuffer%281%29.png"
               alt="Lovely Events Logo"
-              className="w-14 h-14 lg:w-16 lg:h-16 transition-transform duration-300 hover:scale-105"
+              className="w-12 h-12 lg:w-14 lg:h-14 transition-transform duration-300 hover:scale-105"
             />
           </Link>
 
-          <nav className="hidden lg:flex items-center space-x-1">
-            <Link
-              href="/"
-              className={`nav-link px-4 py-2 text-sm font-light tracking-wide transition-colors duration-300 ${
-                scrolled ? "text-gray-800 hover:text-[#ba3364]" : "text-white hover:text-white/80"
-              }`}
+          <nav className="hidden lg:flex items-center gap-6">
+            <a
+              href="tel:+1234567890"
+              className="flex items-center gap-2 text-white/90 hover:text-white text-sm font-light tracking-wide transition-colors duration-300"
             >
-              Home
+              <Phone className="w-4 h-4" />
+              <span>+1 234 567 890</span>
+            </a>
+
+            <Link
+              href="/reservations"
+              className="flex items-center gap-2 text-white/90 hover:text-white text-sm font-light tracking-wide transition-colors duration-300"
+            >
+              <User className="w-4 h-4" />
+              <span>Modify Reservation</span>
             </Link>
+
             <Link
-              href="/promotions"
-              className={`nav-link px-4 py-2 text-sm font-light tracking-wide transition-colors duration-300 ${
-                scrolled ? "text-gray-800 hover:text-[#ba3364]" : "text-white hover:text-white/80"
-              }`}
+              href="/magazine"
+              className="flex items-center gap-2 text-white/90 hover:text-white text-sm font-light tracking-wide transition-colors duration-300"
             >
-              Current Promotions
+              <FileText className="w-4 h-4" />
+              <span>Magazine</span>
             </Link>
 
             <div
               className="relative"
-              onMouseEnter={() => setServicesDropdownOpen(true)}
-              onMouseLeave={() => setServicesDropdownOpen(false)}
+              onMouseEnter={() => setLanguageDropdownOpen(true)}
+              onMouseLeave={() => setLanguageDropdownOpen(false)}
             >
               <button
-                className={`nav-link px-4 py-2 text-sm font-light tracking-wide flex items-center gap-1 transition-colors duration-300 ${
-                  scrolled ? "text-gray-800 hover:text-[#ba3364]" : "text-white hover:text-white/80"
-                }`}
-                aria-expanded={servicesDropdownOpen}
+                className="flex items-center gap-1.5 text-white/90 hover:text-white text-sm font-light tracking-wide transition-colors duration-300"
+                aria-expanded={languageDropdownOpen}
                 aria-haspopup="true"
               >
-                Services
+                <Globe className="w-4 h-4" />
+                <span>English</span>
                 <ChevronDown
-                  className={`w-3.5 h-3.5 transition-transform duration-300 ${
-                    servicesDropdownOpen ? "rotate-180" : ""
-                  }`}
+                  className={`w-3 h-3 transition-transform duration-300 ${languageDropdownOpen ? "rotate-180" : ""}`}
                 />
               </button>
 
-              {servicesDropdownOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-[420px] bg-white rounded-sm shadow-xl border border-gray-100 py-3 animate-nav-dropdown">
-                  <div className="px-2 space-y-0.5">
-                    <Link
-                      href="/services/sporting-events"
-                      className="nav-dropdown-link block px-5 py-3 text-sm text-gray-700 hover:text-[#ba3364] hover:bg-gray-50/50 rounded-sm font-light tracking-wide"
-                    >
-                      Sporting Event Planning
-                    </Link>
-                    <Link
-                      href="/services/balloon-decor"
-                      className="nav-dropdown-link block px-5 py-3 text-sm text-gray-700 hover:text-[#ba3364] hover:bg-gray-50/50 rounded-sm font-light tracking-wide"
-                    >
-                      Balloon Decor
-                    </Link>
-                    <Link
-                      href="/services/corporate-milestones"
-                      className="nav-dropdown-link block px-5 py-3 text-sm text-gray-700 hover:text-[#ba3364] hover:bg-gray-50/50 rounded-sm font-light tracking-wide"
-                    >
-                      Corporate Milestones
-                    </Link>
-                    <Link
-                      href="/services/employee-recognition"
-                      className="nav-dropdown-link block px-5 py-3 text-sm text-gray-700 hover:text-[#ba3364] hover:bg-gray-50/50 rounded-sm font-light tracking-wide"
-                    >
-                      Employee Recognition Dinners
-                    </Link>
-                    <Link
-                      href="/services/corporate-events"
-                      className="nav-dropdown-link block px-5 py-3 text-sm text-gray-700 hover:text-[#ba3364] hover:bg-gray-50/50 rounded-sm font-light tracking-wide"
-                    >
-                      Corporate Event Planning
-                    </Link>
-                    <Link
-                      href="/services/business-experience"
-                      className="nav-dropdown-link block px-5 py-3 text-sm text-gray-700 hover:text-[#ba3364] hover:bg-gray-50/50 rounded-sm font-light tracking-wide"
-                    >
-                      Business Experience Event Planner
-                    </Link>
-                    <Link
-                      href="/services/curated-weddings"
-                      className="nav-dropdown-link block px-5 py-3 text-sm text-gray-700 hover:text-[#ba3364] hover:bg-gray-50/50 rounded-sm font-light tracking-wide"
-                    >
-                      Curated Wedding Experiences With Style & Intention
-                    </Link>
-                    <Link
-                      href="/services/wedding-officiant"
-                      className="nav-dropdown-link block px-5 py-3 text-sm text-gray-700 hover:text-[#ba3364] hover:bg-gray-50/50 rounded-sm font-light tracking-wide"
-                    >
-                      Personalized Wedding Officiant Services
-                    </Link>
-                  </div>
+              {languageDropdownOpen && (
+                <div className="absolute top-full right-0 mt-4 w-32 bg-white rounded-sm shadow-xl border border-gray-100 py-2 animate-nav-dropdown">
+                  <button className="block w-full px-4 py-2 text-sm text-gray-700 hover:text-[#ba3364] hover:bg-gray-50/50 text-left font-light">
+                    English
+                  </button>
+                  <button className="block w-full px-4 py-2 text-sm text-gray-700 hover:text-[#ba3364] hover:bg-gray-50/50 text-left font-light">
+                    Español
+                  </button>
                 </div>
               )}
             </div>
-
-            <Link
-              href="/our-story"
-              className={`nav-link px-4 py-2 text-sm font-light tracking-wide transition-colors duration-300 ${
-                scrolled ? "text-gray-800 hover:text-[#ba3364]" : "text-white hover:text-white/80"
-              }`}
-            >
-              Our Story
-            </Link>
-            <Link
-              href="/shop"
-              className={`nav-link px-4 py-2 text-sm font-light tracking-wide transition-colors duration-300 ${
-                scrolled ? "text-gray-800 hover:text-[#ba3364]" : "text-white hover:text-white/80"
-              }`}
-            >
-              Shop
-            </Link>
-            <Link
-              href="#contact"
-              className={`ml-4 px-6 py-2.5 text-sm font-light tracking-wide rounded-sm transition-all duration-300 ${
-                scrolled ? "bg-[#ba3364] text-white hover:bg-[#732b6f]" : "bg-white/90 text-[#ba3364] hover:bg-white"
-              }`}
-            >
-              Let's Get Started!
-            </Link>
           </nav>
 
           <button
             ref={menuButtonRef}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className={`lg:hidden relative z-50 w-10 h-10 flex flex-col items-center justify-center gap-1.5 transition-colors duration-300 ${
-              mobileMenuOpen ? "text-white" : scrolled ? "text-gray-800" : "text-white"
-            }`}
+            className="relative z-50 flex items-center gap-3 text-white hover:text-white/80 transition-colors duration-300"
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
           >
-            {/* Top line */}
-            <span
-              className={`block h-[1.5px] bg-current transition-all duration-300 ease-out ${
-                mobileMenuOpen ? "w-5 rotate-45 translate-y-[5px]" : "w-6"
-              }`}
-            />
-            {/* Middle line */}
-            <span
-              className={`block h-[1.5px] w-6 bg-current transition-all duration-300 ease-out ${
-                mobileMenuOpen ? "opacity-0 scale-0" : "opacity-100 scale-100"
-              }`}
-            />
-            {/* Bottom line */}
-            <span
-              className={`block h-[1.5px] bg-current transition-all duration-300 ease-out ${
-                mobileMenuOpen ? "w-5 -rotate-45 -translate-y-[5px]" : "w-6"
-              }`}
-            />
+            <span className="text-sm font-light tracking-widest uppercase">Menu</span>
+            <div className="w-8 h-6 flex flex-col items-end justify-center gap-1.5">
+              <span
+                className={`block h-[1.5px] bg-current transition-all duration-300 ease-out ${
+                  mobileMenuOpen ? "w-6 rotate-45 translate-y-[5px]" : "w-8"
+                }`}
+              />
+              <span
+                className={`block h-[1.5px] w-8 bg-current transition-all duration-300 ease-out ${
+                  mobileMenuOpen ? "opacity-0 scale-0" : "opacity-100 scale-100"
+                }`}
+              />
+              <span
+                className={`block h-[1.5px] bg-current transition-all duration-300 ease-out ${
+                  mobileMenuOpen ? "w-6 -rotate-45 -translate-y-[5px]" : "w-8"
+                }`}
+              />
+            </div>
           </button>
         </div>
       </div>
@@ -256,19 +191,17 @@ export default function Header() {
       {mobileMenuOpen && (
         <div
           ref={mobileMenuRef}
-          className="fixed inset-0 z-40 lg:hidden"
+          className="fixed inset-0 z-40"
           role="dialog"
           aria-modal="true"
           aria-label="Mobile navigation"
         >
-          {/* Enhanced backdrop with blur */}
           <div
             className="absolute inset-0 bg-gradient-to-br from-[#ba3364] to-[#732b6f] backdrop-blur-sm animate-mobile-menu-fade"
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
           />
 
-          {/* Menu content with refined slide animation */}
           <nav className="relative h-full flex flex-col items-center justify-center px-8 animate-mobile-menu-slide-refined">
             <div className="w-full max-w-md space-y-1">
               <Link
@@ -286,7 +219,6 @@ export default function Header() {
                 Current Promotions
               </Link>
 
-              {/* Mobile Services Section */}
               <div className="border-b border-white/10">
                 <button
                   onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
@@ -382,7 +314,6 @@ export default function Header() {
                 Contact Us
               </Link>
 
-              {/* Mobile CTA */}
               <div className="pt-8 text-center">
                 <Link
                   href="#contact"
