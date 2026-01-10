@@ -203,7 +203,7 @@ export default function Header() {
             </Link>
           </div>
 
-          <nav className="h-full flex items-center justify-center bg-sky-500/75 bg-transparent h-screen px-8 pt-20">
+          <nav className="h-full flex items-center justify-center bg-sky-500/85 bg-transparent h-screen px-8 pt-20">
             <div className="w-full max-w-2xl space-y-4">
               <Link
                 href="/promotions"
