@@ -107,9 +107,7 @@ export default function Header() {
             />
           </Link>
 
-          <nav
-            className={`hidden lg:flex items-center gap-6 transition-opacity duration-300 ${mobileMenuOpen ? "opacity-0 pointer-events-none" : "opacity-100"}`}
-          >
+          <nav className="hidden lg:flex items-center gap-6">
             <a
               href="tel:+1234567890"
               className="flex items-center gap-2 text-white/90 hover:text-white text-sm font-light tracking-wide transition-colors duration-300"
@@ -195,11 +193,21 @@ export default function Header() {
           aria-modal="true"
           aria-label="Mobile navigation"
         >
+          <div className="absolute top-0 left-0 right-0 px-6 lg:px-12 h-16 lg:h-20 flex items-center justify-between border-b border-white/10">
+            <Link href="/" onClick={() => setMobileMenuOpen(false)}>
+              <img
+                src="/images/design-mode/fulllogo_transparent_nobuffer%281%29.png"
+                alt="Lovely Events Logo"
+                className="w-12 h-12 lg:w-14 lg:h-14"
+              />
+            </Link>
+          </div>
+
           <nav className="h-full flex items-center justify-center px-8 pt-20">
-            <div className="w-full max-w-2xl space-y-2">
+            <div className="w-full max-w-2xl space-y-4">
               <Link
                 href="/promotions"
-                className="block py-5 text-white text-4xl md:text-5xl font-serif italic font-light tracking-wide hover:text-white/70 transition-all duration-500 text-center focus:outline-none focus:text-white/70"
+                className="block py-4 text-white text-4xl md:text-5xl font-serif italic font-light tracking-wide hover:text-white/70 transition-all duration-500 text-center focus:outline-none focus:text-white/70"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Current Promotions
@@ -208,7 +216,7 @@ export default function Header() {
               <div>
                 <button
                   onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
-                  className="w-full py-5 text-white text-4xl md:text-5xl font-serif italic font-light tracking-wide hover:text-white/70 transition-all duration-500 text-center focus:outline-none focus:text-white/70"
+                  className="w-full py-4 text-white text-4xl md:text-5xl font-serif italic font-light tracking-wide hover:text-white/70 transition-all duration-500 text-center focus:outline-none focus:text-white/70"
                   aria-expanded={servicesDropdownOpen}
                 >
                   Services
@@ -277,7 +285,7 @@ export default function Header() {
 
               <Link
                 href="/our-story"
-                className="block py-5 text-white text-4xl md:text-5xl font-serif italic font-light tracking-wide hover:text-white/70 transition-all duration-500 text-center focus:outline-none focus:text-white/70"
+                className="block py-4 text-white text-4xl md:text-5xl font-serif italic font-light tracking-wide hover:text-white/70 transition-all duration-500 text-center focus:outline-none focus:text-white/70"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Our Story
