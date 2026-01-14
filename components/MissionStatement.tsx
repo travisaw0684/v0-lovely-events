@@ -11,7 +11,7 @@ export default function MissionStatement() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(/https://www.pexels.com/photo/vibrant-las-vegas-strip-at-night-with-light-trails-33466000/)`,
+          backgroundImage: `https://www.pexels.com/photo/vibrant-las-vegas-strip-at-night-with-light-trails-33466000/`,
         }}
       />
 
