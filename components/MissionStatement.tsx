@@ -11,7 +11,7 @@ export default function MissionStatement() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(/placeholder.svg?height=1080&width=1920&query=modern+city+skyline+at+dusk+Las+Vegas+strip+aerial+view)`,
+          backgroundImage: `url(/https://www.pexels.com/photo/vibrant-las-vegas-strip-at-night-with-light-trails-33466000/)`,
         }}
       />
 
