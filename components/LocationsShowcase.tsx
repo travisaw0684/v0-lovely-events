@@ -9,7 +9,7 @@ const locations = [
     city: "Event Planning",
     image: "https://images.pexels.com/photos/733852/pexels-photo-733852.jpeg",
     quote: "Turning Your Vision Into Lasting Impressions.",
-    stats: "????????????",
+    stats: "",
   },
   {
     id: 2,
