@@ -1,8 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react"
+import { Star, ChevronLeft, ChevronRight } from "lucide-react"
 
 const testimonials = [
   {
@@ -79,77 +78,76 @@ export default function TestimonialsSection() {
   const testimonial = testimonials[currentTestimonial]
 
   return (
-    <section id="testimonials-section" className="py-20 px-4 bg-background">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className={`text-center mb-16 ${isVisible ? "animate-fade-in" : "opacity-0"}`}>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">What Our Clients Say</h2>
+    <section id="testimonials-section" className="relative py-32 px-4 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#F5F1E8] via-[#EDE7DC] to-[#E8E0D0]" />
+
+      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
+
+      <div className="relative max-w-7xl mx-auto">
+        <div className={`text-center mb-20 ${isVisible ? "animate-fade-in" : "opacity-0"}`}>
+          <p className="font-sans text-sm tracking-[0.2em] uppercase text-primary/60 mb-4">Client Experiences</p>
+          <h2 className="font-serif text-5xl md:text-6xl font-light text-foreground mb-6 text-balance">
+            Treasured Moments
+          </h2>
           <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Don't just take our word for it. Here's what our clients have to say about their unforgettable experiences.
+            Stories from those who trusted us with their most important celebrations
           </p>
         </div>
 
-        {/* Main Testimonial Card */}
-        <div className={`mb-12 ${isVisible ? "animate-slide-up" : "opacity-0"}`}>
-          <Card className="bg-card border-0 shadow-xl max-w-4xl mx-auto">
-            <CardContent className="p-12">
-              <div className="text-center">
-                {/* Quote Icon */}
-                <div className="mb-8">
-                  <Quote className="w-12 h-12 text-secondary mx-auto" />
-                </div>
+        <div className={`grid md:grid-cols-2 gap-0 mb-16 ${isVisible ? "animate-slide-up" : "opacity-0"}`}>
+          {/* Left side - Image */}
+          <div className="relative h-[500px] md:h-[600px] overflow-hidden">
+            <img
+              src={testimonial.image || "/placeholder.svg"}
+              alt={testimonial.name}
+              className="w-full h-full object-cover transition-all duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+          </div>
 
-                {/* Client Photo */}
-                <div className="mb-8">
-                  <img
-                    src={testimonial.image || "/placeholder.svg"}
-                    alt={testimonial.name}
-                    className="w-20 h-20 rounded-full mx-auto object-cover border-4 border-secondary/20"
-                  />
-                </div>
+          {/* Right side - Content */}
+          <div className="bg-white/80 backdrop-blur-sm p-12 md:p-16 flex flex-col justify-center">
+            {/* Star Rating */}
+            <div className="flex gap-1 mb-8">
+              {[...Array(testimonial.rating)].map((_, i) => (
+                <Star key={i} className="w-5 h-5 fill-primary/80 text-primary/80" />
+              ))}
+            </div>
 
-                {/* Star Rating */}
-                <div className="flex justify-center mb-6">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 fill-secondary text-secondary" />
-                  ))}
-                </div>
+            {/* Quote Text */}
+            <blockquote className="font-serif text-2xl md:text-3xl text-foreground leading-relaxed mb-8 italic font-light">
+              "{testimonial.text}"
+            </blockquote>
 
-                {/* Testimonial Text */}
-                <blockquote className="font-sans text-xl text-foreground leading-relaxed mb-8 italic">
-                  "{testimonial.text}"
-                </blockquote>
-
-                {/* Client Info */}
-                <div>
-                  <cite className="font-serif text-xl font-semibold text-foreground not-italic">
-                    {testimonial.name}
-                  </cite>
-                  <p className="font-sans text-muted-foreground mt-1">{testimonial.event}</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+            {/* Client Info */}
+            <div className="border-t border-primary/20 pt-6">
+              <cite className="font-serif text-xl font-medium text-foreground not-italic block mb-1">
+                {testimonial.name}
+              </cite>
+              <p className="font-sans text-sm tracking-wider uppercase text-muted-foreground">{testimonial.event}</p>
+            </div>
+          </div>
         </div>
 
-        {/* Navigation */}
-        <div className="flex items-center justify-center gap-8">
+        <div className="flex items-center justify-center gap-12">
           <button
             onClick={prevTestimonial}
-            className="p-3 rounded-full bg-secondary/10 hover:bg-secondary/20 text-secondary transition-all duration-300 hover:scale-110"
+            className="group relative p-4 transition-all duration-300 hover:scale-110"
             aria-label="Previous testimonial"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <div className="absolute inset-0 bg-primary/10 rounded-full transition-all duration-300 group-hover:bg-primary/20" />
+            <ChevronLeft className="relative w-6 h-6 text-primary" />
           </button>
 
           {/* Dots Indicator */}
-          <div className="flex space-x-2">
+          <div className="flex gap-3">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentTestimonial(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentTestimonial ? "bg-secondary scale-110" : "bg-muted hover:bg-secondary/50"
+                className={`transition-all duration-300 rounded-full ${
+                  index === currentTestimonial ? "w-12 h-3 bg-primary" : "w-3 h-3 bg-primary/30 hover:bg-primary/50"
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
@@ -158,10 +156,11 @@ export default function TestimonialsSection() {
 
           <button
             onClick={nextTestimonial}
-            className="p-3 rounded-full bg-secondary/10 hover:bg-secondary/20 text-secondary transition-all duration-300 hover:scale-110"
+            className="group relative p-4 transition-all duration-300 hover:scale-110"
             aria-label="Next testimonial"
           >
-            <ChevronRight className="w-6 h-6" />
+            <div className="absolute inset-0 bg-primary/10 rounded-full transition-all duration-300 group-hover:bg-primary/20" />
+            <ChevronRight className="relative w-6 h-6 text-primary" />
           </button>
         </div>
       </div>
