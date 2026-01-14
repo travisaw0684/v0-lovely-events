@@ -17,7 +17,7 @@ const locations = [
     image:
       "https://static.mywebsites360.com/d3536c889e90455b8c18f12a5d7c8646/i/c30f5c7422ad4373901fb774b5b3dc30/1/2GTQbgiNxerRr5gcT6hkjr8dsnb6NBTxXMi2obS/N40A3568.jpg",
     quote: "From Kickoff to Celebration — We've Got You Covered.",
-    stats: "????????????",
+    stats: "",
   },
   {
     id: 3,
@@ -25,28 +25,28 @@ const locations = [
     image:
       "https://static.mywebsites360.com/d3536c889e90455b8c18f12a5d7c8646/i/ec404a18b107437fb80c21664fd712a6/1/4SoifmQp45JMgBnHiDiv8/20230509_143624.jpg",
     quote: "Adding Color, Style, and Fun to Every Celebration.",
-    stats: "????????????",
+    stats: "",
   },
   {
     id: 4,
     city: "Business Event Planning",
     image: "https://images.pexels.com/photos/7648472/pexels-photo-7648472.jpeg",
     quote: "Your Vision. Our Expertise. One Unforgettable Event.",
-    stats: "????????????",
+    stats: "",
   },
   {
     id: 5,
     city: "Wedding Events",
     image: "https://images.pexels.com/photos/6405800/pexels-photo-6405800.jpeg",
     quote: "Turning 'I Do' Into a Dream Come True.",
-    stats: "100+ strategic locations",
+    stats: "",
   },
   {
     id: 6,
     city: "Employee Recognition Dinners",
     image: "https://images.pexels.com/photos/6405800/pexels-photo-6405800.jpeg",
     quote: "Historic charm meets modern advertising excellence.",
-    stats: "80+ key positions",
+    stats: "",
   },
 ]
 
