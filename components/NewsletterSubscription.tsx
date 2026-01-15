@@ -48,21 +48,23 @@ export default function NewsletterSubscription() {
   }
 
   return (
-    <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500 rounded-full blur-3xl" />
+    <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-stone-50 via-rose-50/30 to-stone-100">
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-1/3 -left-32 w-96 h-96 bg-rose-200/40 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 -right-32 w-96 h-96 bg-slate-200/40 rounded-full blur-3xl" />
       </div>
 
       <div className="relative max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 mb-6 shadow-lg shadow-amber-500/50">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#832854] to-[#B63669] mb-6 shadow-lg shadow-rose-900/30">
             <Mail className="w-8 h-8 text-white" />
           </div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 text-white">Stay in the Loop</h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 text-slate-900">
+            Stay in the Loop
+          </h2>
 
-          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-700 max-w-2xl mx-auto leading-relaxed">
             Get exclusive access to event inspiration, insider tips, and special offers delivered straight to your
             inbox.
           </p>
@@ -70,12 +72,12 @@ export default function NewsletterSubscription() {
 
         <div className="max-w-xl mx-auto">
           {status === "success" ? (
-            <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/30 rounded-2xl p-8 text-center backdrop-blur-sm animate-in fade-in slide-in-from-bottom-4 duration-500">
+            <div className="bg-white/80 border border-rose-200 rounded-2xl p-8 text-center backdrop-blur-sm shadow-xl animate-in fade-in slide-in-from-bottom-4 duration-500">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-500 mb-4">
                 <Check className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-semibold text-white mb-2">You're All Set!</h3>
-              <p className="text-gray-300">{message}</p>
+              <h3 className="text-2xl font-semibold text-slate-900 mb-2">You're All Set!</h3>
+              <p className="text-slate-700">{message}</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -87,14 +89,14 @@ export default function NewsletterSubscription() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   disabled={isSubmitting}
-                  className="w-full px-6 py-6 text-lg bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-2xl text-white placeholder:text-gray-400 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 transition-all duration-300 disabled:opacity-50"
+                  className="w-full px-6 py-6 text-lg bg-white/80 backdrop-blur-sm border-2 border-slate-200 rounded-2xl text-slate-900 placeholder:text-slate-400 focus:border-[#832854] focus:ring-2 focus:ring-[#832854]/20 transition-all duration-300 disabled:opacity-50 shadow-sm"
                 />
               </div>
 
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full px-8 py-6 text-lg font-semibold rounded-2xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                className="w-full px-8 py-6 text-lg font-semibold rounded-2xl bg-gradient-to-r from-[#832854] to-[#B63669] hover:from-[#6d1f45] hover:to-[#9f2c5a] text-white shadow-lg shadow-rose-900/20 hover:shadow-rose-900/40 hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
                 {isSubmitting ? (
                   <span className="flex items-center justify-center gap-2">
@@ -107,15 +109,15 @@ export default function NewsletterSubscription() {
               </Button>
 
               {status === "error" && (
-                <div className="flex items-start gap-3 p-4 bg-red-500/10 border border-red-500/30 rounded-xl backdrop-blur-sm animate-in fade-in slide-in-from-bottom-2 duration-300">
-                  <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
-                  <p className="text-red-300 text-sm">{message}</p>
+                <div className="flex items-start gap-3 p-4 bg-red-50 border border-red-200 rounded-xl backdrop-blur-sm animate-in fade-in slide-in-from-bottom-2 duration-300 shadow-sm">
+                  <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                  <p className="text-red-700 text-sm">{message}</p>
                 </div>
               )}
             </form>
           )}
 
-          <p className="text-center text-sm text-gray-400 mt-6">We respect your privacy. Unsubscribe at any time.</p>
+          <p className="text-center text-sm text-slate-500 mt-6">We respect your privacy. Unsubscribe at any time.</p>
         </div>
       </div>
     </section>
