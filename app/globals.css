@@ -605,6 +605,16 @@ body {
   }
 }
 
+/* Adding shimmer animation for promotions banner */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 .animate-corporate-fade-in {
   animation: corporate-fade-in-up 1.2s ease-out;
 }
@@ -739,6 +749,11 @@ body {
 
 .animate-mobile-dropdown-refined {
   animation: mobile-dropdown-refined 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Adding shimmer animation class for promotions */
+.animate-shimmer {
+  animation: shimmer 3s ease-in-out infinite;
 }
 
 /* Luxury navigation hover effects */
