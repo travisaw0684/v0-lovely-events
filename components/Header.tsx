@@ -121,7 +121,7 @@ export default function Header() {
               className="flex items-center gap-2 text-white/90 hover:text-white text-sm font-light tracking-wide transition-colors duration-300"
             >
               <User className="w-4 h-4" />
-              <span>Modify Reservation</span>
+              <span>Reservation</span>
             </Link>
 
             <Link
@@ -129,7 +129,7 @@ export default function Header() {
               className="flex items-center gap-2 text-white/90 hover:text-white text-sm font-light tracking-wide transition-colors duration-300"
             >
               <FileText className="w-4 h-4" />
-              <span>Magazine</span>
+              <span>Consultation</span>
             </Link>
 
             <div
