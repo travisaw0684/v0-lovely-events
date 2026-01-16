@@ -309,42 +309,7 @@ export default function PromotionsPage() {
         </div>
       </section>
 
-      <section className="relative py-24 px-6 bg-gradient-to-br from-[#355a75] via-[#732b6f] to-[#15285c] overflow-hidden">
-        {/* Animated gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer"></div>
-
-        {/* Decorative elements */}
-        <div className="absolute top-10 left-10 w-96 h-96 bg-white rounded-full blur-3xl opacity-5"></div>
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#ba3364] rounded-full blur-3xl opacity-10"></div>
-
-        <div
-          className={`relative max-w-4xl mx-auto text-center transition-all duration-1000 delay-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-        >
-          <Sparkles className="h-12 w-12 text-white/80 mx-auto mb-6 animate-pulse" />
-          <h2 className="text-4xl md:text-6xl font-serif italic mb-6 leading-tight text-white drop-shadow-lg">
-            Ready to Create Magic?
-          </h2>
-          <p className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed font-light">
-            Don't miss out on these exclusive offers. Contact us today to start planning your unforgettable event.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button
-              size="lg"
-              className="bg-white hover:bg-white/90 text-[#ba3364] font-semibold px-10 py-6 text-lg transition-all duration-300 hover:scale-110 shadow-2xl rounded-full group"
-            >
-              Book Consultation
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-[#ba3364] font-semibold px-10 py-6 text-lg transition-all duration-300 hover:scale-110 bg-transparent rounded-full group"
-            >
-              View Portfolio
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </div>
-        </div>
-      </section>
+      
       <div className="relative">
       {/* PreFooterCTA before Footer */}
       <PreFooterCTA />
