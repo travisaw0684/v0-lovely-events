@@ -8,6 +8,7 @@ import { Clock, Star, Calendar, Gift, Sparkles, Heart, ArrowRight } from "lucide
 import Image from "next/image"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+import PreFooterCTA from "@/components/PreFooterCTA"
 
 export default function PromotionsPage() {
   const [isVisible, setIsVisible] = useState(false)
@@ -344,6 +345,9 @@ export default function PromotionsPage() {
           </div>
         </div>
       </section>
+
+      {/* PreFooterCTA before Footer */}
+      <PreFooterCTA />
 
       {/* Footer component for consistent site navigation */}
       <Footer />
