@@ -666,7 +666,7 @@ export default function CorporateMilestonesPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 px-6 text-center relative overflow-hidden bg-gradient-to-br from-[#732b6f] via-[#5a2258] to-[#2F5068]">
+      <section className="py-24 px-6 pb-[25rem] text-center relative overflow-hidden bg-gradient-to-br from-[#732b6f] via-[#5a2258] to-[#2F5068]">
         {/* Animated background elements */}
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-72 h-72 bg-white/5 rounded-full blur-[80px] animate-pulse" />
