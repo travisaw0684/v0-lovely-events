@@ -2,6 +2,7 @@
 
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
+import { PreFooterCTA } from "@/components/PreFooterCTA"
 import { Trophy, Users, Calendar, ArrowRight, Star, Sparkles, Medal } from "lucide-react"
 import { motion } from "framer-motion"
 
@@ -450,6 +451,8 @@ export default function SportingEventsPage() {
           </div>
         </motion.div>
       </section>
+
+      <PreFooterCTA />
 
       <Footer />
     </div>

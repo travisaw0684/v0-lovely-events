@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import Link from "next/link"
 
-export default function PreFooterCTA() {
+export function PreFooterCTA() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -98,3 +98,5 @@ export default function PreFooterCTA() {
     </motion.div>
   )
 }
+
+export default PreFooterCTA
