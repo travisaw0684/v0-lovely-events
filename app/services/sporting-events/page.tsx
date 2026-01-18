@@ -452,9 +452,13 @@ export default function SportingEventsPage() {
         </motion.div>
       </section>
 
+      <div className="relative">
+      {/* PreFooterCTA before Footer */}
       <PreFooterCTA />
 
+      {/* Footer component for consistent site navigation */}
       <Footer />
+      </div>
     </div>
   )
 }
