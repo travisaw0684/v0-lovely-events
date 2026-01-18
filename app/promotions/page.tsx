@@ -248,7 +248,7 @@ export default function PromotionsPage() {
         </div>
       </section>
 
-      <section className="relative py-24 px-6 bg-gradient-to-br from-slate-50 to-stone-100 overflow-hidden">
+      <section className="relative py-24 px-6 bg-gradient-to-br from-slate-50 to-stone-100 overflow-hidden pb-[25rem]">
         {/* Decorative elements */}
         <div className="absolute top-20 left-20 w-72 h-72 bg-[#ba3364] rounded-full blur-3xl opacity-10"></div>
         <div className="absolute bottom-20 right-20 w-72 h-72 bg-[#732b6f] rounded-full blur-3xl opacity-10"></div>
