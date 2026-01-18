@@ -525,7 +525,7 @@ export default function BalloonDecorPage() {
         </div>
       </section>
 
-      <section className="py-32 px-6" style={{ backgroundColor: "var(--balloon-primary)" }}>
+      <section className="py-32 px-6 pb-[25rem]" style={{ backgroundColor: "var(--balloon-primary)" }}>
         <div className="max-w-7xl mx-auto">
           <div className="balloon-asymmetric-grid">
             <motion.div
