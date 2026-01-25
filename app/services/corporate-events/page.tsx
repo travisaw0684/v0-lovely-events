@@ -423,9 +423,10 @@ export default function CorporateEventsPage() {
         </div>
       </section>
 
-      <PreFooterCTA />
-
-      <Footer />
+      <div className="relative">
+        <PreFooterCTA />
+        <Footer />
+      </div>
     </div>
   )
 }
