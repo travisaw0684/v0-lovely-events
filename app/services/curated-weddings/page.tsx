@@ -512,7 +512,7 @@ export default function CuratedWeddingsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 px-6 text-center relative overflow-hidden bg-gradient-to-br from-rose-500 via-pink-500 to-fuchsia-500">
+      <section className="py-32 px-6 pb-[25rem] text-center relative overflow-hidden bg-gradient-to-br from-rose-500 via-pink-500 to-fuchsia-500">
         {/* Animated background elements */}
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-72 h-72 bg-white/10 rounded-full blur-[80px] animate-pulse" />
@@ -564,9 +564,10 @@ export default function CuratedWeddingsPage() {
         </div>
       </section>
 
-      <PreFooterCTA />
-
-      <Footer />
+      <div className="relative">
+        <PreFooterCTA />
+        <Footer />
+      </div>
     </div>
   )
 }
