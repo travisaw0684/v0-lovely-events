@@ -3,60 +3,56 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* shadcn design tokens - HSL format for proper Tailwind integration */
+  --background: 0 0% 100%;
+  --foreground: 220 13% 26%;
+  --card: 140 69% 96%;
+  --card-foreground: 220 13% 26%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 220 13% 26%;
+  --primary: 298 43% 32%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 0 0% 0%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 140 69% 96%;
+  --muted-foreground: 220 13% 26%;
+  --accent: 74 78% 45%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 343 83% 42%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 220 13% 91%;
+  --input: 210 20% 98%;
+  --ring: 174 72% 40%;
+  --chart-1: 330 81% 60%;
+  --chart-2: 248 53% 58%;
+  --chart-3: 38 92% 50%;
+  --chart-4: 350 89% 60%;
+  --chart-5: 142 71% 45%;
+  --radius: 0.5rem;
+  --sidebar-background: 0 0% 100%;
+  --sidebar-foreground: 220 13% 26%;
+  --sidebar-primary: 140 69% 96%;
+  --sidebar-primary-foreground: 220 13% 26%;
+  --sidebar-accent: 74 78% 45%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 174 72% 40%;
 
   /* Corporate Milestones Design Tokens */
-  --background: #ffffff;
-  --foreground: #374151;
-  --card: #f0fdf4;
-  --card-foreground: #374151;
-  --popover: #ffffff;
-  --popover-foreground: #374151;
-  --primary: #732b6f;
-  --primary-foreground: #ffffff;
-  --secondary: #000000;
-  --secondary-foreground: #ffffff;
-  --muted: #f0fdf4;
-  --muted-foreground: #374151;
-  --accent: #84cc16;
-  --accent-foreground: #ffffff;
-  --destructive: #be123c;
-  --destructive-foreground: #ffffff;
-  --border: #e5e7eb;
-  --input: #f8fafc;
-  --ring: rgba(20, 184, 166, 0.5);
-  --chart-1: #ec4899;
-  --chart-2: #6366f1;
-  --chart-3: #f59e0b;
-  --chart-4: #f43f5e;
-  --chart-5: #22c55e;
-  --radius: 0.5rem;
-  --sidebar: #ffffff;
-  --sidebar-foreground: #374151;
-  --sidebar-primary: #f0fdf4;
-  --sidebar-primary-foreground: #374151;
-  --sidebar-accent: #84cc16;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #e5e7eb;
-  --sidebar-ring: rgba(20, 184, 166, 0.5);
-
-  /* Advanced Balloon Decor Design Tokens - Inspired by modern creative agencies */
-  --balloon-background: #faf9f7;
-  --balloon-foreground: #2d2d2d;
-  --balloon-card: #ffffff;
-  --balloon-card-foreground: #2d2d2d;
-  --balloon-primary: #d4a574;
-  --balloon-primary-foreground: #ffffff;
-  --balloon-secondary: #f4f1eb;
-  --balloon-secondary-foreground: #2d2d2d;
-  --balloon-accent: #e8b894;
-  --balloon-accent-foreground: #2d2d2d;
-  --balloon-muted: #f8f6f3;
-  --balloon-muted-foreground: #6b6b6b;
-  --balloon-border: #e8e5e0;
-  --balloon-ring: rgba(212, 165, 116, 0.3);
+  --balloon-background: 40 29% 97%;
+  --balloon-foreground: 0 0% 18%;
+  --balloon-card: 0 0% 100%;
+  --balloon-card-foreground: 0 0% 18%;
+  --balloon-primary: 29 40% 64%;
+  --balloon-primary-foreground: 0 0% 100%;
+  --balloon-secondary: 40 29% 95%;
+  --balloon-secondary-foreground: 0 0% 18%;
+  --balloon-accent: 29 59% 74%;
+  --balloon-accent-foreground: 0 0% 18%;
+  --balloon-muted: 40 36% 97%;
+  --balloon-muted-foreground: 0 0% 42%;
+  --balloon-border: 40 26% 90%;
+  --balloon-ring: 29 40% 64%;
   --balloon-radius: 1rem;
 
   /* Advanced typography scale */
@@ -74,22 +70,21 @@
   --balloon-text-8xl: 6rem;
   --balloon-text-9xl: 8rem;
 
-  /* Adding sophisticated employee recognition design tokens inspired by modern corporate aesthetics */
-  /* Employee Recognition Advanced Design Tokens - Inspired by sophisticated corporate design */
-  --employee-background: #fafafa;
-  --employee-foreground: #1a1a1a;
-  --employee-card: #ffffff;
-  --employee-card-foreground: #1a1a1a;
-  --employee-primary: #000000;
-  --employee-primary-foreground: #ffffff;
-  --employee-secondary: #f5f5f5;
-  --employee-secondary-foreground: #1a1a1a;
-  --employee-accent: #666666;
-  --employee-accent-foreground: #ffffff;
-  --employee-muted: #f8f8f8;
-  --employee-muted-foreground: #666666;
-  --employee-border: #e5e5e5;
-  --employee-ring: rgba(0, 0, 0, 0.1);
+  /* Employee Recognition Design Tokens */
+  --employee-background: 0 0% 98%;
+  --employee-foreground: 0 0% 10%;
+  --employee-card: 0 0% 100%;
+  --employee-card-foreground: 0 0% 10%;
+  --employee-primary: 0 0% 0%;
+  --employee-primary-foreground: 0 0% 100%;
+  --employee-secondary: 0 0% 96%;
+  --employee-secondary-foreground: 0 0% 10%;
+  --employee-accent: 0 0% 40%;
+  --employee-accent-foreground: 0 0% 100%;
+  --employee-muted: 0 0% 97%;
+  --employee-muted-foreground: 0 0% 40%;
+  --employee-border: 0 0% 90%;
+  --employee-ring: 0 0% 0%;
   --employee-radius: 0.75rem;
 
   /* Advanced typography scale for large text treatments */
@@ -108,21 +103,21 @@
   --employee-text-9xl: 8rem;
   --employee-text-10xl: 10rem;
 
-  /* Advanced Corporate Events Design Tokens - Inspired by sophisticated design references */
-  --corporate-background: #faf9f7;
-  --corporate-foreground: #1a1a1a;
-  --corporate-card: #ffffff;
-  --corporate-card-foreground: #1a1a1a;
-  --corporate-primary: #000000;
-  --corporate-primary-foreground: #ffffff;
-  --corporate-secondary: #c17b47;
-  --corporate-secondary-foreground: #ffffff;
-  --corporate-accent: #8b5a3c;
-  --corporate-accent-foreground: #ffffff;
-  --corporate-muted: #f5f4f2;
-  --corporate-muted-foreground: #666666;
-  --corporate-border: #e8e5e0;
-  --corporate-ring: rgba(193, 123, 71, 0.2);
+  /* Corporate Events Design Tokens */
+  --corporate-background: 40 29% 97%;
+  --corporate-foreground: 0 0% 10%;
+  --corporate-card: 0 0% 100%;
+  --corporate-card-foreground: 0 0% 10%;
+  --corporate-primary: 0 0% 0%;
+  --corporate-primary-foreground: 0 0% 100%;
+  --corporate-secondary: 25 46% 52%;
+  --corporate-secondary-foreground: 0 0% 100%;
+  --corporate-accent: 25 42% 40%;
+  --corporate-accent-foreground: 0 0% 100%;
+  --corporate-muted: 40 21% 96%;
+  --corporate-muted-foreground: 0 0% 40%;
+  --corporate-border: 40 26% 90%;
+  --corporate-ring: 25 46% 52%;
   --corporate-radius: 0.75rem;
 
   /* Advanced typography scale for large text treatments */
@@ -141,21 +136,21 @@
   --corporate-text-9xl: 8rem;
   --corporate-text-10xl: 10rem;
 
-  /* Advanced Business Expo Design Tokens - Inspired by sophisticated design references */
-  --expo-background: #faf9f7;
-  --expo-foreground: #1a1a1a;
-  --expo-card: #ffffff;
-  --expo-card-foreground: #1a1a1a;
-  --expo-primary: #ba3364;
-  --expo-primary-foreground: #ffffff;
-  --expo-secondary: #732b6f;
-  --expo-secondary-foreground: #ffffff;
-  --expo-accent: #8b5a3c;
-  --expo-accent-foreground: #ffffff;
-  --expo-muted: #f5f4f2;
-  --expo-muted-foreground: #666666;
-  --expo-border: #e8e5e0;
-  --expo-ring: rgba(193, 123, 71, 0.2);
+  /* Business Expo Design Tokens */
+  --expo-background: 40 29% 97%;
+  --expo-foreground: 0 0% 10%;
+  --expo-card: 0 0% 100%;
+  --expo-card-foreground: 0 0% 10%;
+  --expo-primary: 338 63% 47%;
+  --expo-primary-foreground: 0 0% 100%;
+  --expo-secondary: 298 43% 32%;
+  --expo-secondary-foreground: 0 0% 100%;
+  --expo-accent: 25 42% 40%;
+  --expo-accent-foreground: 0 0% 100%;
+  --expo-muted: 40 21% 96%;
+  --expo-muted-foreground: 0 0% 40%;
+  --expo-border: 40 26% 90%;
+  --expo-ring: 25 46% 52%;
   --expo-radius: 0.75rem;
 
   /* Advanced typography scale for large text treatments */
@@ -174,21 +169,21 @@
   --expo-text-9xl: 8rem;
   --expo-text-10xl: 10rem;
 
-  /* Advanced Wedding Design Tokens - Inspired by sophisticated design references */
-  --wedding-background: #faf9f7;
-  --wedding-foreground: #1a1a1a;
-  --wedding-card: #ffffff;
-  --wedding-card-foreground: #1a1a1a;
-  --wedding-primary: #d4a574;
-  --wedding-primary-foreground: #ffffff;
-  --wedding-secondary: #f4c2c2;
-  --wedding-secondary-foreground: #1a1a1a;
-  --wedding-accent: #2d5016;
-  --wedding-accent-foreground: #ffffff;
-  --wedding-muted: #f5f4f2;
-  --wedding-muted-foreground: #666666;
-  --wedding-border: #e8e5e0;
-  --wedding-ring: rgba(212, 165, 116, 0.2);
+  /* Wedding Design Tokens */
+  --wedding-background: 40 29% 97%;
+  --wedding-foreground: 0 0% 10%;
+  --wedding-card: 0 0% 100%;
+  --wedding-card-foreground: 0 0% 10%;
+  --wedding-primary: 29 40% 64%;
+  --wedding-primary-foreground: 0 0% 100%;
+  --wedding-secondary: 0 42% 84%;
+  --wedding-secondary-foreground: 0 0% 10%;
+  --wedding-accent: 102 46% 26%;
+  --wedding-accent-foreground: 0 0% 100%;
+  --wedding-muted: 40 21% 96%;
+  --wedding-muted-foreground: 0 0% 40%;
+  --wedding-border: 40 26% 90%;
+  --wedding-ring: 29 40% 64%;
   --wedding-radius: 0.75rem;
 
   /* Advanced typography scale for large text treatments */
@@ -208,14 +203,14 @@
   --wedding-text-10xl: 10rem;
 
   /* Trusted Brands Design Tokens */
-  --brands-background: #ffffff;
-  --brands-foreground: #1a1a1a;
-  --brands-card: #fafafa;
-  --brands-card-foreground: #1a1a1a;
-  --brands-primary: #ba3364;
-  --brands-primary-foreground: #ffffff;
-  --brands-muted: #666666;
-  --brands-border: #e5e5e5;
+  --brands-background: 0 0% 100%;
+  --brands-foreground: 0 0% 10%;
+  --brands-card: 0 0% 98%;
+  --brands-card-foreground: 0 0% 10%;
+  --brands-primary: 338 63% 47%;
+  --brands-primary-foreground: 0 0% 100%;
+  --brands-muted: 0 0% 40%;
+  --brands-border: 0 0% 90%;
 }
 
 * {
@@ -229,8 +224,8 @@ html {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
 }
 
 /* Simplified and cleaned up all animations to prevent syntax errors */
@@ -546,6 +541,80 @@ body {
   }
 }
 
+/* Adding luxury navigation animations matching Hotel Wellington style */
+@keyframes nav-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes nav-dropdown-slide {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mobile-menu-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes mobile-menu-slide {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Refined animations matching Hotel Wellington timing and feel */
+@keyframes mobile-menu-slide-refined {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes mobile-dropdown-refined {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Adding shimmer animation for promotions banner */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 .animate-corporate-fade-in {
   animation: corporate-fade-in-up 1.2s ease-out;
 }
@@ -656,6 +725,64 @@ body {
 
 .animate-brands-fade-in {
   animation: brands-fade-in 0.8s ease-out;
+}
+
+.animate-nav-fade-in {
+  animation: nav-fade-in 0.3s ease-out;
+}
+
+.animate-nav-dropdown {
+  animation: nav-dropdown-slide 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-mobile-menu-fade {
+  animation: mobile-menu-fade 0.3s ease-out;
+}
+
+.animate-mobile-menu-slide {
+  animation: mobile-menu-slide 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-mobile-menu-slide-refined {
+  animation: mobile-menu-slide-refined 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-mobile-dropdown-refined {
+  animation: mobile-dropdown-refined 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Adding shimmer animation class for promotions */
+.animate-shimmer {
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* Luxury navigation hover effects */
+.nav-link {
+  position: relative;
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-dropdown-link {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-dropdown-link:hover {
+  transform: translateX(4px);
 }
 
 /* Advanced hover effects for interactive elements */
