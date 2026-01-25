@@ -791,7 +791,10 @@ export default function WeddingOfficiantPage() {
           </div>
         </motion.div>
 
+       <div className="relative">
+        <PreFooterCTA />
         <Footer />
+      </div>
       </div>
     </div>
   )
