@@ -484,7 +484,7 @@ export default function EmployeeRecognitionPage() {
         </div>
       </section>
 
-      <section className="py-32 px-6 text-center" style={{ backgroundColor: "var(--employee-primary)" }}>
+      <section className="py-32 px-6 pb-[25rem] text-center" style={{ backgroundColor: "var(--employee-primary)" }}>
         <div className="max-w-4xl mx-auto">
           <motion.h2
             className="font-serif font-bold mb-8 leading-tight"
