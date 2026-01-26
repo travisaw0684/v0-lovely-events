@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ChevronRight } from "lucide-react"
 
@@ -106,12 +107,14 @@ export default function HeroCarousel() {
             >
               Let's Get Started <ChevronRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button
-              size="lg"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(255,255,255,0.5)] transition-all duration-150 px-8 py-4 text-lg font-semibold tracking-wide"
-            >
-              Free Consultation <ChevronRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link href="/consultation">
+              <Button
+                size="lg"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(255,255,255,0.5)] transition-all duration-150 px-8 py-4 text-lg font-semibold tracking-wide"
+              >
+                Free Consultation <ChevronRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
