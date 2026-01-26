@@ -113,7 +113,7 @@ export default function Header() {
               className="flex items-center gap-2 text-white/90 hover:text-white text-sm font-light tracking-wide transition-colors duration-300"
             >
               <Phone className="w-4 h-4" />
-              <span>+1 234 567 890</span>
+              <span>+1 234 567 897</span>
             </a>
 
             <Link
