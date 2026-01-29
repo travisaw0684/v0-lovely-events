@@ -12,10 +12,18 @@ import PreFooterCTA from "@/components/PreFooterCTA"
 
 export default function PromotionsPage() {
   const [isVisible, setIsVisible] = useState(false)
+  const [flippedCards, setFlippedCards] = useState<Record<number, boolean>>({})
 
   useEffect(() => {
     setIsVisible(true)
   }, [])
+
+  const toggleCardFlip = (cardId: number) => {
+    setFlippedCards((prev) => ({
+      ...prev,
+      [cardId]: !prev[cardId],
+    }))
+  }
 
   const promotions = [
     {
@@ -34,6 +42,18 @@ export default function PromotionsPage() {
       ],
       validUntil: "April 30, 2024",
       isLimited: true,
+      extendedInfo: {
+        details: "Our Spring Wedding Package is designed to transform your special day into a breathtaking celebration. From the first consultation to the final farewell, our dedicated team ensures every detail reflects your unique love story.",
+        includes: [
+          "3 planning consultations",
+          "Venue walkthrough & setup",
+          "Custom floral design",
+          "Ceremony & reception coordination",
+          "Vendor management",
+          "Timeline creation & management",
+        ],
+        idealFor: "Couples seeking a stress-free wedding experience with elegant spring-themed aesthetics.",
+      },
     },
     {
       id: 2,
@@ -46,6 +66,18 @@ export default function PromotionsPage() {
       features: ["Event design & theming", "Audio/visual coordination", "Catering management", "VIP guest services"],
       validUntil: "May 15, 2024",
       isLimited: false,
+      extendedInfo: {
+        details: "Elevate your corporate events with our comprehensive gala planning services. We create sophisticated experiences that reflect your company's brand and values while impressing clients and stakeholders.",
+        includes: [
+          "Brand-aligned event design",
+          "Full AV production",
+          "Premium catering coordination",
+          "Guest registration systems",
+          "Award ceremony production",
+          "Post-event analytics report",
+        ],
+        idealFor: "Companies hosting annual galas, award ceremonies, product launches, or milestone celebrations.",
+      },
     },
     {
       id: 3,
@@ -58,6 +90,18 @@ export default function PromotionsPage() {
       features: ["Romantic venue styling", "Custom menu planning", "Live music coordination", "Photography session"],
       validUntil: "June 1, 2024",
       isLimited: true,
+      extendedInfo: {
+        details: "Celebrate your love story with an intimate anniversary experience crafted just for you. Our team creates magical moments that honor your journey together with elegance and romance.",
+        includes: [
+          "Private venue styling",
+          "Personalized menu curation",
+          "Live musician or quartet",
+          "Professional photo session",
+          "Custom floral arrangements",
+          "Surprise element coordination",
+        ],
+        idealFor: "Couples celebrating milestone anniversaries who want an unforgettable, romantic experience.",
+      },
     },
     {
       id: 4,
@@ -70,6 +114,18 @@ export default function PromotionsPage() {
       features: ["Theme development", "Custom cake design", "Entertainment booking", "Gift coordination"],
       validUntil: "May 31, 2024",
       isLimited: false,
+      extendedInfo: {
+        details: "Make milestone birthdays truly memorable with our full-service planning. From sweet sixteens to golden anniversaries, we create celebrations that reflect the guest of honor's personality and dreams.",
+        includes: [
+          "Personalized theme design",
+          "Custom cake & dessert bar",
+          "Entertainment & DJ services",
+          "Photo booth setup",
+          "Guest favors & gifts",
+          "Memory book coordination",
+        ],
+        idealFor: "Anyone celebrating a milestone birthday (16, 21, 30, 40, 50, etc.) in style.",
+      },
     },
   ]
 
@@ -173,76 +229,171 @@ export default function PromotionsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {promotions.map((promo, index) => (
-              <Card
+              <div
                 key={promo.id}
-                className={`group overflow-hidden border-2 border-[#ba3364]/20 hover:border-[#ba3364] bg-white hover:shadow-2xl hover:shadow-[#ba3364]/20 transition-all duration-500 hover:-translate-y-2 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-                style={{ transitionDelay: `${(index + 1) * 150}ms` }}
+                className={`relative h-[680px] perspective-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                style={{ 
+                  transitionDelay: `${(index + 1) * 150}ms`,
+                  perspective: "1000px",
+                }}
               >
-                <div className="relative h-72 overflow-hidden">
-                  <Image
-                    src={promo.image || "/placeholder.svg"}
-                    alt={promo.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="absolute top-4 left-4 flex gap-2">
-                    <Badge className="bg-[#ba3364] text-white font-semibold text-sm px-4 py-2 shadow-lg">
-                      {promo.discount}
-                    </Badge>
-                    {promo.isLimited && (
-                      <Badge className="bg-[#732b6f] text-white font-semibold text-sm px-4 py-2 shadow-lg animate-pulse">
-                        Limited Time
-                      </Badge>
-                    )}
-                  </div>
-                  <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <Sparkles className="h-8 w-8 text-white drop-shadow-lg animate-pulse" />
-                  </div>
+                <div
+                  className="relative w-full h-full transition-transform duration-700 ease-in-out"
+                  style={{
+                    transformStyle: "preserve-3d",
+                    transform: flippedCards[promo.id] ? "rotateY(180deg)" : "rotateY(0deg)",
+                  }}
+                >
+                  {/* Front of card */}
+                  <Card
+                    className="absolute inset-0 group overflow-hidden border-2 border-[#ba3364]/20 hover:border-[#ba3364] bg-white hover:shadow-2xl hover:shadow-[#ba3364]/20 transition-all duration-500"
+                    style={{ backfaceVisibility: "hidden" }}
+                  >
+                    <div className="relative h-72 overflow-hidden">
+                      <Image
+                        src={promo.image || "/placeholder.svg"}
+                        alt={promo.title}
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="absolute top-4 left-4 flex gap-2">
+                        <Badge className="bg-[#ba3364] text-white font-semibold text-sm px-4 py-2 shadow-lg">
+                          {promo.discount}
+                        </Badge>
+                        {promo.isLimited && (
+                          <Badge className="bg-[#732b6f] text-white font-semibold text-sm px-4 py-2 shadow-lg animate-pulse">
+                            Limited Time
+                          </Badge>
+                        )}
+                      </div>
+                      <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <Sparkles className="h-8 w-8 text-white drop-shadow-lg animate-pulse" />
+                      </div>
+                    </div>
+
+                    <CardHeader className="pb-4">
+                      <CardTitle className="text-3xl font-serif italic text-gray-900 group-hover:text-[#ba3364] transition-colors duration-300">
+                        {promo.title}
+                      </CardTitle>
+                      <CardDescription className="text-gray-600 text-base leading-relaxed mt-2">
+                        {promo.description}
+                      </CardDescription>
+                    </CardHeader>
+
+                    <CardContent className="space-y-5">
+                      <div className="flex items-baseline gap-4 p-4 bg-gradient-to-r from-[#ba3364]/5 to-[#732b6f]/5 rounded-lg">
+                        <span className="text-4xl font-bold text-[#ba3364]">{promo.salePrice}</span>
+                        <span className="text-xl text-gray-400 line-through">{promo.originalPrice}</span>
+                        <span className="ml-auto text-sm font-semibold text-[#732b6f] bg-[#732b6f]/10 px-3 py-1 rounded-full">
+                          SAVE {promo.discount}
+                        </span>
+                      </div>
+
+                      <ul className="space-y-3">
+                        {promo.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-center gap-3 text-gray-700">
+                            <Heart className="h-5 w-5 text-[#ba3364] fill-current flex-shrink-0" />
+                            <span className="leading-relaxed">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      <div className="flex items-center gap-2 text-sm text-gray-600 pt-2 border-t border-gray-200">
+                        <Calendar className="h-4 w-4 text-[#732b6f]" />
+                        <span>
+                          Valid until <span className="font-semibold text-[#732b6f]">{promo.validUntil}</span>
+                        </span>
+                      </div>
+                    </CardContent>
+
+                    <CardFooter className="pt-2">
+                      <Button 
+                        onClick={() => toggleCardFlip(promo.id)}
+                        className="w-full bg-gradient-to-r from-[#ba3364] to-[#732b6f] hover:from-[#732b6f] hover:to-[#ba3364] text-white font-semibold py-6 text-lg transition-all duration-300 hover:shadow-xl group/btn rounded-full"
+                      >
+                        Learn More
+                        <ArrowRight className="ml-2 h-5 w-5 group-hover/btn:translate-x-1 transition-transform" />
+                      </Button>
+                    </CardFooter>
+                  </Card>
+
+                  {/* Back of card */}
+                  <Card
+                    className="absolute inset-0 overflow-hidden border-2 border-[#ba3364] bg-gradient-to-br from-white via-[#ba3364]/5 to-[#732b6f]/10 shadow-2xl shadow-[#ba3364]/20"
+                    style={{ 
+                      backfaceVisibility: "hidden",
+                      transform: "rotateY(180deg)",
+                    }}
+                  >
+                    <CardHeader className="pb-2 bg-gradient-to-r from-[#ba3364] to-[#732b6f] text-white">
+                      <div className="flex items-center justify-between">
+                        <CardTitle className="text-2xl font-serif italic">
+                          {promo.title}
+                        </CardTitle>
+                        <Badge className="bg-white/20 text-white border-white/40 font-semibold">
+                          {promo.discount}
+                        </Badge>
+                      </div>
+                      <div className="flex items-baseline gap-3 mt-2">
+                        <span className="text-3xl font-bold">{promo.salePrice}</span>
+                        <span className="text-lg text-white/70 line-through">{promo.originalPrice}</span>
+                      </div>
+                    </CardHeader>
+
+                    <CardContent className="pt-6 space-y-5 overflow-y-auto max-h-[420px]">
+                      <div>
+                        <h4 className="text-sm font-semibold text-[#732b6f] uppercase tracking-wider mb-2">About This Package</h4>
+                        <p className="text-gray-700 leading-relaxed text-sm">
+                          {promo.extendedInfo.details}
+                        </p>
+                      </div>
+
+                      <div>
+                        <h4 className="text-sm font-semibold text-[#732b6f] uppercase tracking-wider mb-3">What&apos;s Included</h4>
+                        <ul className="grid grid-cols-1 gap-2">
+                          {promo.extendedInfo.includes.map((item, idx) => (
+                            <li key={idx} className="flex items-center gap-2 text-gray-700 text-sm">
+                              <Sparkles className="h-4 w-4 text-[#ba3364] flex-shrink-0" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="bg-[#ba3364]/10 p-4 rounded-lg">
+                        <h4 className="text-sm font-semibold text-[#732b6f] uppercase tracking-wider mb-2">Ideal For</h4>
+                        <p className="text-gray-700 text-sm leading-relaxed">
+                          {promo.extendedInfo.idealFor}
+                        </p>
+                      </div>
+
+                      <div className="flex items-center gap-2 text-sm text-gray-600 pt-2 border-t border-gray-200">
+                        <Calendar className="h-4 w-4 text-[#732b6f]" />
+                        <span>
+                          Valid until <span className="font-semibold text-[#732b6f]">{promo.validUntil}</span>
+                        </span>
+                      </div>
+                    </CardContent>
+
+                    <CardFooter className="pt-2 flex gap-3">
+                      <Button 
+                        onClick={() => toggleCardFlip(promo.id)}
+                        variant="outline"
+                        className="flex-1 border-[#ba3364] text-[#ba3364] hover:bg-[#ba3364]/10 font-semibold py-6 text-lg rounded-full"
+                      >
+                        Back
+                      </Button>
+                      <Button 
+                        className="flex-1 bg-gradient-to-r from-[#ba3364] to-[#732b6f] hover:from-[#732b6f] hover:to-[#ba3364] text-white font-semibold py-6 text-lg transition-all duration-300 hover:shadow-xl rounded-full"
+                      >
+                        Book Now
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Button>
+                    </CardFooter>
+                  </Card>
                 </div>
-
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-3xl font-serif italic text-gray-900 group-hover:text-[#ba3364] transition-colors duration-300">
-                    {promo.title}
-                  </CardTitle>
-                  <CardDescription className="text-gray-600 text-base leading-relaxed mt-2">
-                    {promo.description}
-                  </CardDescription>
-                </CardHeader>
-
-                <CardContent className="space-y-5">
-                  <div className="flex items-baseline gap-4 p-4 bg-gradient-to-r from-[#ba3364]/5 to-[#732b6f]/5 rounded-lg">
-                    <span className="text-4xl font-bold text-[#ba3364]">{promo.salePrice}</span>
-                    <span className="text-xl text-gray-400 line-through">{promo.originalPrice}</span>
-                    <span className="ml-auto text-sm font-semibold text-[#732b6f] bg-[#732b6f]/10 px-3 py-1 rounded-full">
-                      SAVE {promo.discount}
-                    </span>
-                  </div>
-
-                  <ul className="space-y-3">
-                    {promo.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-3 text-gray-700">
-                        <Heart className="h-5 w-5 text-[#ba3364] fill-current flex-shrink-0" />
-                        <span className="leading-relaxed">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="flex items-center gap-2 text-sm text-gray-600 pt-2 border-t border-gray-200">
-                    <Calendar className="h-4 w-4 text-[#732b6f]" />
-                    <span>
-                      Valid until <span className="font-semibold text-[#732b6f]">{promo.validUntil}</span>
-                    </span>
-                  </div>
-                </CardContent>
-
-                <CardFooter className="pt-2">
-                  <Button className="w-full bg-gradient-to-r from-[#ba3364] to-[#732b6f] hover:from-[#732b6f] hover:to-[#ba3364] text-white font-semibold py-6 text-lg transition-all duration-300 hover:shadow-xl group/btn rounded-full">
-                    Learn More
-                    <ArrowRight className="ml-2 h-5 w-5 group-hover/btn:translate-x-1 transition-transform" />
-                  </Button>
-                </CardFooter>
-              </Card>
+              </div>
             ))}
           </div>
         </div>
