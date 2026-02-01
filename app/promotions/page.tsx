@@ -246,10 +246,10 @@ export default function PromotionsPage() {
                 >
                   {/* Front of card */}
                   <Card
-                    className="absolute inset-0 group overflow-hidden border-2 border-[#ba3364]/20 hover:border-[#ba3364] bg-white hover:shadow-2xl hover:shadow-[#ba3364]/20 transition-all duration-500 flex flex-col"
+                    className="absolute inset-0 group overflow-hidden border-2 border-[#ba3364]/20 hover:border-[#ba3364] bg-white hover:shadow-2xl hover:shadow-[#ba3364]/20 transition-all duration-500"
                     style={{ backfaceVisibility: "hidden" }}
                   >
-                    <div className="relative h-56 flex-shrink-0 overflow-hidden">
+                    <div className="relative h-72 overflow-hidden">
                       <Image
                         src={promo.image || "/placeholder.svg"}
                         alt={promo.title}
@@ -281,7 +281,7 @@ export default function PromotionsPage() {
                       </CardDescription>
                     </CardHeader>
 
-                    <CardContent className="space-y-5 flex-1">
+                    <CardContent className="space-y-5">
                       <div className="flex items-baseline gap-4 p-4 bg-gradient-to-r from-[#ba3364]/5 to-[#732b6f]/5 rounded-lg">
                         <span className="text-4xl font-bold text-[#ba3364]">{promo.salePrice}</span>
                         <span className="text-xl text-gray-400 line-through">{promo.originalPrice}</span>
@@ -307,7 +307,7 @@ export default function PromotionsPage() {
                       </div>
                     </CardContent>
 
-                    <CardFooter className="pt-2 mt-auto flex-shrink-0">
+                    <CardFooter className="pt-2">
                       <Button 
                         onClick={() => toggleCardFlip(promo.id)}
                         className="w-full bg-gradient-to-r from-[#ba3364] to-[#732b6f] hover:from-[#732b6f] hover:to-[#ba3364] text-white font-semibold py-6 text-lg transition-all duration-300 hover:shadow-xl group/btn rounded-full"
