@@ -719,11 +719,11 @@ export default function CorporateMilestonesPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-white/70">
             <div className="flex items-center gap-2 hover:text-white transition-colors">
               <Phone className="w-5 h-5" />
-              <span>(702) 555-0123</span>
+              <span>702-748-8866</span>
             </div>
             <div className="flex items-center gap-2 hover:text-white transition-colors">
               <Mail className="w-5 h-5" />
-              <span>hello@lovelyevents.com</span>
+              <span>info@lovelyeventsgroup.com</span>
             </div>
           </div>
         </motion.div>

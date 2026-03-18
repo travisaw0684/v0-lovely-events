@@ -31,7 +31,7 @@ export async function POST(request: Request) {
     }
 
     const resendApiKey = process.env.RESEND_API_KEY
-    const recipientEmail = process.env.CONSULTATION_EMAIL || "hello@lovelyeventsgroup.com"
+    const recipientEmail = process.env.CONSULTATION_EMAIL || "info@lovelyeventsgroup.com"
 
     // Format the event type for display
     const eventTypeLabels: Record<string, string> = {

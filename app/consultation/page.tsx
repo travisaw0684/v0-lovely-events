@@ -102,7 +102,7 @@ export default function ConsultationPage() {
                 <Phone className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Call Us</h3>
-                  <p className="text-gray-600">+1 (702) 555-0123</p>
+                  <p className="text-gray-600">702-748-8866</p>
                   <p className="text-sm text-gray-500 mt-1">Available 9AM - 6PM PST</p>
                 </div>
               </div>
@@ -113,7 +113,7 @@ export default function ConsultationPage() {
                 <Mail className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Us</h3>
-                  <p className="text-gray-600">hello@lovelyeventsgroup.com</p>
+                  <p className="text-gray-600">info@lovelyeventsgroup.com</p>
                   <p className="text-sm text-gray-500 mt-1">We respond within 24 hours</p>
                 </div>
               </div>
@@ -180,7 +180,7 @@ export default function ConsultationPage() {
                         value={formData.phone}
                         onChange={handleInputChange}
                         required
-                        placeholder="(702) 555-0000"
+                        placeholder="702-748-8866"
                       />
                     </div>
                   </div>
