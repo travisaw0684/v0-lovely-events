@@ -22,14 +22,14 @@ export default function Footer() {
             <div className="space-y-3">
               <p className="text-white/90 flex items-center">
                 <Phone className="h-4 w-4 mr-3 text-pink-200" />
-                <a href="tel:+15551234567" className="hover:text-pink-200 transition-colors">
-                  +1 (555) 123-4567
+                <a href="tel:+17027488866" className="hover:text-pink-200 transition-colors">
+                  702-748-8866
                 </a>
               </p>
               <p className="text-white/90 flex items-center">
                 <Mail className="h-4 w-4 mr-3 text-pink-200" />
-                <a href="mailto:hello@lovelyevents.com" className="hover:text-pink-200 transition-colors">
-                  hello@lovelyevents.com
+<a href="mailto:info@lovelyeventsgroup.com" className="hover:text-pink-200 transition-colors">
+            info@lovelyeventsgroup.com
                 </a>
               </p>
               <p className="text-white/90 flex items-center">
