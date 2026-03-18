@@ -109,11 +109,11 @@ export default function Header() {
 
           <nav className="hidden lg:flex items-center gap-6">
             <a
-              href="tel:+1234567890"
+              href="tel:+17027488866"
               className="flex items-center gap-2 text-white/90 hover:text-white text-sm font-light tracking-wide transition-colors duration-300"
             >
               <Phone className="w-4 h-4" />
-              <span>+1 234 567 897</span>
+              <span>702-748-8866</span>
             </a>
 
             <Link
