@@ -1,6 +1,16 @@
+import type { Metadata } from "next"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import { Heart, Building2, PartyPopper, Star, CheckCircle, ArrowRight, Users, Calendar, Award } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Event Planning Services",
+  description:
+    "Explore wedding planning, corporate events, and social celebrations by Lovely Events Group in Las Vegas.",
+  alternates: {
+    canonical: "/services",
+  },
+}
 
 const services = [
   {

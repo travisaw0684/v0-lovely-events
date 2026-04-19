@@ -1,7 +1,7 @@
 "use client"
 
-import { Header } from "@/components/Header"
-import { Footer } from "@/components/Footer"
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
 import { PreFooterCTA } from "@/components/PreFooterCTA"
 import { Heart, BookOpen, Users, Sparkles, Crown, MessageCircle } from "lucide-react"
 import { motion, useScroll, useTransform } from "framer-motion"

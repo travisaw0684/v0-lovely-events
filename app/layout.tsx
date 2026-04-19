@@ -11,9 +11,54 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  title: "Lovely Events - Making Your Events Unforgettable",
+  metadataBase: new URL("https://www.lovelyeventsgroup.com"),
+  title: {
+    default: "Lovely Events Group | Las Vegas Event Planning",
+    template: "%s | Lovely Events Group",
+  },
   description:
-    "Sophisticated event planning services specializing in weddings, corporate events, and social gatherings. Creating extraordinary events that reflect your style and story.",
+    "Luxury event planning in Las Vegas for weddings, corporate events, and social celebrations. Thoughtful design, flawless execution, and unforgettable experiences.",
+  keywords: [
+    "Las Vegas event planner",
+    "wedding planner Las Vegas",
+    "corporate events Las Vegas",
+    "event design",
+    "luxury events",
+    "social celebrations",
+    "Lovely Events Group",
+  ],
+  openGraph: {
+    title: "Lovely Events Group | Las Vegas Event Planning",
+    description:
+      "Luxury event planning in Las Vegas for weddings, corporate events, and social celebrations. Thoughtful design, flawless execution, and unforgettable experiences.",
+    type: "website",
+    siteName: "Lovely Events Group",
+    locale: "en_US",
+    images: [
+      {
+        url: "/elegant-event-celebration-couple-smiling.jpg",
+        alt: "Lovely Events Group celebration",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lovely Events Group | Las Vegas Event Planning",
+    description:
+      "Luxury event planning in Las Vegas for weddings, corporate events, and social celebrations. Thoughtful design, flawless execution, and unforgettable experiences.",
+    images: ["/elegant-event-celebration-couple-smiling.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   generator: "v0.dev",
 }
 

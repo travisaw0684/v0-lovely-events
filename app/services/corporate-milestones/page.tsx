@@ -1,7 +1,7 @@
 "use client"
 
-import { Header } from "@/components/Header"
-import { Footer } from "@/components/Footer"
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
 import { PreFooterCTA } from "@/components/PreFooterCTA"
 import { Users, MapPin, Palette, Headphones, CheckCircle, Star, Building, Phone, Mail, ChevronDown, Award, Sparkles, ArrowRight, Trophy } from "lucide-react"
 import { useState } from "react"

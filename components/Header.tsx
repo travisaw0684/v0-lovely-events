@@ -117,7 +117,7 @@ export default function Header() {
             </a>
 
             <Link
-              href="/reservations"
+              href="/consultation"
               className="flex items-center gap-2 text-white/90 hover:text-white text-sm font-light tracking-wide transition-colors duration-300"
             >
               <User className="w-4 h-4" />

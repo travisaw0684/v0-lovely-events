@@ -1,8 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
-import "../styles/Card.css";
+import "../styles/Card.css"
 
 const galleryImages = [
   {
@@ -65,7 +64,7 @@ export default function LuxuryEventsGallery() {
           {galleryImages.map((image) => (
 
             <div className="card">
-              <img src={image.src} atl={image.alt} />
+              <img src={image.src} alt={image.alt} />
               <div className="content">
                 <h2></h2>
                 <h3></h3>

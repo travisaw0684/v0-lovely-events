@@ -105,7 +105,7 @@ export default function CallToAction() {
                 asChild
                 className="bg-[#4a2c3e] hover:bg-[#5a3c4e] text-white px-14 py-7 text-base font-medium rounded-full shadow-2xl transition-all duration-300 hover:scale-110 hover:shadow-[#4a2c3e]/50 uppercase tracking-[0.2em] border-2 border-[#d4af37]/30"
               >
-                <Link href="/contact">Begin Your Experience</Link>
+                <Link href="/consultation">Begin Your Experience</Link>
               </Button>
 
               <div className="flex items-center justify-center lg:justify-start gap-2">

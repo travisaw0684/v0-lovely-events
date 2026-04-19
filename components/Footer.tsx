@@ -34,7 +34,7 @@ export default function Footer() {
               </p>
               <p className="text-white/90 flex items-center">
                 <MapPin className="h-4 w-4 mr-3 text-pink-200" />
-                New York, NY
+                Las Vegas, NV
               </p>
             </div>
           </div>
@@ -44,25 +44,31 @@ export default function Footer() {
             <h4 className="font-serif text-xl font-semibold mb-6 text-white">Our Services</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="text-white/80 hover:text-pink-200 transition-colors flex items-center">
+                <Link
+                  href="/services/curated-weddings"
+                  className="text-white/80 hover:text-pink-200 transition-colors flex items-center"
+                >
                   <Heart className="h-3 w-3 mr-2 text-pink-300" />
                   Wedding Planning
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-white/80 hover:text-pink-200 transition-colors flex items-center">
+                <Link
+                  href="/services/corporate-events"
+                  className="text-white/80 hover:text-pink-200 transition-colors flex items-center"
+                >
                   <Heart className="h-3 w-3 mr-2 text-pink-300" />
                   Corporate Events
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-white/80 hover:text-pink-200 transition-colors flex items-center">
+                <Link href="/services" className="text-white/80 hover:text-pink-200 transition-colors flex items-center">
                   <Heart className="h-3 w-3 mr-2 text-pink-300" />
                   Private Celebrations
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-white/80 hover:text-pink-200 transition-colors flex items-center">
+                <Link href="/services" className="text-white/80 hover:text-pink-200 transition-colors flex items-center">
                   <Heart className="h-3 w-3 mr-2 text-pink-300" />
                   Custom Experiences
                 </Link>
@@ -89,22 +95,22 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#campaigns" className="text-white/80 hover:text-pink-200 transition-colors">
+                <Link href="/our-story" className="text-white/80 hover:text-pink-200 transition-colors">
                   Our Story
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-white/80 hover:text-pink-200 transition-colors">
+                <Link href="/#campaigns" className="text-white/80 hover:text-pink-200 transition-colors">
                   Portfolio
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-white/80 hover:text-pink-200 transition-colors">
+                <Link href="/#testimonials-section" className="text-white/80 hover:text-pink-200 transition-colors">
                   Testimonials
                 </Link>
               </li>
               <li>
-                <Link href="#contact" className="text-white/80 hover:text-pink-200 transition-colors">
+                <Link href="/consultation" className="text-white/80 hover:text-pink-200 transition-colors">
                   Contact Us
                 </Link>
               </li>

@@ -1,8 +1,18 @@
-import { Header } from "@/components/Header"
-import { Footer } from "@/components/Footer"
+import type { Metadata } from "next"
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
 import { Heart, Star, Users, Award, Calendar, Sparkles } from "lucide-react"
 import Image from "next/image"
 import LuxuryEventsGallery from "@/components/LuxuryEventsGallery"
+
+export const metadata: Metadata = {
+  title: "Our Story",
+  description:
+    "Meet the Lovely Events Group team and discover our approach to creating unforgettable celebrations in Las Vegas.",
+  alternates: {
+    canonical: "/our-story",
+  },
+}
 
 export default function OurStoryPage() {
   return (

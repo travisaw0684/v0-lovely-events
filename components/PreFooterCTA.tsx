@@ -66,7 +66,7 @@ export function PreFooterCTA() {
                 Every event is unique, and we strive to provide personalized service to each of our clients.
               </motion.p>
 
-              <Link href="/contact">
+              <Link href="/consultation">
                 <motion.button
                   variants={itemVariants}
                   whileHover={{

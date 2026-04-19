@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import Header from "@/components/Header"
 import HeroCarousel from "@/components/HeroCarousel"
 import MeetTheFounder from "@/components/MeetTheFounder"
@@ -10,6 +11,15 @@ import MissionStatement from "@/components/MissionStatement"
 import FeaturedCampaigns from "@/components/FeaturedCampaigns"
 import Footer from "@/components/Footer"
 import PreFooterCTA from "@/components/PreFooterCTA"
+
+export const metadata: Metadata = {
+  title: "Las Vegas Event Planner",
+  description:
+    "Luxury event planning in Las Vegas for weddings, corporate events, and social celebrations. Thoughtful design, flawless execution, and unforgettable experiences.",
+  alternates: {
+    canonical: "/",
+  },
+}
 
 export default function HomePage() {
   return (
