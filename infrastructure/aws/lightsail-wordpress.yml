@@ -1,0 +1,84 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Lovely Events Group - WordPress (prod + staging) on Amazon Lightsail"
+
+Parameters:
+  BlueprintId:
+    Type: String
+    Default: wordpress
+    Description: "Lightsail blueprint id (WordPress). See Lightsail get-blueprints."
+
+  ProdInstanceName:
+    Type: String
+    Default: lovely-cms-prod
+    Description: "Lightsail instance name for production WordPress."
+
+  StagingInstanceName:
+    Type: String
+    Default: lovely-cms-staging
+    Description: "Lightsail instance name for staging WordPress."
+
+  ProdBundleId:
+    Type: String
+    Default: micro_2_0
+    Description: "Lightsail bundle id for production (size/price). Example: micro_2_0, small_2_0."
+
+  StagingBundleId:
+    Type: String
+    Default: nano_2_0
+    Description: "Lightsail bundle id for staging (size/price). Example: nano_2_0, micro_2_0."
+
+Resources:
+  ProdInstance:
+    Type: AWS::Lightsail::Instance
+    Properties:
+      InstanceName: !Ref ProdInstanceName
+      BlueprintId: !Ref BlueprintId
+      BundleId: !Ref ProdBundleId
+      Tags:
+        - Key: Project
+          Value: LovelyEventsGroup
+        - Key: Environment
+          Value: prod
+
+  StagingInstance:
+    Type: AWS::Lightsail::Instance
+    Properties:
+      InstanceName: !Ref StagingInstanceName
+      BlueprintId: !Ref BlueprintId
+      BundleId: !Ref StagingBundleId
+      Tags:
+        - Key: Project
+          Value: LovelyEventsGroup
+        - Key: Environment
+          Value: staging
+
+  ProdStaticIp:
+    Type: AWS::Lightsail::StaticIp
+    DependsOn: ProdInstance
+    Properties:
+      StaticIpName: !Sub "${ProdInstanceName}-static-ip"
+      AttachedTo: !Ref ProdInstanceName
+
+  StagingStaticIp:
+    Type: AWS::Lightsail::StaticIp
+    DependsOn: StagingInstance
+    Properties:
+      StaticIpName: !Sub "${StagingInstanceName}-static-ip"
+      AttachedTo: !Ref StagingInstanceName
+
+Outputs:
+  ProdInstanceNameOut:
+    Description: "Production Lightsail instance name"
+    Value: !Ref ProdInstanceName
+
+  StagingInstanceNameOut:
+    Description: "Staging Lightsail instance name"
+    Value: !Ref StagingInstanceName
+
+  ProdStaticIpAddress:
+    Description: "Production static IPv4 address"
+    Value: !GetAtt ProdStaticIp.IpAddress
+
+  StagingStaticIpAddress:
+    Description: "Staging static IPv4 address"
+    Value: !GetAtt StagingStaticIp.IpAddress

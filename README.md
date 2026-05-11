@@ -16,6 +16,14 @@ Your project is live at:
 
 **[https://vercel.com/travis-walkers-projects/v0-lovely-to-maximus](https://vercel.com/travis-walkers-projects/v0-lovely-to-maximus)**
 
+## Infrastructure Notes
+
+AWS WordPress/Lightsail setup notes are maintained in:
+
+**[infrastructure/aws/README.md](/Users/traviswalker/Documents/Lovely Events Project/v0-lovely-events/infrastructure/aws/README.md)**
+
+Keep operational notes, resource names, commands, and handoff details there. Do not commit passwords, SSH keys, database dumps, or WordPress backup archives.
+
 ## Build your app
 
 Continue building your app on:

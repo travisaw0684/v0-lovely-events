@@ -1,3 +1,5 @@
+import { type CmsMediaImage, getWordPressMediaImages } from "@/lib/wordpress"
+
 const tileData = [
   {
     img: "https://static.mywebsites360.com/d3536c889e90455b8c18f12a5d7c8646/i/df42e818f52a4bb094434d835f444a36/1/GCuCv727RiYFXYTGtzWJiQ/462570137_1009777691163693_2811138529125412320_n.jpg",
@@ -61,26 +63,63 @@ const tileData = [
   },
 ]
 
-export default function FeaturedCampaigns() {
+type HighlightTile = {
+  img: string
+  title: string
+  author: string
+}
+
+function toHighlightTiles(images: CmsMediaImage[]) {
+  return images.map((image) => ({
+    img: image.url,
+    title: image.alt || image.title || "Event Highlight",
+    author: image.caption || "Lovely Events",
+  }))
+}
+
+async function getHighlightTiles(): Promise<HighlightTile[]> {
+  try {
+    const mediaTiles = toHighlightTiles(await getWordPressMediaImages({ perPage: 12, noStore: true }))
+
+    if (mediaTiles.length === 0) {
+      return tileData
+    }
+
+    return [...mediaTiles, ...tileData].slice(0, 12)
+  } catch (error) {
+    console.error("[Recent Highlights CMS Fallback]", error)
+    return tileData
+  }
+}
+
+function HighlightCard({ tile }: { tile: HighlightTile }) {
+  return (
+    <figure className="relative group overflow-hidden rounded-lg shadow-lg">
+      <div className="aspect-[4/3] overflow-hidden">
+        <img
+          src={tile.img || "/placeholder.svg"}
+          alt={tile.title}
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+        <h3 className="text-white font-semibold text-base md:text-lg leading-snug line-clamp-2">{tile.title}</h3>
+        <p className="text-white/80 text-sm">by {tile.author}</p>
+      </div>
+    </figure>
+  )
+}
+
+export default async function FeaturedCampaigns() {
+  const tiles = await getHighlightTiles()
+
   return (
     <section id="campaigns" className="py-16 px-4 bg-background pb-[400px]">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-extralight mb-6 leading-tight tracking-tight text-black mb-6 text-center">Recent Highlights</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {tileData.map((tile, index) => (
-            <div key={index} className="relative group overflow-hidden rounded-lg shadow-lg">
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src={tile.img || "/placeholder.svg"}
-                  alt={tile.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                <h3 className="text-white font-semibold text-lg">{tile.title}</h3>
-                <p className="text-white/80 text-sm">by {tile.author}</p>
-              </div>
-            </div>
+          {tiles.map((tile, index) => (
+            <HighlightCard key={`${tile.title}-${index}`} tile={tile} />
           ))}
         </div>
       </div>
